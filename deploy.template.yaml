@@ -1,0 +1,8 @@
+name: smlc-website
+services:
+  - name: web
+    environment_slug: static-sites      # Set the environment to static site
+    source_dir: dist                    # Serve files from the 'dist' directory
+    routes:
+      - path: /
+        preserve_path_prefix: true      # Ensures the root path is preserved

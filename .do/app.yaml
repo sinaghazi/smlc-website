@@ -1,9 +1,0 @@
-name: smlc-website
-
-services:
-  - name: web
-    environment_slug: static-sites
-    source_dir: dist
-    routes:
-      - path: /
-        preserve_path_prefix: true
