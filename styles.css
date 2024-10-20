@@ -9,10 +9,6 @@
 }
 
 @layer components {
-    .container {
-        @apply w-[90%] max-w-6xl mx-auto;
-    }
-
     .btn {
         @apply inline-block px-6 py-3 bg-primary text-white rounded transition duration-300 hover:bg-opacity-60;
     }
@@ -52,8 +48,6 @@
     #cube-container canvas {
         @apply w-full h-full;
     }
-
-    /* Add any additional custom styles here */
 }
 
 @layer utilities {
