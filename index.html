@@ -3,24 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sina's Multidimensional Leadership Cube</title>
-    <link href="styles.css" rel="stylesheet">
+    <title>Sina's Multidimensional Leadership Cube | Discover Multidimensional Leadership Dynamics</title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Explore Sina's Multidimensional Leadership Cube (SMLC) to gain insights into personal, organizational, and societal leadership dynamics.">
+    <meta name="keywords" content="SMLC, Leadership Cube, Multidimensional Leadership, Leadership Model, Organizational Dynamics, Personal Development">
+    <meta name="author" content="Sina Ghazi">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sina's Multidimensional Leadership Cube">
+    <meta property="og:description" content="Discover a new perspective on leadership dynamics with the SMLC model.">
+    <meta property="og:image" content="https://sinaghazi.com/img/og-image.png">
+    <meta property="og:url" content="https://sinaghazi.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sina's Multidimensional Leadership Cube">
+    <meta name="twitter:description" content="Discover a new perspective on leadership dynamics with the SMLC model.">
+    <meta name="twitter:image" content="https://sinaghazi.com/img/twitter-card.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+
+    <!-- Stylesheets and Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="dist/output.css" rel="stylesheet">
 
+    <!-- Import Map for Modules -->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+          }
+        }
+    </script>
+
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="ZAOYGYGK" defer></script>
+    <!-- / Fathom -->
 </head>
+<body>
+
 <body class="font-sans text-gray-800 bg-white">
 <header class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#" class="logo">
             <img src="img/sg-logo-transparent.png" alt="SG Logo" class="h-12">
         </a>
-        <!-- Hamburger menu button (visible on mobile) -->
         <button id="menu-toggle" class="lg:hidden text-gray-500 hover:text-gray-600 focus:outline-none">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
-        <!-- Desktop menu (hidden on mobile) -->
         <nav class="hidden lg:block">
             <ul class="flex space-x-6">
                 <li><a href="index.html" class="text-gray-800 hover:text-primary">Home</a></li>
@@ -30,7 +69,6 @@
             </ul>
         </nav>
     </div>
-    <!-- Mobile menu (hidden by default) -->
     <nav id="mobile-menu" class="fixed top-0 left-0 bottom-0 w-[90%] bg-white transform -translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
         <div class="h-full overflow-y-auto">
             <ul class="flex flex-col space-y-4 p-6">
@@ -41,27 +79,102 @@
             </ul>
         </div>
     </nav>
-    <div id="menu-overlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden lg:hidden"></div>
-
 </header>
+<div id="menu-overlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden lg:hidden"></div>
 
 <main class="pt-20 lg:pt-16">
     <section class="hero relative h-screen bg-cover bg-center" style="background-image: url('img/hero-background.jpg');">
-        <div class="absolute inset-0 bg-secondary bg-opacity-80"></div>
+        <div class="absolute inset-0 bg-secondary bg-opacity-60"></div>
         <div class="container mx-auto px-4 h-full flex items-center justify-center relative z-10">
             <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Discover Sina's Multidimensional Leadership Cube</h1>
-                <h2 class="text-xl md:text-2xl text-gray-600 mb-8">A new perspective on leadership dynamics</h2>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Discover Sina's Multidimensional Leadership Cube</h1>                <h2 class="text-xl md:text-2xl text-gray-600 mb-8">A new perspective on leadership dynamics</h2>
                 <a href="#interactive" class="btn">Explore Now</a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-down">
+            <a href="#introduction">▼</a>
+        </div>
+    </section>
+
+    <section id="introduction" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-lg max-w-3xl mx-auto">
+                In today's complex world, leadership requires a multidimensional approach. The SMLC model provides insights into personal, organizational, and societal dynamics, helping you navigate and lead more effectively.
+            </p>
+        </div>
+    </section>
+
+    <section id="interactive" class="bg-secondary py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Explore the Dimensions of Leadership</h2>
+            <div class="selection-options flex justify-center space-x-4 mb-8">
+                <button class="selection-btn active" data-type="individual">Individual</button>
+                <button class="selection-btn" data-type="organization">Organization/Business</button>
+                <button class="selection-btn" data-type="society">Society/Country</button>
+            </div>
+            <p class="text-center mb-8">
+                Adjust the sliders below to see how different factors influence leadership styles within the multidimensional cube.
+            </p>
+            <div class="cube-and-controls flex flex-wrap justify-center items-start">
+                <div id="cube-container" class="w-full md:w-1/2 lg:w-2/5 h-96 bg-white border border-gray-300 rounded-lg"></div>
+                <div class="controls w-full md:w-1/2 lg:w-2/5 mt-8 md:mt-0 md:ml-8">
+                    <div class="slider-group mb-6">
+                        <label for="xRange" id="xLabel" class="block text-sm font-medium text-gray-700 mb-2">Individualism vs. Collectivism</label>
+                        <input type="range" id="xRange" min="1" max="5" value="3" class="w-full">
+                    </div>
+                    <div class="slider-group mb-6">
+                        <label for="yRange" id="yLabel" class="block text-sm font-medium text-gray-700 mb-2">Emotional vs. Rational</label>
+                        <input type="range" id="yRange" min="1" max="5" value="3" class="w-full">
+                    </div>
+                    <div class="slider-group mb-6">
+                        <label for="zRange" id="zLabel" class="block text-sm font-medium text-gray-700 mb-2">Risk-Averse vs. Risk-Taking</label>
+                        <input type="range" id="zRange" min="1" max="5" value="3" class="w-full">
+                    </div>
+                </div>
+            </div>
+            <div id="descriptionBox" class="bg-white p-6 mt-8 text-base leading-relaxed text-gray-700 rounded-lg shadow-md max-w-3xl mx-auto">
+                You are exploring a balanced leadership style that harmonizes individual goals with collective needs, balances emotions with rationality, and approaches risk with caution.
             </div>
         </div>
     </section>
 
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-xl mb-8">Want to learn more about how the SMLC model can benefit you?</p>
+            <div class="flex justify-center space-x-4">
+                <a href="explore.html" class="btn">Learn More About SMLC</a>
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
 
+    <section class="bg-secondary py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">License</h2>
+            <p class="max-w-3xl mx-auto">
+                Sina's Multidimensional Leadership Cube (SMLC) is licensed under the
+                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="text-primary hover:underline">CC BY 4.0</a>
+                license. You are free to share and adapt the material for any purpose, even commercially, as long as appropriate credit is given.
+            </p>
+        </div>
+    </section>
 </main>
 
+<footer class="bg-secondary py-8">
+    <div class="container mx-auto px-4 flex flex-wrap justify-between items-center">
+        <div class="social-media mb-4 lg:mb-0">
+            <a href="https://www.linkedin.com/in/sinaghazi" target="_blank" class="inline-block">
+                <img src="img/linkedin-icon.png" alt="LinkedIn" class="w-8 h-8">
+            </a>
+        </div>
+        <div class="footer-links">
+            <a href="privacy-policy.html" class="text-gray-700 hover:text-primary mr-4">Privacy Policy</a>
+            <a href="terms-of-service.html" class="text-gray-700 hover:text-primary">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="app.js"></script>
-
-
 </body>
 </html>
