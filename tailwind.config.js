@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./*.html', './app.js'],
+  content: ['./*.html', './cube.js'],
   theme: {
     extend: {
       colors: {

@@ -1,4 +1,4 @@
-// app.js
+// cube.js
 
 // Import statements using the import map
 import * as THREE from 'three';
@@ -10,21 +10,6 @@ let data; // Variable to hold JSON data
 
 // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", function () {
-    // Menu functionality
-    const menuToggle = document.querySelector('button.lg\\:hidden');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const closeMenu = document.getElementById('close-menu');
-    const body = document.body;
-
-    menuToggle.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-        body.classList.toggle('overflow-hidden');
-    });
-
-    closeMenu.addEventListener('click', function() {
-        mobileMenu.classList.add('hidden');
-        body.classList.remove('overflow-hidden');
-    });
 
     // 3D Cube functionality
     // Slider elements
