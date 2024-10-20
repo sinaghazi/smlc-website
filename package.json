@@ -8,7 +8,8 @@
     "build:js": "gulp",
     "copy-data": "mkdir -p dist/data && cp -R data/* dist/data",
     "copy-images": "mkdir -p dist/img && cp -R img/* dist/img",
-    "build": "npm run build:css && npm run build:js && npm run copy-data && npm run copy-images"
+    "build": "npm run build:css && npm run build:js && npm run copy-data && npm run copy-images",
+    "start": "echo 'Static site. No start command needed.'"
   },
   "keywords": [],
   "license": "CC-BY-4.0",
