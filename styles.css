@@ -1,29 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-/* Custom styles */
 @layer base {
     body {
-        @apply font-sans text-gray-800 bg-white;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        @apply font-bold;
+        font-family: "Abel", sans-serif;
     }
 }
 
 @layer components {
-    .btn {
-        @apply inline-block px-6 py-3 bg-primary text-white rounded-md transition duration-300 hover:bg-opacity-80;
+    .container {
+        @apply w-[90%] max-w-6xl mx-auto;
     }
 
-    .container {
-        @apply max-w-7xl mx-auto px-4;
+    .btn {
+        @apply inline-block px-6 py-3 bg-primary text-white rounded transition duration-300 hover:bg-opacity-60;
     }
 
     .logo img {
-        @apply h-12 w-auto;
+        @apply max-h-[50px] pt-[5px];
     }
 
     .title-section {
@@ -31,11 +26,11 @@
     }
 
     .title-section::before {
-        @apply content-[''] absolute inset-0 bg-secondary bg-opacity-80 z-0;
+        @apply content-[''] absolute inset-0 bg-secondary bg-opacity-60 z-[1];
     }
 
     .title-section h1 {
-        @apply relative z-10 text-4xl md:text-5xl mb-4;
+        @apply relative z-[2] text-4xl md:text-5xl m-0;
     }
 
     .hero {
@@ -43,89 +38,22 @@
     }
 
     .hero::before {
-        @apply content-[''] absolute inset-0 bg-secondary bg-opacity-80;
-    }
-
-    .hero-content {
-        @apply relative z-10 text-center;
+        @apply content-[''] absolute inset-0 bg-secondary bg-opacity-60;
     }
 
     .scroll-down a {
         @apply inline-block text-2xl text-primary animate-bounce;
     }
 
-    .introduction {
-        @apply py-16 text-center;
-    }
-
-    .interactive {
-        @apply bg-secondary py-16;
-    }
-
-    .selection-options {
-        @apply flex justify-center space-x-4 mb-8;
-    }
-
-    .selection-btn {
-        @apply bg-white border-2 border-primary text-primary px-4 py-2 rounded-md cursor-pointer transition duration-300 hover:bg-primary hover:text-white;
-    }
-
-    .selection-btn.active {
-        @apply bg-primary text-white;
-    }
-
-    .cube-and-controls {
-        @apply flex flex-wrap items-start justify-center;
-    }
-
     #cube-container {
-        @apply w-full md:w-1/2 lg:w-2/5 h-96 bg-white border border-gray-300 rounded-lg;
+        @apply w-full md:w-1/2 lg:w-2/5 h-[400px] bg-white border border-gray-300 rounded-lg;
     }
 
-    .controls {
-        @apply w-full md:w-1/2 lg:w-2/5 mt-8 md:mt-0 md:ml-8;
+    #cube-container canvas {
+        @apply w-full h-full;
     }
 
-    .slider-group {
-        @apply mb-6;
-    }
-
-    .slider-group label {
-        @apply block text-sm font-medium text-gray-700 mb-2;
-    }
-
-    .slider-group input[type="range"] {
-        @apply w-full;
-    }
-
-    .description-box {
-        @apply bg-white p-6 mt-8 text-base leading-relaxed text-gray-700 rounded-lg shadow-md;
-    }
-
-    .further-exploration {
-        @apply bg-white py-16 text-center;
-    }
-
-    .license-explainer {
-        @apply bg-secondary py-16 text-center;
-    }
-
-    .about, .contact, .explore, .privacy-policy, .terms-of-service {
-        @apply py-16;
-    }
-
-    .contact-details {
-        @apply max-w-2xl mx-auto text-lg text-gray-700;
-    }
-
-
-    #mobile-menu {
-        @apply shadow-lg;
-    }
-
-    #mobile-menu a {
-        @apply block py-2 px-4 text-gray-800 hover:bg-gray-100;
-    }
+    /* Add any additional custom styles here */
 }
 
 @layer utilities {
@@ -145,11 +73,3 @@
         }
     }
 }
-
-/* Styles for the 3D cube (if needed) */
-#cube-container canvas {
-    @apply w-full h-full;
-}
-
-/* Additional custom styles that might not fit well with Tailwind's utility-first approach */
-/* Add any remaining custom styles here */
