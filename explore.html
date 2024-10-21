@@ -32,6 +32,7 @@
     <!-- Stylesheets and Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="css/output.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 
 
     <!-- Fathom - beautiful, simple website analytics -->
@@ -87,32 +88,166 @@
             <div class="absolute inset-0 bg-secondary bg-opacity-60"></div>
         </section>
 
-        <section class="py-16">
+        <!-- How SMLC Works Section -->
+        <section class="py-16 bg-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8">Explore the SMLC Model</h2>
-                <p class="mb-6">The SMLC model is designed to be interactive and adaptable, allowing leaders to explore different scenarios and understand the multifaceted nature of leadership.</p>
-
-                <h3 class="text-2xl font-bold mb-4">Dimensions of the Cube</h3>
-
-                <div class="mb-8">
-                    <h4 class="text-xl font-bold mb-2">1. Personal Dimension</h4>
-                    <p>Investigate how personal values, beliefs, and behaviors influence leadership styles. This dimension encourages self-reflection and personal development.</p>
+                <h2 class="text-3xl font-bold mb-8 text-center">How Does SMLC Work?</h2>
+                <div class="flex flex-wrap items-center">
+                    <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+                        <h3 class="text-2xl font-semibold mb-4">Understanding the Axes</h3>
+                        <p class="text-lg mb-4">SMLC uses a three-dimensional cube to represent leadership styles and behaviors. Each level (Society/Country, Organization/Business, and Personal) has its own set of axes that define different aspects of leadership and interaction.</p>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <svg width="100%" height="300" viewBox="0 0 400 300">
+                            <!-- 3D Cube representation -->
+                            <polygon points="50,250 200,150 350,250 200,350" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+                            <polygon points="50,250 200,150 200,0 50,100" fill="#e0e0e0" stroke="#333" stroke-width="2"/>
+                            <polygon points="200,150 350,250 350,100 200,0" fill="#d0d0d0" stroke="#333" stroke-width="2"/>
+                            <text x="180" y="380" text-anchor="middle" fill="#333">X-Axis</text>
+                            <text x="20" y="175" text-anchor="middle" fill="#333" transform="rotate(-90 20,175)">Y-Axis</text>
+                            <text x="380" y="175" text-anchor="middle" fill="#333" transform="rotate(90 380,175)">Z-Axis</text>
+                        </svg>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="mb-8">
-                    <h4 class="text-xl font-bold mb-2">2. Organizational Dimension</h4>
-                    <p>Understand the role of organizational culture, structure, and processes. Explore how these factors affect decision-making, communication, and overall effectiveness.</p>
+        <!-- Axes Explanation Section -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h3 class="text-2xl font-semibold mb-8 text-center">The Three Levels of SMLC</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold mb-4">Society/Country Level</h4>
+                        <ul class="list-disc list-inside">
+                            <li>X-Axis: Economic Systems (Collectivism ↔ Free Markets)</li>
+                            <li>Y-Axis: Human-Centric vs. System-Centric</li>
+                            <li>Z-Axis: Data-Driven vs. Intuition-Driven</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold mb-4">Organization/Business Level</h4>
+                        <ul class="list-disc list-inside">
+                            <li>X-Axis: Organizational Structure (Hierarchical ↔ Flat)</li>
+                            <li>Y-Axis: Culture Orientation (Task-Oriented ↔ People-Oriented)</li>
+                            <li>Z-Axis: Innovation Approach (Process-Driven ↔ Innovation-Driven)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold mb-4">Personal Level</h4>
+                        <ul class="list-disc list-inside">
+                            <li>X-Axis: Individual vs. Collective Focus</li>
+                            <li>Y-Axis: Emotional vs. Rational Decision-Making</li>
+                            <li>Z-Axis: Risk-Taking vs. Risk-Averse</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="mb-8">
-                    <h4 class="text-xl font-bold mb-2">3. Societal Dimension</h4>
-                    <p>Examine the broader societal context, including economic systems, cultural norms, and technological advancements. Learn how external factors shape organizational and personal leadership approaches.</p>
+        <!-- The Importance of Distances Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-center">The Importance of Distances</h2>
+                <div class="flex flex-wrap items-center">
+                    <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+                        <p class="text-lg mb-4">A key concept in SMLC is that the distance between two points in the cube represents the differences between entities. This distance can reveal potential conflicts, misunderstandings, or synergies.</p>
+                        <h3 class="text-xl font-semibold mb-2">Why Distances Matter:</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Identifying Gaps: Larger distances indicate significant differences that could lead to challenges.</li>
+                            <li>Bridging Differences: Understanding the distance helps in finding ways to move closer together.</li>
+                            <li>Improving Interactions: Knowing relative positions allows for adjusting approaches.</li>
+                        </ul>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <svg width="100%" height="300" viewBox="0 0 400 300">
+                            <!-- Distance visualization -->
+                            <rect x="50" y="50" width="300" height="200" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+                            <circle cx="100" cy="100" r="10" fill="#ff0000"/>
+                            <circle cx="300" cy="200" r="10" fill="#0000ff"/>
+                            <line x1="100" y1="100" x2="300" y2="200" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+                            <text x="200" y="280" text-anchor="middle" fill="#333">Distance represents differences</text>
+                        </svg>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <h3 class="text-2xl font-bold mb-4">Interactive Tools</h3>
-                <p class="mb-6">Utilize our interactive cube and sliders to model different leadership scenarios. Adjust variables to see how changes at one level impact others.</p>
+        <!-- Practical Steps to Use SMLC Section -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-center">Practical Steps to Use SMLC</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">1. Assessment</h3>
+                        <p>Determine your position on each axis using surveys, self-reflection, or data analysis.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">2. Plotting</h3>
+                        <p>Place these points within the cube to visualize positions.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">3. Analyzing Distances</h3>
+                        <p>Look at the distances between different points to identify areas of alignment and divergence.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">4. Developing Strategies</h3>
+                        <p>Create strategies to address gaps or leverage alignments based on your analysis.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">5. Implementing Changes</h3>
+                        <p>Take action based on your strategies, which may involve training, policy changes, or open dialogues.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">6. Monitoring and Reassessment</h3>
+                        <p>Regularly check back to see if distances have decreased and adjust strategies as needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <a href="index.html#interactive" class="btn inline-block px-6 py-3 bg-primary text-white rounded transition duration-300 hover:bg-opacity-60">Try the Interactive Cube</a>
+        <!-- Additional Aspects of SMLC Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-center">Additional Aspects of SMLC</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">Communication Mastery Module</h3>
+                        <p class="mb-4">Enhance communication skills across different types of conversations:</p>
+                        <ul class="list-disc list-inside">
+                            <li>Practical Conversations</li>
+                            <li>Emotional Conversations</li>
+                            <li>Social Conversations</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">Situational Adaptability Module</h3>
+                        <p class="mb-4">Assess and improve adaptability to changing situations:</p>
+                        <ul class="list-disc list-inside">
+                            <li>Responsiveness</li>
+                            <li>Resilience</li>
+                            <li>Flexibility</li>
+                            <li>Decision-Making Under Pressure</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-8 bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Ethical and Cultural Considerations</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Cultural Sensitivity: Recognizes and incorporates cultural differences.</li>
+                        <li>Ethical Leadership: Emphasizes the importance of ethics and social responsibility.</li>
+                        <li>Global Applicability: Designed to be relevant across different cultures and societies.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="py-16 bg-primary text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-4">Ready to Apply SMLC?</h2>
+                <p class="text-xl mb-8">Start your journey with Sina's Multidimensional Leadership Cube and transform your approach to leadership and decision-making.</p>
+                <a href="contact.html" class="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition duration-300">Get Started</a>
             </div>
         </section>
     </main>
@@ -132,5 +267,15 @@
     </footer>
 
 <script src="js/common.js"></script>
+<script>
+    // Add any page-specific JavaScript here
+    document.addEventListener('DOMContentLoaded', function() {
+        // Animate SVG elements
+        gsap.from("svg", {duration: 1, opacity: 0, y: 50, stagger: 0.2});
+
+        // Animate text elements
+        gsap.from("h1, h2, h3, p", {duration: 1, opacity: 0, y: 30, stagger: 0.1});
+    });
+</script>
 </body>
 </html>
