@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        font-family: "Abel", sans-serif;
+        font-family: "Open Sans", sans-serif;
     }
 }
 
@@ -66,4 +66,39 @@
             transform: translateY(-5px);
         }
     }
+}
+
+/* Custom styles for about.html */
+.svg-icon {
+    @apply w-12 h-12 mb-4 text-primary;
+}
+
+.svg-icon path {
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.benefit-card {
+    @apply bg-gray-100 p-6 rounded-lg shadow-md transition duration-300 hover:shadow-lg;
+}
+
+.case-study-card {
+    @apply bg-white p-8 rounded-lg shadow-md transition duration-300 hover:shadow-lg;
+}
+
+/* SVG animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+svg {
+    animation: fadeInUp 1s ease-out;
 }

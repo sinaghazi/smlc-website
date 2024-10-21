@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./*.html', './cube.js'],
+  content: ['./*.html', './js/*.js'],
   theme: {
     extend: {
       colors: {
@@ -12,8 +12,8 @@ module.exports = {
       },
       fontSize: {
         'custom-size': '18px',
-        '2.5xl': '1.75rem',  // This is between 2xl and 3xl
-        '3.5xl': '2rem',     // This is between 3xl and 4xl
+        '2.5xl': '1.75rem',
+        '3.5xl': '2rem',
       },
       lineHeight: {
         'custom-leading': '1.6',
@@ -21,6 +21,10 @@ module.exports = {
       backgroundColor: {
         'secondary-60': 'rgba(253, 225, 196, 0.6)',
       },
+      gradientColorStops: theme => ({
+        'primary': '#ff3300',
+        'secondary': '#FDE1C4',
+      }),
     },
   },
   plugins: [],
