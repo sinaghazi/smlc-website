@@ -365,6 +365,189 @@
         "default": "Exploring organizational dynamics that balance structure with flexibility, and processes with innovation.",
         "example": "An organization emphasizing team collaboration, prioritizing employee well-being, and fostering innovation."
       }
+    },
+    "society": {
+      "axes": {
+        "X": {
+          "label": "Economic Systems",
+          "description": "Defines the economic framework and resource distribution approach",
+          "values": [
+            {
+              "label": "Collectivist Economy",
+              "description": "Centralized economic planning with shared resource allocation",
+              "impact": "High social security but potential inefficiencies in resource allocation",
+              "examples": [
+                "Nordic social democracy model",
+                "Cooperative economic systems"
+              ]
+            },
+            {
+              "label": "Moderately Collectivist",
+              "description": "Mixed economy with strong social programs",
+              "impact": "Balance between social protection and market efficiency",
+              "examples": [
+                "European social market economies",
+                "Canadian economic model"
+              ]
+            },
+            {
+              "label": "Mixed Economy",
+              "description": "Balanced approach between market forces and regulation",
+              "impact": "Flexible adaptation to different economic conditions",
+              "examples": [
+                "Modern Western European economies",
+                "Australian economic system"
+              ]
+            },
+            {
+              "label": "Moderately Free Market",
+              "description": "Market-driven with strategic regulation",
+              "impact": "High innovation with some social protections",
+              "examples": [
+                "US economic model",
+                "UK economic system"
+              ]
+            },
+            {
+              "label": "Free Market Economy",
+              "description": "Minimal government intervention in markets",
+              "impact": "Maximum economic freedom but potential social disparities",
+              "examples": [
+                "Hong Kong historical model",
+                "Singapore economic system"
+              ]
+            }
+          ]
+        },
+        "Y": {
+          "label": "Human-Centric vs. System-Centric",
+          "description": "Balance between individual needs and system efficiency",
+          "values": [
+            {
+              "label": "Highly Human-Centric",
+              "description": "Prioritizes individual well-being and social outcomes",
+              "impact": "High social satisfaction but potentially lower efficiency",
+              "examples": [
+                "Danish social system",
+                "New Zealand's well-being budget approach"
+              ]
+            },
+            {
+              "label": "Moderately Human-Centric",
+              "description": "Strong focus on human needs with system considerations",
+              "impact": "Good balance of social outcomes and efficiency",
+              "examples": [
+                "German social market system",
+                "Swedish welfare model"
+              ]
+            },
+            {
+              "label": "Balanced",
+              "description": "Equal consideration of human and system needs",
+              "impact": "Adaptable approach suitable for various contexts",
+              "examples": [
+                "Modern European Union policies",
+                "Canadian social system"
+              ]
+            },
+            {
+              "label": "Moderately System-Centric",
+              "description": "Efficiency-focused with human considerations",
+              "impact": "High efficiency while maintaining basic social protection",
+              "examples": [
+                "Japanese economic model",
+                "South Korean development approach"
+              ]
+            },
+            {
+              "label": "Highly System-Centric",
+              "description": "Maximizes system efficiency and economic metrics",
+              "impact": "High economic growth but potential social challenges",
+              "examples": [
+                "Industrial revolution era policies",
+                "Rapid industrialization models"
+              ]
+            }
+          ]
+        },
+        "Z": {
+          "label": "Data-Driven vs. Intuition-Driven",
+          "description": "Approach to decision-making and policy formation",
+          "values": [
+            {
+              "label": "Highly Intuition-Driven",
+              "description": "Relies on traditional wisdom and cultural values",
+              "impact": "Strong cultural continuity but may miss data-driven opportunities",
+              "examples": [
+                "Traditional governance systems",
+                "Community-based decision making"
+              ]
+            },
+            {
+              "label": "Moderately Intuition-Driven",
+              "description": "Combines traditional wisdom with some data analysis",
+              "impact": "Balanced approach preserving culture while modernizing",
+              "examples": [
+                "Bhutan's Gross National Happiness approach",
+                "Indigenous governance systems"
+              ]
+            },
+            {
+              "label": "Balanced",
+              "description": "Equal weight to data and cultural wisdom",
+              "impact": "Comprehensive decision-making incorporating multiple perspectives",
+              "examples": [
+                "Modern Nordic governance models",
+                "New Zealand's bicultural approach"
+              ]
+            },
+            {
+              "label": "Moderately Data-Driven",
+              "description": "Emphasizes data while considering cultural factors",
+              "impact": "Evidence-based decisions with cultural sensitivity",
+              "examples": [
+                "Estonia's digital governance",
+                "Singapore's smart nation initiative"
+              ]
+            },
+            {
+              "label": "Highly Data-Driven",
+              "description": "Relies primarily on data and analytics",
+              "impact": "Maximum efficiency but potential loss of human elements",
+              "examples": [
+                "Smart city initiatives",
+                "AI-driven policy making"
+              ]
+            }
+          ]
+        }
+      },
+      "combinations": {
+        "high_impact": [
+          {
+            "position": ["Mixed Economy", "Balanced", "Moderately Data-Driven"],
+            "description": "Progressive Balanced Society",
+            "impact": "Creates sustainable development with strong social cohesion",
+            "examples": [
+              "Modern Nordic societies",
+              "Advanced digital democracies"
+            ]
+          },
+          {
+            "position": ["Moderately Free Market", "Moderately System-Centric", "Highly Data-Driven"],
+            "description": "Tech-Driven Development Model",
+            "impact": "Rapid advancement but potential social adaptation challenges",
+            "examples": [
+              "Smart city-state models",
+              "Digital transformation leaders"
+            ]
+          }
+        ]
+      },
+      "descriptions": {
+        "default": "Exploring societal dynamics that balance economic models, governance approaches, and social values.",
+        "example": "A society valuing community welfare, making policy decisions based on empirical data, and encouraging technological advancements."
+      }
     }
   }
 }
