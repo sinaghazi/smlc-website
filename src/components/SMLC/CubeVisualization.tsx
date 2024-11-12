@@ -1,9 +1,12 @@
+// src/components/SMLC/CubeVisualization.tsx
 import React, { useRef, useEffect, useMemo } from 'react';
-import { OrbitControls, Text } from '@react-three/drei';
-import { Canvas, useThree, ThreeEvent } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import { Canvas, useThree } from '@react-three/fiber';
 import { IconState, Position } from './types';
 import { AxisType, AXIS_LABELS } from "../../types/axis.types";
 import * as THREE from 'three';
+import { Html } from '@react-three/drei';
+
 
 interface CubeVisualizationProps {
     primaryIcon: IconState;
@@ -11,109 +14,61 @@ interface CubeVisualizationProps {
     onPositionChange: (isSecondary: boolean, position: Position) => void;
 }
 
-const AxisLabel: React.FC<{
-    position: [number, number, number];
-    text: string;
-    rotation?: [number, number, number];
-}> = ({ position, text, rotation = [0, 0, 0] }) => {
-    return (
-        <Text
-            position={position}
-            rotation={rotation}
-            fontSize={0.15}
-            color="black"
-            anchorX="center"
-            anchorY="middle"
-            characters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!?-_"
-        >
-            {text}
-        </Text>
-    );
-};
-
-const AxisLabels: React.FC<{ axisType: AxisType }> = ({ axisType }) => {
-    const labels = AXIS_LABELS[axisType];
-    const positions: Array<{
-        position: [number, number, number];
-        text: string;
-        rotation?: [number, number, number];
-    }> = useMemo(() => [
-        // X-axis
-        {
-            position: [-1.2, 0, 0],
-            text: labels.x.split(' vs. ')[0]
-        },
-        {
-            position: [1.2, 0, 0],
-            text: labels.x.split(' vs. ')[1]
-        },
-        // Y-axis
-        {
-            position: [0, 1.2, 0],
-            text: labels.y.split(' vs. ')[1]
-        },
-        {
-            position: [0, -1.2, 0],
-            text: labels.y.split(' vs. ')[0]
-        },
-        // Z-axis
-        {
-            position: [0, 0, 1.2],
-            text: labels.z.split(' vs. ')[1],
-            rotation: [0, Math.PI / 2, 0]
-        },
-        {
-            position: [0, 0, -1.2],
-            text: labels.z.split(' vs. ')[0],
-            rotation: [0, Math.PI / 2, 0]
-        }
-    ], [labels]);
-
-    return (
-        <>
-            {positions.map((props, index) => (
-                <AxisLabel key={index} {...props} />
-            ))}
-        </>
-    );
-};
-
 const IconMesh: React.FC<{
     position: Position;
     color: string;
     axisType: AxisType;
 }> = ({ position, color, axisType }) => {
     const meshRef = useRef<THREE.Mesh>(null);
-    const material = useMemo(() => new THREE.MeshStandardMaterial({
-        color,
-        metalness: 0.1,
-        roughness: 0.5
-    }), [color]);
 
-    const getGeometry = (type: AxisType) => {
-        switch (type) {
+    const geometry = useMemo(() => {
+        switch (axisType) {
             case AxisType.PERSONAL:
-                return <sphereGeometry args={[0.1, 32, 32]} />;
+                return new THREE.SphereGeometry(0.1, 32, 32);
             case AxisType.ORGANIZATIONAL:
-                return <boxGeometry args={[0.2, 0.2, 0.2]} />;
+                return new THREE.BoxGeometry(0.2, 0.2, 0.2);
             case AxisType.SOCIETAL:
-                return <coneGeometry args={[0.1, 0.2, 32]} />;
+                return new THREE.ConeGeometry(0.1, 0.2, 32);
             default:
-                return <sphereGeometry args={[0.1, 32, 32]} />;
+                return new THREE.SphereGeometry(0.1, 32, 32);
         }
-    };
+    }, [axisType]);
 
     return (
         <mesh
             ref={meshRef}
             position={[position.x, position.y, position.z]}
-            onClick={(e: ThreeEvent<MouseEvent>) => {
-                e.stopPropagation();
-            }}
+            geometry={geometry}
         >
-            {getGeometry(axisType)}
-            <primitive object={material} attach="material" />
+            <meshStandardMaterial color={color} metalness={0.1} roughness={0.5} />
         </mesh>
+    );
+};
+
+// Create a new component for the axis labels
+const AxisLabel: React.FC<{
+    position: [number, number, number];
+    text: string;
+}> = ({ position, text }) => {
+
+    return (
+        <Html
+            position={position}
+            center
+            style={{
+                transform: 'translate3d(-50%, -50%, 0)',
+                background: 'white',
+                padding: '2px 4px',
+                borderRadius: '4px',
+                fontSize: '12px',
+                whiteSpace: 'nowrap',
+                opacity: 0.9,
+                pointerEvents: 'none',
+            }}
+
+        >
+            <div className="text-gray-900 font-medium">{text}</div>
+        </Html>
     );
 };
 
@@ -122,7 +77,23 @@ const CubeObject: React.FC<{
     primaryIcon: IconState;
     secondaryIcon: IconState;
 }> = ({ primaryIcon, secondaryIcon }) => {
+
     const meshRef = useRef<THREE.Mesh>(null);
+
+    const axisLabels = useMemo(() => {
+        const labels = AXIS_LABELS[primaryIcon.axisType];
+        return [
+            // X-axis
+            { position: [-1.5, 0, 0] as [number, number, number], text: labels.x.split(' vs. ')[0] },
+            { position: [1.5, 0, 0] as [number, number, number], text: labels.x.split(' vs. ')[1] },
+            // Y-axis
+            { position: [0, 1.5, 0] as [number, number, number], text: labels.y.split(' vs. ')[1] },
+            { position: [0, -1.5, 0] as [number, number, number], text: labels.y.split(' vs. ')[0] },
+            // Z-axis
+            { position: [0, 0, 1.5] as [number, number, number], text: labels.z.split(' vs. ')[1] },
+            { position: [0, 0, -1.5] as [number, number, number], text: labels.z.split(' vs. ')[0] },
+        ];
+    }, [primaryIcon.axisType]);
 
     const [geometry, edges, transparentMaterial, lineMaterial] = useMemo(() => {
         const geo = new THREE.BoxGeometry(2, 2, 2);
@@ -164,18 +135,27 @@ const CubeObject: React.FC<{
                     return (
                         <line key={color}>
                             <bufferGeometry>
-                                <float32BufferAttribute
+                                <bufferAttribute
                                     attach="attributes-position"
-                                    args={[positions, 3]}
+                                    array={positions}
+                                    count={positions.length / 3}
+                                    itemSize={3}
                                 />
                             </bufferGeometry>
                             <lineBasicMaterial color={color} linewidth={2} />
                         </line>
                     );
                 })}
-            </group>
 
-            <AxisLabels axisType={primaryIcon.axisType} />
+
+            </group>
+            {axisLabels.map((label, index) => (
+                <AxisLabel
+                    key={index}
+                    position={label.position}
+                    text={label.text}
+                />
+            ))}
 
             {primaryIcon.active && (
                 <IconMesh
@@ -205,8 +185,6 @@ const Scene: React.FC<{
     useEffect(() => {
         camera.position.set(5, 5, 5);
         camera.lookAt(0, 0, 0);
-
-        gl.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         gl.setClearColor('#ffffff', 1);
     }, [camera, gl]);
 
@@ -221,7 +199,7 @@ const Scene: React.FC<{
             <OrbitControls
                 enablePan={false}
                 enableZoom={true}
-                maxDistance={10}
+                maxDistance={12}
                 minDistance={3}
                 enableDamping
                 dampingFactor={0.05}
