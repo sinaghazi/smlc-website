@@ -1,0 +1,55 @@
+/* Primary (Red) Slider */
+.slider-primary {
+    @apply w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
+}
+
+.slider-primary::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #ef4444;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-primary::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #ef4444;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.slider-primary:focus {
+    outline: none;
+}
+
+/* Secondary (Blue) Slider */
+.slider-secondary {
+    @apply w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
+}
+
+.slider-secondary::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #3b82f6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-secondary::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #3b82f6;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.slider-secondary:focus {
+    outline: none;
+}

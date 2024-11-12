@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for 3D canvas */
+.canvas-container {
+    @apply relative w-full;
+}
+
+/* Square aspect ratio container */
+.canvas-container::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+.canvas-container canvas {
+    @apply absolute inset-0 w-full h-full;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+}

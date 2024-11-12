@@ -1,8 +1,15 @@
 name: smlc-website
 services:
   - name: web
-    environment_slug: static-sites      # Set the environment to static site
-    source_dir: dist                    # Serve files from the 'dist' directory
+    environment_slug: static-sites
+    source_dir: dist
+    build_command: ./build.sh
+    output_dir: dist
     routes:
       - path: /
-        preserve_path_prefix: true      # Ensures the root path is preserved
+        preserve_path_prefix: true
+    envs:
+      - key: NODE_VERSION
+        value: 20
+    static_sites_dev_server:
+      command: npm run preview
