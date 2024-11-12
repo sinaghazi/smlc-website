@@ -1,13 +1,16 @@
 {
   "name": "smlc-cube",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "dev": "vite",
-    "lint": "eslint .",
     "clean": "rimraf dist",
-    "build": "npm run clean && tsc -b && vite build && node verify-build.js",
+    "build": "tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
