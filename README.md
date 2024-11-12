@@ -1,111 +1,162 @@
 # Sina's Multidimensional Leadership Cube (SMLC)
 
-A powerful 3D visualization tool for understanding leadership dimensions across personal, organizational, and societal levels.
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6.3-blue.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.14-blue.svg)](https://tailwindcss.com/)
 
-## 🚀 Features
+## Overview
 
-- Interactive 3D cube visualization using Three.js and React Three Fiber
-- Real-time position tracking and comparison
-- Multi-dimensional analysis across three leadership levels
-- Responsive design with Tailwind CSS
-- Guidelines and insights based on position analysis
-- Export and sharing capabilities
+SMLC is an interactive framework designed to visualize and analyze leadership dynamics across personal, organizational, and societal levels. Through a three-dimensional cube interface, users can explore different leadership dimensions and understand their relationships.
 
-## 🛠 Tech Stack
+## Features
 
-- **Framework:** React 18+ with TypeScript
-- **3D Rendering:** Three.js with React Three Fiber
-- **Styling:** Tailwind CSS
-- **State Management:** React Hooks
-- **3D Controls:** React Three Drei
-- **Build Tool:** Vite
-- **Component Library:** Shadcn/ui
+- **3D Visualization**: Interactive cube representation using Three.js
+- **Multi-level Analysis**: Personal, organizational, and societal perspectives
+- **Position Mapping**: Detailed examples and insights for different positions
+- **Comparison Tools**: Analyze differences between leadership styles
+- **Responsive Design**: Optimized for desktop and mobile devices
 
-## 📦 Installation
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v20.0.0 or higher)
+- npm (v10.0.0 or higher)
+
+### Installation
 
 1. Clone the repository:
-```bash
-git clone https://github.com/sinaghazi/smlc.git
-cd smlc
-```
+   ```bash
+   git clone https://github.com/sinaghazi/smlc-website.git
+   cd smlc-website
+   ```
 
 2. Install dependencies:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. Start the development server:
-```bash
-npm run dev
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+### Project Structure
+
+```
+smlc-website/
+├── src/
+│   ├── components/         # React components
+│   ├── types/             # TypeScript type definitions
+│   ├── data/              # Data mappings and constants
+│   ├── utils/             # Utility functions
+│   └── assets/            # Static assets
+├── public/                # Public assets
+└── dist/                  # Production build output
 ```
 
-## 🏗 Project Structure
+## Usage
 
-```
-src/
-├── components/
-│   ├── SMLC/
-│   │   ├── CubeVisualization.tsx
-│   │   ├── ControlPanel.tsx
-│   │   ├── GuidelinesModal.tsx
-│   │   └── SMLCContainer.tsx
-│   └── ui/
-├── types/
-│   ├── axis.types.ts
-│   └── cube.types.ts
-├── constants/
-│   ├── colors.constants.ts
-│   └── cube.constants.ts
-└── App.tsx
-```
+### Basic Navigation
 
-## 🎮 Usage
+1. Select the desired level (Personal, Organizational, or Societal)
+2. Adjust the position using the control panel sliders
+3. Add a comparison point to analyze differences
+4. View detailed examples and insights for each position
 
-1. Select a leadership level (Personal, Organizational, or Societal)
-2. Adjust the axis values using the control panel
-3. Add a comparison point (optional)
-4. View the visualization in the 3D cube
-5. Export or share your analysis
+### Advanced Features
 
-## 🔑 Key Components
+- **Position Analysis**: Understand the characteristics of specific positions
+- **Comparison Mode**: Compare different leadership styles
+- **Export Options**: Save and share your analysis
+- **Interactive Learning**: Explore real-world examples
 
-- **CubeVisualization**: Handles the 3D rendering and interaction
-- **ControlPanel**: Manages user input and axis controls
-- **GuidelinesModal**: Provides analysis and insights
-- **SMLCContainer**: Main container component orchestrating the application
+## Contributing
 
-## 🤝 Contributing
+We welcome contributions! Please follow these steps:
 
 1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/AmazingFeature`
-3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
-4. Push to the branch: `git push origin feature/AmazingFeature`
-5. Open a Pull Request
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "feat: add some feature"
+   ```
+4. Push to your fork:
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+5. Create a Pull Request
 
-## 📄 License
+## Development
 
-This project is licensed under the CC BY 4.0 License - see the [LICENSE](LICENSE) file for details.
+### Commands
 
-## 🙏 Acknowledgments
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run preview`: Preview production build
+- `npm run clean`: Clean build artifacts
 
-- Three.js community
-- React Three Fiber team
-- Tailwind CSS team
+### Code Style
 
-## 🔮 Future Enhancements
+We use:
+- ESLint for code linting
+- Prettier for code formatting
+- TypeScript for type safety
 
-- Enhanced analytics and reporting
-- Additional visualization modes
-- Collaborative features
-- Mobile optimization
-- Integration with external leadership assessment tools
+### Testing
 
-## ⚠️ Requirements
+Run tests with:
+```bash
+npm test
+```
 
-- Node.js 16+
-- Modern browser with WebGL support
-- Minimum screen resolution: 1024x768
+## Performance
 
-## 📞 Contact
+The application is optimized for:
+- Fast initial loading
+- Smooth 3D rendering
+- Efficient data handling
+- Responsive interactions
 
-For questions and support, please contact info@sinaghazi.com or visit [sinaghazi.com](https://sinaghazi.com)
+## Browser Support
+
+- Chrome (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
+- Edge (latest 2 versions)
+
+## Deployment
+
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+
+2. Deploy the `dist` folder to your hosting service
+
+## License
+
+This project is licensed under the Creative Commons Attribution 4.0 International License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+- Three.js for 3D rendering
+- React Three Fiber for React integration
+- TailwindCSS for styling
+- Vite for build tooling
+
+## Contact
+
+Sina Ghazi 
+
+Project Link: [https://github.com/sinaghazi/smlc-website](https://github.com/sinaghazi/smlc-website)
+
