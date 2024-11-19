@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import {
     Book,
     Building2,
@@ -8,7 +9,11 @@ import {
     Lightbulb,
     LucideIcon,
     Target,
-    ArrowRight, CheckCircle2, BarChart3, Play
+    ArrowRight,
+    CheckCircle2,
+    FileText,
+    BarChart3,  // Add this
+    Play       // Add this
 } from 'lucide-react';
 import { HackathonResults } from '../HackathonResults';
 import {Link} from "react-router-dom";
@@ -28,6 +33,113 @@ interface ApplicationCardProps {
     category: string;
 }
 
+interface Resource {
+    title: string;
+    author?: string;
+    description: string;
+    link?: string;
+    type: 'book' | 'article' | 'paper';
+}
+
+interface ResourceCategory {
+    title: string;
+    description: string;
+    resources: Resource[];
+}
+
+const resourceCategories: ResourceCategory[] = [
+    {
+        title: "Leadership and Systems Thinking",
+        description: "Foundation texts on organizational learning and systems thinking",
+        resources: [
+            {
+                title: "The Fifth Discipline",
+                author: "Peter Senge",
+                description: "Explores systems thinking as a core discipline for organizational success",
+                type: "book",
+                link: "https://www.amazon.com/Fifth-Discipline-Practice-Learning-Organization/dp/0385517254"
+            },
+            {
+                title: "Team of Teams",
+                author: "General Stanley McChrystal",
+                description: "Focuses on adaptability and breaking hierarchical silos",
+                type: "book",
+                link: "https://www.amazon.com/Team-Teams-Rules-Engagement-Complex/dp/1591847486"
+            },
+            {
+                title: "A Leader's Framework for Decision Making",
+                author: "David J. Snowden and Mary E. Boone",
+                description: "Harvard Business Review article introducing the Cynefin framework",
+                type: "article",
+                link: "https://hbr.org/2007/11/a-leaders-framework-for-decision-making"
+            }
+        ]
+    },
+    {
+        title: "Cultural and Emotional Intelligence",
+        description: "Resources on cultural dimensions and emotional intelligence in leadership",
+        resources: [
+            {
+                title: "Cultures and Organizations: Software of the Mind",
+                author: "Geert Hofstede et al.",
+                description: "Foundational text on cultural dimensions and their impact",
+                type: "book",
+                link: "https://www.amazon.com/Cultures-Organizations-Software-Mind-Intercultural/dp/0071664181"
+            },
+            {
+                title: "Emotional Intelligence 2.0",
+                author: "Travis Bradberry and Jean Greaves",
+                description: "Actionable insights into emotional intelligence",
+                type: "book",
+                link: "https://www.amazon.com/Emotional-Intelligence-2-0-Travis-Bradberry/dp/0974320625"
+            }
+        ]
+    }
+];
+
+const ResourceCard: React.FC<Resource> = ({ title, author, description, link, type }) => {
+    const TypeIcon = type === 'book' ? Book : type === 'article' ? FileText : FileText;
+
+    return (
+        <div className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow">
+            <div className="flex items-start gap-4">
+                <div className="p-2 bg-indigo-50 rounded">
+                    <TypeIcon className="w-5 h-5 text-indigo-600" />
+                </div>
+                <div className="flex-1">
+                    <h4 className="text-lg font-semibold text-gray-900">{title}</h4>
+                    {author && (
+                        <p className="text-sm text-indigo-600 mt-1">by {author}</p>
+                    )}
+                    <p className="text-gray-600 mt-2 text-sm">{description}</p>
+                    {link && (
+
+                       <a href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm text-indigo-600 hover:text-indigo-700 mt-4"
+                        >
+                        Learn more
+                        <ArrowRight className="w-4 h-4" />
+                        </a>
+                        )}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const ResourceSection: React.FC<{ category: ResourceCategory }> = ({category}) => (
+    <div className="mb-12">
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">{category.title}</h3>
+        <p className="text-gray-600 mb-6">{category.description}</p>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {category.resources.map((resource, index) => (
+                <ResourceCard key={index} {...resource} />
+            ))}
+        </div>
+    </div>
+);
 
 const ExplanationCard: React.FC<ExplanationCardProps> = ({ title, description, icon: Icon }) => (
     <div className="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
@@ -259,13 +371,31 @@ export const SMLCExplanation: React.FC = () => {
                 {/* Content Sections */}
                 <div className="space-y-12">
                     {activeTab === 'overview' && (
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {concepts.map((concept, index: number) => (
-                                <ExplanationCard key={index} {...concept} />
-                            ))}
+                        <div className="space-y-12">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                {concepts.map((concept, index: number) => (
+                                    <ExplanationCard key={index} {...concept} />
+                                ))}
+                            </div>
+
+                            {/* Resources Section */}
+                            <div className="mt-16">
+                                <div className="text-center mb-12">
+                                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                        Recommended Resources
+                                    </h2>
+                                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                                        Explore these carefully curated resources to deepen your understanding of leadership dimensions and organizational dynamics.
+                                    </p>
+                                </div>
+
+                                {resourceCategories.map((category, index) => (
+                                    <ResourceSection key={index} category={category} />
+                                ))}
+                                
+                            </div>
                         </div>
                     )}
-
                     {activeTab === 'levels' && (
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                             {levels.map((level, index: number) => (
