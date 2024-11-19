@@ -12,6 +12,7 @@ import {
     LineChart,
     ArrowRight, CheckCircle2
 } from 'lucide-react';
+import { HackathonResults } from '../HackathonResults';
 
 interface ExplanationCardProps {
     title: string;
@@ -28,12 +29,6 @@ interface ApplicationCardProps {
     category: string;
 }
 
-interface CaseStudyProps {
-    title: string;
-    organization: string;
-    impact: string[];
-    icon: LucideIcon;
-}
 
 const ExplanationCard: React.FC<ExplanationCardProps> = ({ title, description, icon: Icon }) => (
     <div className="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
@@ -156,29 +151,6 @@ export const SMLCExplanation: React.FC = () => {
     ];
 
 
-    const caseStudies = [
-        {
-            title: "First Place of Synergy Hackathon",
-            organization: "LahtiES",
-            impact: [
-                "Target Audience",
-                "Value Proposition",
-                "SMLC mapping"
-            ],
-            icon: Building2
-        },
-        {
-            title: "Second Place of Synergy Hackathon ",
-            organization: "LahtiES",
-            impact: [
-                "Target Audience",
-                "Value Proposition",
-                "SMLC mapping"
-            ],
-            icon: Users
-        }
-    ];
-
     const applications = [
         {
             title: "Leadership Development",
@@ -219,32 +191,7 @@ export const SMLCExplanation: React.FC = () => {
     ];
 
 
-    const CaseStudy: React.FC<CaseStudyProps> = ({
-                                                     title,
-                                                     organization,
-                                                     impact,
-                                                     icon: Icon
-                                                 }) => (
-        <div className="bg-gray-50 rounded-lg p-6 border border-gray-100">
-            <div className="flex items-center gap-4 mb-4">
-                <div className="p-2 bg-indigo-100 rounded-lg">
-                    <Icon className="h-6 w-6 text-indigo-600" />
-                </div>
-                <div>
-                    <h4 className="text-lg font-semibold text-gray-900">{title}</h4>
-                    <p className="text-sm text-indigo-600">{organization}</p>
-                </div>
-            </div>
-            <ul className="space-y-2">
-                {impact.map((item, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                        <ArrowRight className="h-4 w-4 text-indigo-600 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm">{item}</span>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+
 
 // Add these new components after your existing components
     const ApplicationCard: React.FC<ApplicationCardProps> = ({
@@ -372,13 +319,8 @@ export const SMLCExplanation: React.FC = () => {
                             </div>
 
                             {/* Case Studies */}
-                            <div className="mb-12">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-6">Success Stories (Coming on 15.11.2024)</h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    {caseStudies.map((study, index) => (
-                                        <CaseStudy key={index} {...study} />
-                                    ))}
-                                </div>
+                            <div className="mt-12">
+                                <HackathonResults/>
                             </div>
 
                             {/* Call to Action */}
