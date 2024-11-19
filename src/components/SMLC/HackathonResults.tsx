@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Trophy, Star, Video, ArrowRight, Users, Brain, Target } from 'lucide-react';
+import { Trophy, Star, ArrowRight, Users, Brain, Target } from 'lucide-react';
 
 interface TeamScore {
     name: string;
@@ -70,7 +70,7 @@ const teams: TeamScore[] = [
     {
         name: "Hackathon Heroes",
         totalScore: 21.5,
-        videoUrl: "YOUR_YOUTUBE_URL_HERE", // Add the actual URL when available
+        videoUrl: "https://youtu.be/UYebkaXIsb4", // Add the actual URL when available
         scores: {
             innovation: 4,
             technical: 3,
@@ -91,7 +91,7 @@ const teams: TeamScore[] = [
     {
         name: "Team D",
         totalScore: 18,
-        videoUrl: "YOUR_YOUTUBE_URL_HERE", // Add the actual URL when available
+        videoUrl: "https://youtu.be/f8GHp4bT8bU",
         scores: {
             innovation: 3.5,
             technical: 2.5,
@@ -128,30 +128,58 @@ const ScoreCard: React.FC<ScoreCardProps> = ({ label, analysis }) => (
     </div>
 );
 
+interface YouTubeEmbedProps {
+    videoUrl: string;
+}
+
+const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoUrl }) => {
+    const getYouTubeId = (url: string): string => {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+        const match = url.match(regExp);
+        return match?.[2] ?? '';
+    };
+
+    const videoId = getYouTubeId(videoUrl);
+    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+
+    return (
+        <div className="aspect-w-16 aspect-h-9">
+            <iframe
+                src={embedUrl}
+                className="w-full rounded-lg"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+            ></iframe>
+        </div>
+    );
+};
+
+
 const TeamCard: React.FC<{ team: TeamScore }> = ({ team }) => {
     const [showDetails, setShowDetails] = useState(false);
 
     return (
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-4">
-                        <div className="p-3 bg-indigo-100 rounded-lg">
-                            <Trophy className="h-6 w-6 text-indigo-600" />
+                <div className="flex flex-col">
+                    <div className="flex flex-col lg:flex-row items-start justify-between gap-4">
+                        <div className="flex-1">
+                            <div className="flex items-center gap-4 mb-2">
+                                <div className="p-3 bg-indigo-100 rounded-lg">
+                                    <Trophy className="h-6 w-6 text-indigo-600"/>
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-gray-900">{team.name}</h3>
+                                </div>
+                            </div>
+                            <p className="text-gray-600 text-sm mt-2">{team.analysis.innovation}</p>
                         </div>
-                        <div>
-                            <h3 className="text-xl font-bold text-gray-900">{team.name}</h3>
-                        </div>
+                        {team.videoUrl && team.videoUrl !== "YOUR_YOUTUBE_URL_HERE" && (
+                            <div className="w-full lg:w-1/3 flex-shrink-0">
+                                <YouTubeEmbed videoUrl={team.videoUrl}/>
+                            </div>
+                        )}
                     </div>
-                    {team.videoUrl && (
-                        <button
-                            className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
-                            onClick={() => window.open(team.videoUrl, '_blank')}
-                        >
-                            <Video className="h-4 w-4" />
-                            Watch Pitch
-                        </button>
-                    )}
                 </div>
 
                 <button
@@ -159,7 +187,7 @@ const TeamCard: React.FC<{ team: TeamScore }> = ({ team }) => {
                     className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700"
                 >
                     {showDetails ? 'Hide Details' : 'Show Details'}
-                    <ArrowRight className={`h-4 w-4 transform transition-transform ${showDetails ? 'rotate-90' : ''}`} />
+                    <ArrowRight className={`h-4 w-4 transform transition-transform ${showDetails ? 'rotate-90' : ''}`}/>
                 </button>
 
                 {showDetails && (
@@ -210,7 +238,7 @@ export const HackathonResults: React.FC = () => {
 
                 <div className="grid gap-8 mb-12">
                     {teams.map((team, index) => (
-                        <TeamCard key={index} team={team} />
+                        <TeamCard key={index} team={team}/>
                     ))}
                 </div>
 

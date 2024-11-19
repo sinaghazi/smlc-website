@@ -392,7 +392,7 @@ export const SMLCExplanation: React.FC = () => {
                                 {resourceCategories.map((category, index) => (
                                     <ResourceSection key={index} category={category} />
                                 ))}
-                                
+
                             </div>
                         </div>
                     )}
