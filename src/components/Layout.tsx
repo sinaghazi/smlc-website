@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { Book, Home, Trophy, Menu, X } from 'lucide-react';
+import {Book, Home, Trophy, Menu, X, Users, Mail} from 'lucide-react';
 import { Logo } from '@/assets/Logo';
 
 const Layout: React.FC = () => {
@@ -14,7 +14,10 @@ const Layout: React.FC = () => {
     const navigationItems = [
         { path: '/', icon: Home, label: 'Home' },
         { path: '/explanation', icon: Book, label: 'Learn More' },
-        { path: '/challenge', icon: Trophy, label: 'Challenge' }
+        { path: '/challenge', icon: Trophy, label: 'Challenge' },
+        { path: '/teams/assessment', icon: Users, label: 'Team Assessment' },
+        { path: '/contact', icon: Mail, label: 'Contact' }
+
     ];
 
     const toggleMenu = () => {

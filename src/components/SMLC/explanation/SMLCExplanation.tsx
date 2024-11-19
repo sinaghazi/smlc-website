@@ -8,11 +8,10 @@ import {
     Lightbulb,
     LucideIcon,
     Target,
-    Network,
-    LineChart,
-    ArrowRight, CheckCircle2
+    ArrowRight, CheckCircle2, BarChart3, Play
 } from 'lucide-react';
 import { HackathonResults } from '../HackathonResults';
+import {Link} from "react-router-dom";
 
 interface ExplanationCardProps {
     title: string;
@@ -91,7 +90,7 @@ interface Level {
 }
 
 export const SMLCExplanation: React.FC = () => {
-    const [activeTab, setActiveTab] = useState<string>('overview');
+    const [activeTab, setActiveTab] = useState<string>('applications');
 
     const tabs: TabData[] = [
         { id: 'overview', label: 'Overview', icon: Book },
@@ -295,17 +294,16 @@ export const SMLCExplanation: React.FC = () => {
                                 ))}
                             </div>
 
-                            {/* Implementation Steps */}
-                            <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-8 mb-12">
+                            <div className=" text-center bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-8 mb-12">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                                    Implementation Process
+                                    How to apply SMLC in action by team leaders?
                                 </h3>
                                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                                     {[
-                                        { icon: Target, title: "Assess", description: "Evaluate current state" },
-                                        { icon: Network, title: "Plan", description: "Develop strategy" },
-                                        { icon: Users, title: "Implement", description: "Execute changes" },
-                                        { icon: LineChart, title: "Monitor", description: "Track progress" }
+                                        { icon: Users, title: "Team Formation", description: "Listen to your team members and form a real team" },
+                                        { icon: Target, title: "Individual Assessment", description: "Spend quality time and understand every member of your team" },
+                                        { icon: BarChart3, title: "Team Analysis", description: "Put the data together and analyze" },
+                                        { icon: Play, title: "Action Plan", description: "Get recommendations and take real action!" }
                                     ].map((step, index) => (
                                         <div key={index} className="text-center">
                                             <div className="mx-auto w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
@@ -315,6 +313,17 @@ export const SMLCExplanation: React.FC = () => {
                                             <p className="text-sm text-gray-600">{step.description}</p>
                                         </div>
                                     ))}
+
+                                </div>
+                                <div className="mt-12">
+                                <Link
+                                    to="/teams/assessment"
+                                    className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600"
+                                >
+                                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                                        An Example Team Assessment Tool
+                                        <ArrowRight className="w-4 h-4" />
+                                    </button></Link>
                                 </div>
                             </div>
 
@@ -329,12 +338,15 @@ export const SMLCExplanation: React.FC = () => {
                                     Ready to Transform Your Leadership?
                                 </h3>
                                 <p className="text-gray-600 mb-6">
-                                    Start applying SMLC principles in your organization today.
-                                </p>
+                                    Organize a Hackaton! and promote multi-dimensional thinking.
+                                </p> <Link
+                                to="/challenge"
+                                className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600"
+                            >
                                 <button className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
                                     Get Started
                                     <ArrowRight className="w-4 h-4" />
-                                </button>
+                                </button></Link>
                             </div>
                         </div>
                     )}

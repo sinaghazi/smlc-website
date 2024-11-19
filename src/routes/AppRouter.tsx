@@ -4,6 +4,8 @@ import HomePage from '../components/HomePage';
 import { SMLCExplanation } from '../components/SMLC/explanation/SMLCExplanation';
 import ChallengePage from '../components/hackathon/ChallengePage';
 import Layout from '../components/Layout';
+import TeamAssessment from '../components/teams/TeamAssessment';
+import ContactPage from '../components/contact/ContactPage';
 
 const AppRouter: React.FC = () => {
     return (
@@ -13,6 +15,8 @@ const AppRouter: React.FC = () => {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/explanation" element={<SMLCExplanation />} />
                     <Route path="/challenge" element={<ChallengePage />} />
+                    <Route path="/teams/assessment" element={<TeamAssessment />} />
+                    <Route path="/contact" element={<ContactPage />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Route>
             </Routes>
