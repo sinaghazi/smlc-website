@@ -65,17 +65,58 @@ const teams: TeamScore[] = [
             communication: "Delivery was confident and professional, with excellent articulation of technical and practical aspects.",
             alignment: "Fully aligned with SMLC principles, addressing personal, organizational, and societal levels. Offers tools for actionable insights and leadership adaptability."
         }
+    },
+    // Add these entries to the teams array
+    {
+        name: "Hackathon Heroes",
+        totalScore: 21.5,
+        videoUrl: "YOUR_YOUTUBE_URL_HERE", // Add the actual URL when available
+        scores: {
+            innovation: 4,
+            technical: 3,
+            feasibility: 3.5,
+            presentation: 2.5,
+            communication: 2.5,
+            alignment: 2.5
+        },
+        analysis: {
+            innovation: "The leadership training program is practical but less novel compared to other solutions. Focus on situational adaptability and cross-cultural communication is valuable but not groundbreaking.",
+            technical: "Basic structure with situational exercises and leadership assessments, but lacks advanced technological features or detailed data analysis.",
+            feasibility: "The program is feasible for small-scale training but less scalable due to reliance on facilitated workshops and physical sessions.",
+            presentation: "Practical delivery but less engaging compared to others. Lacked captivating visual elements or advanced storytelling to maintain interest.",
+            communication: "Professional delivery but lacked fluidity and full engagement in articulating key points.",
+            alignment: "Aligned with SMLC at the personal level but less emphasis on organizational and societal levels. The approach primarily addresses individual leadership improvement."
+        }
+    },
+    {
+        name: "Team D",
+        totalScore: 18,
+        videoUrl: "YOUR_YOUTUBE_URL_HERE", // Add the actual URL when available
+        scores: {
+            innovation: 3.5,
+            technical: 2.5,
+            feasibility: 3,
+            presentation: 2,
+            communication: 2,
+            alignment: 2
+        },
+        analysis: {
+            innovation: "The classification system using colors (Red, Blue, Green) is creative but lacks technological sophistication. The focus on workshops and psychological profiling is resource-heavy.",
+            technical: "Relies on manual interventions and lacks detailed technical implementation. Minimal use of technology limits its scope for data-driven decision-making.",
+            feasibility: "Practical in smaller-scale applications but resource-intensive due to reliance on psychologists and workshops. Scalability is limited.",
+            presentation: "Presentation lacked clarity and structured storytelling. Minimal visuals made the concept harder to grasp and less engaging for the audience.",
+            communication: "Inconsistent delivery, lacking clarity and engagement, which impacted the overall understanding of the solution.",
+            alignment: "Moderately aligned with SMLC principles, focusing primarily on individual-level collaboration. Lacks emphasis on broader organizational or societal integration."
+        }
     }
 ];
 
 interface ScoreCardProps {
     label: string;
-    score: number;
-    maxScore: number;
     analysis: string;
 }
 
-const ScoreCard: React.FC<ScoreCardProps> = ({ label, score, maxScore, analysis }) => (
+const ScoreCard: React.FC<ScoreCardProps> = ({ label, analysis }) => (
     <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
         <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-900">{label}</h3>
@@ -125,38 +166,26 @@ const TeamCard: React.FC<{ team: TeamScore }> = ({ team }) => {
                     <div className="mt-6 grid gap-4">
                         <ScoreCard
                             label="Innovation"
-                            score={team.scores.innovation}
-                            maxScore={5}
                             analysis={team.analysis.innovation}
                         />
                         <ScoreCard
                             label="Technical Analysis"
-                            score={team.scores.technical}
-                            maxScore={4}
                             analysis={team.analysis.technical}
                         />
                         <ScoreCard
                             label="Feasibility"
-                            score={team.scores.feasibility}
-                            maxScore={4}
                             analysis={team.analysis.feasibility}
                         />
                         <ScoreCard
                             label="Presentation"
-                            score={team.scores.presentation}
-                            maxScore={3}
                             analysis={team.analysis.presentation}
                         />
                         <ScoreCard
                             label="Communication"
-                            score={team.scores.communication}
-                            maxScore={3}
                             analysis={team.analysis.communication}
                         />
                         <ScoreCard
                             label="SMLC Alignment"
-                            score={team.scores.alignment}
-                            maxScore={3}
                             analysis={team.analysis.alignment}
                         />
                     </div>
