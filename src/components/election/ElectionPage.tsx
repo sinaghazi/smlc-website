@@ -322,7 +322,7 @@ const ElectionPage: React.FC = () => {
               <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-xl">
                 <iframe 
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/m3JV8LMH9vw?cc_load_policy=1&cc_lang_pref=en" 
+                  src={`https://www.youtube.com/embed/m3JV8LMH9vw?cc_load_policy=1&cc_lang_pref=${lang}`} 
                   title="Sina Ghazi – Candidate 137 Introduction and Vision" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                   allowFullScreen
