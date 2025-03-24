@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import sinaElectionPhoto from '../../assets/sinaghazi-election-photo.jpg';
-import { ChevronDown, ChevronUp, X, Home, BookOpen, MessageCircle, Vote, Award, Users, Briefcase, Globe, Shield, FileText, BarChart2, Zap, Heart, Compass } from 'lucide-react';
+import { ChevronDown, ChevronUp, Home, BookOpen, MessageCircle, Vote, Award, Users, Briefcase, Globe, FileText, BarChart2, Zap, Compass } from 'lucide-react';
 import { getTranslations, SupportedLanguage } from '../../translations';
 
 // Define the Q&A item type
