@@ -6,6 +6,7 @@ import ChallengePage from '../components/hackathon/ChallengePage';
 import Layout from '../components/Layout';
 import TeamAssessment from '../components/teams/TeamAssessment';
 import ContactPage from '../components/contact/ContactPage';
+import CampaignPage from '../components/campaign/CampaignPage';
 
 const AppRouter: React.FC = () => {
     return (
@@ -17,6 +18,7 @@ const AppRouter: React.FC = () => {
                     <Route path="/challenge" element={<ChallengePage />} />
                     <Route path="/teams/assessment" element={<TeamAssessment />} />
                     <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/campaign" element={<CampaignPage />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Route>
             </Routes>

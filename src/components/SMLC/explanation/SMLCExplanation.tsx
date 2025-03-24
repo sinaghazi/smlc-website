@@ -103,21 +103,21 @@ const ResourceCard: React.FC<Resource> = ({ title, author, description, link, ty
     return (
         <div className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow">
             <div className="flex items-start gap-4">
-                <div className="p-2 bg-indigo-50 rounded">
-                    <TypeIcon className="w-5 h-5 text-indigo-600" />
+                <div className="p-2 bg-kokoomus-lightBlue rounded">
+                    <TypeIcon className="w-5 h-5 text-kokoomus-blue" />
                 </div>
                 <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-gray-900">{title}</h4>
+                    <h4 className="text-lg font-barlowSemi text-kokoomus-navy">{title}</h4>
                     {author && (
-                        <p className="text-sm text-indigo-600 mt-1">by {author}</p>
+                        <p className="text-sm text-kokoomus-blue mt-1 font-sourceSerif">by {author}</p>
                     )}
-                    <p className="text-gray-600 mt-2 text-sm">{description}</p>
+                    <p className="text-gray-600 mt-2 text-sm font-sourceSerif">{description}</p>
                     {link && (
 
                        <a href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm text-indigo-600 hover:text-indigo-700 mt-4"
+                        className="inline-flex items-center gap-2 text-sm font-barlowSemi uppercase text-kokoomus-blue hover:text-kokoomus-navy mt-4"
                         >
                         Learn more
                         <ArrowRight className="w-4 h-4" />
@@ -131,8 +131,8 @@ const ResourceCard: React.FC<Resource> = ({ title, author, description, link, ty
 
 const ResourceSection: React.FC<{ category: ResourceCategory }> = ({category}) => (
     <div className="mb-12">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">{category.title}</h3>
-        <p className="text-gray-600 mb-6">{category.description}</p>
+        <h3 className="text-2xl font-barlow italic uppercase font-bold text-kokoomus-navy mb-2">{category.title}</h3>
+        <p className="text-gray-600 mb-6 font-sourceSerif">{category.description}</p>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {category.resources.map((resource, index) => (
                 <ResourceCard key={index} {...resource} />
@@ -144,12 +144,12 @@ const ResourceSection: React.FC<{ category: ResourceCategory }> = ({category}) =
 const ExplanationCard: React.FC<ExplanationCardProps> = ({ title, description, icon: Icon }) => (
     <div className="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
         <div className="flex items-center gap-4 mb-4">
-            <div className="p-3 bg-indigo-100 rounded-lg">
-                <Icon className="w-6 h-6 text-indigo-600" />
+            <div className="p-3 bg-kokoomus-lightBlue rounded-lg">
+                <Icon className="w-6 h-6 text-kokoomus-blue" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+            <h3 className="text-lg font-barlowSemi uppercase text-kokoomus-navy">{title}</h3>
         </div>
-        <p className="text-gray-600">{description}</p>
+        <p className="text-gray-600 font-sourceSerif">{description}</p>
     </div>
 );
 
@@ -164,15 +164,15 @@ const LevelCard: React.FC<LevelCardProps> = ({ title, description, examples, ico
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="p-6">
             <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-indigo-100 rounded-lg">
-                    <Icon className="w-6 h-6 text-indigo-600" />
+                <div className="p-3 bg-kokoomus-lightBlue rounded-lg">
+                    <Icon className="w-6 h-6 text-kokoomus-blue" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+                <h3 className="text-xl font-barlowSemi uppercase text-kokoomus-navy">{title}</h3>
             </div>
-            <p className="text-gray-600 mb-4">{description}</p>
+            <p className="text-gray-600 mb-4 font-sourceSerif">{description}</p>
             <div className="space-y-2">
-                <h4 className="font-medium text-gray-900">Examples:</h4>
-                <ul className="list-disc list-inside text-gray-600">
+                <h4 className="font-barlowSemi uppercase text-kokoomus-navy">Examples:</h4>
+                <ul className="list-disc list-inside text-gray-600 font-sourceSerif">
                     {examples.map((example: string, index: number) => (
                         <li key={index}>{example}</li>
                     ))}
@@ -301,9 +301,6 @@ export const SMLCExplanation: React.FC = () => {
         }
     ];
 
-
-
-
 // Add these new components after your existing components
     const ApplicationCard: React.FC<ApplicationCardProps> = ({
                                                                  title,
@@ -314,20 +311,20 @@ export const SMLCExplanation: React.FC = () => {
                                                              }) => (
         <div className="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
             <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-indigo-100 rounded-lg">
-                    <Icon className="w-6 h-6 text-indigo-600" />
+                <div className="p-3 bg-kokoomus-lightBlue rounded-lg">
+                    <Icon className="w-6 h-6 text-kokoomus-blue" />
                 </div>
                 <div>
-                    <span className="text-sm text-indigo-600">{category}</span>
-                    <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+                    <span className="text-sm text-kokoomus-blue font-barlowSemi uppercase">{category}</span>
+                    <h3 className="text-lg font-barlowSemi uppercase text-kokoomus-navy">{title}</h3>
                 </div>
             </div>
-            <p className="text-gray-600 mb-4">{description}</p>
+            <p className="text-gray-600 mb-4 font-sourceSerif">{description}</p>
             <ul className="space-y-2">
                 {examples.map((example, index) => (
                     <li key={index} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700">{example}</span>
+                        <CheckCircle2 className="h-5 w-5 text-kokoomus-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700 font-sourceSerif">{example}</span>
                     </li>
                 ))}
             </ul>
@@ -336,29 +333,29 @@ export const SMLCExplanation: React.FC = () => {
 
 
     return (
-        <div className="min-h-screen bg-gray-50 py-12">
+        <div className="min-h-screen bg-kokoomus-beige py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Hero Section */}
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                    <h1 className="text-4xl font-barlow italic uppercase font-bold text-kokoomus-navy mb-4">
                         Understanding SMLC
                     </h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sourceSerif">
                         Explore Sina's Multidimensional Leadership Cube and discover how it can transform your understanding of leadership dynamics.
                     </p>
                 </div>
 
                 {/* Navigation Tabs */}
                 <div className="flex justify-center mb-12">
-                    <div className="inline-flex rounded-lg bg-gray-100 p-1">
+                    <div className="inline-flex rounded-lg bg-white p-1">
                         {tabs.map((tab) => (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
-                                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+                                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all font-barlowSemi uppercase ${
                                     activeTab === tab.id
-                                        ? 'bg-white shadow-sm text-indigo-600'
-                                        : 'text-gray-600 hover:text-gray-900'
+                                        ? 'bg-kokoomus-lightBlue shadow-sm text-kokoomus-navy'
+                                        : 'text-gray-600 hover:text-kokoomus-navy'
                                 }`}
                             >
                                 <tab.icon className="w-4 h-4" />
@@ -381,10 +378,10 @@ export const SMLCExplanation: React.FC = () => {
                             {/* Resources Section */}
                             <div className="mt-16">
                                 <div className="text-center mb-12">
-                                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                    <h2 className="text-3xl font-barlow italic uppercase font-bold text-kokoomus-navy mb-4">
                                         Recommended Resources
                                     </h2>
-                                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                                    <p className="text-lg text-gray-600 max-w-3xl mx-auto font-sourceSerif">
                                         Explore these carefully curated resources to deepen your understanding of leadership dimensions and organizational dynamics.
                                     </p>
                                 </div>
@@ -408,10 +405,10 @@ export const SMLCExplanation: React.FC = () => {
                         <div className="bg-white rounded-lg shadow-lg p-8">
                             {/* Applications Introduction */}
                             <div className="text-center mb-12">
-                                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                <h2 className="text-3xl font-barlow italic uppercase font-bold text-kokoomus-navy mb-4">
                                     Practical Applications
                                 </h2>
-                                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                                <p className="text-lg text-gray-600 max-w-3xl mx-auto font-sourceSerif">
                                     Discover how SMLC is being applied across different contexts to transform
                                     leadership and organizational dynamics.
                                 </p>
@@ -424,8 +421,8 @@ export const SMLCExplanation: React.FC = () => {
                                 ))}
                             </div>
 
-                            <div className=" text-center bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-8 mb-12">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                            <div className="text-center bg-gradient-to-r from-kokoomus-lightBlue to-kokoomus-beige rounded-xl p-8 mb-12">
+                                <h3 className="text-2xl font-barlow italic uppercase font-bold text-kokoomus-navy mb-8 text-center">
                                     How to apply SMLC in action by team leaders?
                                 </h3>
                                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -437,10 +434,10 @@ export const SMLCExplanation: React.FC = () => {
                                     ].map((step, index) => (
                                         <div key={index} className="text-center">
                                             <div className="mx-auto w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
-                                                <step.icon className="h-6 w-6 text-indigo-600" />
+                                                <step.icon className="h-6 w-6 text-kokoomus-blue" />
                                             </div>
-                                            <h4 className="font-semibold text-gray-900 mb-2">{step.title}</h4>
-                                            <p className="text-sm text-gray-600">{step.description}</p>
+                                            <h4 className="font-barlowSemi uppercase text-kokoomus-navy mb-2">{step.title}</h4>
+                                            <p className="text-sm text-gray-600 font-sourceSerif">{step.description}</p>
                                         </div>
                                     ))}
 
@@ -448,9 +445,9 @@ export const SMLCExplanation: React.FC = () => {
                                 <div className="mt-12">
                                 <Link
                                     to="/teams/assessment"
-                                    className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600"
+                                    className="text-sm font-barlowSemi uppercase leading-6 text-kokoomus-navy hover:text-kokoomus-blue"
                                 >
-                                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-kokoomus-blue text-white rounded-lg hover:bg-kokoomus-navy transition-colors font-barlowSemi uppercase">
                                         An Example Team Assessment Tool
                                         <ArrowRight className="w-4 h-4" />
                                     </button></Link>
@@ -463,17 +460,17 @@ export const SMLCExplanation: React.FC = () => {
                             </div>
 
                             {/* Call to Action */}
-                            <div className="text-center bg-indigo-50 rounded-xl p-8">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                            <div className="text-center bg-kokoomus-lightBlue rounded-xl p-8">
+                                <h3 className="text-2xl font-barlow italic uppercase font-bold text-kokoomus-navy mb-4">
                                     Ready to Transform Your Leadership?
                                 </h3>
-                                <p className="text-gray-600 mb-6">
+                                <p className="text-gray-600 mb-6 font-sourceSerif">
                                     Organize a Hackaton! and promote multi-dimensional thinking.
                                 </p> <Link
                                 to="/challenge"
-                                className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600"
+                                className="text-sm font-barlowSemi uppercase leading-6 text-kokoomus-navy hover:text-kokoomus-blue"
                             >
-                                <button className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                                <button className="inline-flex items-center gap-2 px-6 py-3 bg-kokoomus-blue text-white rounded-lg hover:bg-kokoomus-navy transition-colors font-barlowSemi uppercase">
                                     Get Started
                                     <ArrowRight className="w-4 h-4" />
                                 </button></Link>

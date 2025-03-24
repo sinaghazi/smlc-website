@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import {Book, Home, Trophy, Menu, X, Users, Mail} from 'lucide-react';
+import {Book, Home, Trophy, Menu, X, Users, Mail, Vote} from 'lucide-react';
 import { Logo } from '@/assets/Logo';
 
 const Layout: React.FC = () => {
@@ -16,8 +16,8 @@ const Layout: React.FC = () => {
         { path: '/explanation', icon: Book, label: 'Learn More' },
         { path: '/challenge', icon: Trophy, label: 'Challenge' },
         { path: '/teams/assessment', icon: Users, label: 'Team Assessment' },
-        { path: '/contact', icon: Mail, label: 'Contact' }
-
+        { path: '/contact', icon: Mail, label: 'Contact' },
+        { path: '/campaign', icon: Vote, label: 'Campaign 2025' }
     ];
 
     const toggleMenu = () => {
@@ -25,15 +25,15 @@ const Layout: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-kokoomus-beige">
             {/* Navigation */}
-            <nav className="bg-white shadow-sm sticky top-0 z-50">
+            <nav className="bg-kokoomus-navy shadow-sm sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
                         <div className="flex justify-between w-full">
                             {/* Logo */}
                             <Link to="/" className="flex-shrink-0 flex items-center">
-                                <Logo size="md" />
+                                <Logo size="md" inverted={true} />
                             </Link>
 
                             {/* Desktop Navigation */}
@@ -42,10 +42,10 @@ const Layout: React.FC = () => {
                                     <Link
                                         key={path}
                                         to={path}
-                                        className={`inline-flex items-center gap-2 px-1 pt-1 border-b-2 text-sm font-medium ${
+                                        className={`inline-flex items-center gap-2 px-1 pt-1 border-b-2 text-sm font-barlowSemi uppercase ${
                                             isActive(path)
-                                                ? 'border-orange-500 text-gray-900'
-                                                : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                                                ? 'border-kokoomus-blue text-white'
+                                                : 'border-transparent text-kokoomus-lightBlue hover:border-kokoomus-lightBlue hover:text-white'
                                         }`}
                                     >
                                         <Icon className="w-4 h-4" />
@@ -53,45 +53,43 @@ const Layout: React.FC = () => {
                                     </Link>
                                 ))}
                             </div>
+                        </div>
 
-                            {/* Mobile menu button */}
-                            <div className="flex items-center sm:hidden">
-                                <button
-                                    onClick={toggleMenu}
-                                    className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500"
-                                >
-                                    <span className="sr-only">Open main menu</span>
-                                    {isMenuOpen ? (
-                                        <X className="block h-6 w-6" />
-                                    ) : (
-                                        <Menu className="block h-6 w-6" />
-                                    )}
-                                </button>
-                            </div>
+                        {/* Mobile menu button */}
+                        <div className="flex items-center sm:hidden">
+                            <button
+                                onClick={toggleMenu}
+                                className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-kokoomus-blue focus:outline-none"
+                            >
+                                <span className="sr-only">Open main menu</span>
+                                {isMenuOpen ? (
+                                    <X className="block h-6 w-6" aria-hidden="true" />
+                                ) : (
+                                    <Menu className="block h-6 w-6" aria-hidden="true" />
+                                )}
+                            </button>
                         </div>
                     </div>
+                </div>
 
-                    {/* Mobile menu */}
-                    <div className={`${isMenuOpen ? 'block' : 'hidden'} sm:hidden`}>
-                        <div className="pt-2 pb-3 space-y-1">
-                            {navigationItems.map(({ path, icon: Icon, label }) => (
-                                <Link
-                                    key={path}
-                                    to={path}
-                                    className={`${
-                                        isActive(path)
-                                            ? 'bg-orange-50 border-orange-500 text-orange-700'
-                                            : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700'
-                                    } block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition-colors duration-150`}
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    <div className="flex items-center gap-2">
-                                        <Icon className="w-4 h-4" />
-                                        {label}
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
+                {/* Mobile Menu */}
+                <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
+                    <div className="pt-2 pb-3 space-y-1">
+                        {navigationItems.map(({ path, icon: Icon, label }) => (
+                            <Link
+                                key={path}
+                                to={path}
+                                className={`flex items-center gap-3 px-3 py-2 text-base font-barlowSemi uppercase ${
+                                    isActive(path)
+                                        ? 'bg-kokoomus-blue text-white'
+                                        : 'text-white hover:bg-kokoomus-lightBlue hover:text-kokoomus-navy'
+                                }`}
+                                onClick={toggleMenu}
+                            >
+                                <Icon className="w-5 h-5" />
+                                {label}
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </nav>
@@ -102,22 +100,26 @@ const Layout: React.FC = () => {
             </main>
 
             {/* Footer */}
-            <footer className="bg-white">
-                <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-                    <div className="mt-8 md:order-1 md:mt-0">
-                        <p className="text-center text-sm leading-5 text-gray-500">
-                            Sina's Multidimensional Leadership Cube (SMLC) is licensed under the{' '}
-                            <a
-                                href="https://creativecommons.org/licenses/by/4.0/"
-                                className="text-indigo-600 hover:text-indigo-500 hover:underline"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                CC BY 4.0
-                            </a>{' '}
-                            license. You are free to share and adapt the material for any purpose, even commercially, as
-                            long as appropriate credit is given.
-                        </p>
+            <footer className="bg-kokoomus-navy text-white py-12">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col md:flex-row justify-between items-center">
+                        <div className="mb-6 md:mb-0">
+                            <Logo size="md" inverted={true} />
+                            <p className="mt-2 text-sm text-kokoomus-lightBlue font-sourceSerif">
+                                &copy; {new Date().getFullYear()} Sina's Multidimensional Leadership Cube
+                            </p>
+                        </div>
+                        <div className="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
+                            {navigationItems.map(({ path, label }) => (
+                                <Link
+                                    key={path}
+                                    to={path}
+                                    className="text-sm text-kokoomus-lightBlue hover:text-white font-barlowSemi uppercase"
+                                >
+                                    {label}
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </footer>

@@ -1,4 +1,4 @@
-import { PositionMapping, PersonaExample, CompanyExample, CountryExample } from './positionMapping';
+import { PositionMapping, PersonaExample, CompanyExample, CountryExample } from './types';
 
 // Define the possible values for each axis
 const axisValues = [-1, -0.5, 0, 0.5, 1];

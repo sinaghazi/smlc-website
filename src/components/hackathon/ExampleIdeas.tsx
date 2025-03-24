@@ -88,13 +88,13 @@ export const ExampleIdeas: React.FC = () => {
     });
 
     return (
-        <div className="py-24 bg-gray-50">
+        <div className="py-24 bg-kokoomus-beige">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:text-center mb-16">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    <h2 className="text-3xl font-barlow italic uppercase font-bold text-kokoomus-navy sm:text-4xl">
                         Example Project Ideas
                     </h2>
-                    <p className="mt-4 text-lg text-gray-600">
+                    <p className="mt-4 text-lg text-gray-600 font-sourceSerif">
                         Explore these sample ideas or use them as inspiration for your own innovative solution.
                     </p>
                 </div>
@@ -108,9 +108,9 @@ export const ExampleIdeas: React.FC = () => {
                                 <button
                                     key={category}
                                     onClick={() => setSelectedCategory(category)}
-                                    className={`px-3 py-1 rounded-full text-sm ${
+                                    className={`px-3 py-1 rounded-full text-sm font-barlowSemi uppercase ${
                                         selectedCategory === category
-                                            ? 'bg-indigo-600 text-white'
+                                            ? 'bg-kokoomus-blue text-white'
                                             : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                                     }`}
                                 >
@@ -126,7 +126,7 @@ export const ExampleIdeas: React.FC = () => {
                             placeholder="Search ideas..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                            className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-kokoomus-blue focus:border-transparent font-sourceSerif"
                         />
                     </div>
                 </div>
@@ -140,16 +140,18 @@ export const ExampleIdeas: React.FC = () => {
                         >
                             <div className="p-6">
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className="p-2 bg-indigo-100 rounded-lg">
-                                        {example.icon}
+                                    <div className="p-2 bg-kokoomus-lightBlue rounded-lg">
+                                        <div className="text-kokoomus-blue">
+                                            {example.icon}
+                                        </div>
                                     </div>
-                                    <span className="text-sm font-medium text-indigo-600">{example.category}</span>
+                                    <span className="text-sm font-barlowSemi uppercase text-kokoomus-blue">{example.category}</span>
                                 </div>
-                                <h3 className="text-xl font-semibold text-gray-900 mb-2">{example.title}</h3>
-                                <p className="text-gray-600 mb-4">{example.description}</p>
+                                <h3 className="text-xl font-barlow italic uppercase font-bold text-kokoomus-navy mb-2">{example.title}</h3>
+                                <p className="text-gray-600 mb-4 font-sourceSerif">{example.description}</p>
                                 <div className="border-t pt-4">
-                                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Objective:</h4>
-                                    <p className="text-sm text-gray-600">{example.objective}</p>
+                                    <h4 className="text-sm font-barlowSemi uppercase text-kokoomus-navy mb-2">Objective:</h4>
+                                    <p className="text-sm text-gray-600 font-sourceSerif">{example.objective}</p>
                                 </div>
                             </div>
                         </div>
@@ -158,7 +160,7 @@ export const ExampleIdeas: React.FC = () => {
 
                 {filteredExamples.length === 0 && (
                     <div className="text-center py-12">
-                        <p className="text-gray-600">No examples found matching your criteria.</p>
+                        <p className="text-gray-600 font-sourceSerif">No examples found matching your criteria.</p>
                     </div>
                 )}
             </div>
