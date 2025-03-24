@@ -1,0 +1,196 @@
+{
+  "title": "SINA GHAZI",
+  "subtitle": "Lahti City Council Candidate 2025",
+  "candidateNumber": "CANDIDATE 137",
+  "videoDescription": "Learn about Sina Ghazi, his background, and key promises for improving innovation, entrepreneurship, and citizen responsiveness in Lahti.",
+  "keyPromisesTitle": "KEY ELECTION PROMISES",
+  "promises": {
+    "tech": {
+      "title": "TECHNOLOGY FOR CITIZEN VISIBILITY",
+      "points": [
+        "Sina's LahenJutut app gives every citizen a voice in city development.",
+        "The app supports multiple languages including Finnish, English, Russian, and Arabic.",
+        "Complete user anonymity ensures everyone can freely share their ideas."
+      ]
+    },
+    "entrepreneurship": {
+      "title": "SUPPORTING ENTREPRENEURSHIP & INNOVATION",
+      "points": [
+        "Creating collaborative local networks connecting established businesses with startups.",
+        "Developing practical training programs in partnership with local educational institutions.",
+        "Simplifying city processes to make entrepreneurship more accessible."
+      ]
+    },
+    "integration": {
+      "title": "EFFECTIVE INTEGRATION FOR MIGRANTS",
+      "points": [
+        "Establishing a specialized competence and language center for newcomers.",
+        "Offering tailored language education, skills validation, and personalized career coaching.",
+        "Creating pathways for international talent to build careers in Lahti."
+      ]
+    },
+    "youth": {
+      "title": "YOUTH & STUDENT ENGAGEMENT",
+      "points": [
+        "Creating meaningful pathways for youth participation in city planning.",
+        "Supporting student entrepreneurship initiatives.",
+        "Ensuring educational opportunities align with future career prospects in the region."
+      ]
+    }
+  },
+  "qaTitle": "QUESTIONS & ANSWERS",
+  "qaDescription": "Answers to frequently asked questions about my campaign and vision for Lahti.",
+  "socialMediaTitle": "CONNECT ON SOCIAL MEDIA",
+  "socialMediaDescription": "Follow Sina's campaign journey and join the conversation.",
+  "voteForSina": "#VoteForSina",
+  "vote": "VOTE 137",
+  "tabs": {
+    "overview": "Overview",
+    "detailed": "Policy Positions",
+    "qa": "Q&A"
+  },
+  "detailedPromises": {
+    "title": "DETAILED POLICY POSITIONS",
+    "description": "Explore my stance on key issues affecting Lahti and Finland. Click on any topic to read my detailed explanation.",
+    "entrepreneurship": {
+      "title": "STRONGER ENTREPRENEURSHIP AND WORK-LIFE REFORM",
+      "description": "I support local entrepreneurship and job creation by creating a collaboration model in Lahti where local educational institutions and businesses jointly develop practical training programs and entrepreneurial networks. This ensures that Lahti remains at the forefront of work life shaped by AI and automation."
+    },
+    "integration": {
+      "title": "MORE EFFECTIVE INTEGRATION AND UTILIZATION OF SKILLS",
+      "description": "I promote the rapid employment of immigrants and international talent in Lahti by developing a competence and language service center that offers qualification recognition, tailored language training, and personalized career coaching. This ensures that everyone can find their place and contribute to Lahti's growth and well-being."
+    },
+    "decisionMaking": {
+      "title": "MORE OPEN AND INCLUSIVE DECISION-MAKING",
+      "description": "I bring decision-making closer to city residents by introducing a digital platform where every Lahti resident can follow city decision-making in real time and participate in discussions and making proposals. This increases transparency and enables the utilization of new technology in developing our city together with residents."
+    }
+  },
+  "qaCategories": {
+    "Technology": "Technology",
+    "Entrepreneurship": "Entrepreneurship",
+    "Integration": "Integration",
+    "Election General": "Election General"
+  },
+  "qaItems": [
+    {
+      "id": "tech-1",
+      "category": "Technology",
+      "question": "What is the LahenJutut app?",
+      "answer": "LahenJutut is a citizen engagement app I created. It lets Lahti residents share ideas and concerns directly with city officials. It's available in multiple languages to make sure everyone's voice is heard."
+    },
+    {
+      "id": "tech-2",
+      "category": "Technology",
+      "question": "How will technology improve citizen participation?",
+      "answer": "Our digital platform will let citizens track city decisions in real-time. You'll be able to comment on proposals and suggest your own ideas. This makes government more transparent and responsive."
+    },
+    {
+      "id": "ent-1",
+      "category": "Entrepreneurship",
+      "question": "What initiatives are planned to boost local entrepreneurship?",
+      "answer": "We'll create hands-on training with local schools. This helps businesses grow and creates more jobs in Lahti."
+    },
+    {
+      "id": "ent-2",
+      "category": "Entrepreneurship",
+      "question": "How will you support small businesses in Lahti?",
+      "answer": "We'll connect big companies with small ones. This creates mentoring chances. We'll also make city paperwork easier for business owners."
+    },
+    {
+      "id": "int-1",
+      "category": "Integration",
+      "question": "How will you enhance integration for new migrants?",
+      "answer": "We'll build a special center for newcomers. It will offer language classes, skills checks, and job coaching. This helps people settle in faster."
+    },
+    {
+      "id": "int-2",
+      "category": "Integration",
+      "question": "What role do you see for international talent in Lahti's future?",
+      "answer": "International talent helps Lahti grow! We'll create ways for international students to stay here. We'll attract skilled workers and help them build lives in our city."
+    },
+    {
+      "id": "gen-1",
+      "category": "Election General",
+      "question": "How does Sina Ghazi's international experience benefit Lahti?",
+      "answer": "Sina brings a global view to Lahti. This helps bring in new ideas, attract international talent, and make our city's economy stronger."
+    },
+    {
+      "id": "gen-2",
+      "category": "Election General",
+      "question": "What are your priorities for youth and student engagement?",
+      "answer": "We'll create ways for young people to help plan the city. We'll support student businesses. And we'll make sure school leads to good jobs in Lahti."
+    }
+  ],
+  "policyPositions": [
+    {
+      "id": "edu-1",
+      "category": "Education",
+      "question": "My municipality should set a maximum limit for the size of basic education teaching groups.",
+      "stance": "Strongly Agree",
+      "explanation": "Smaller classes mean teachers can help each student better. Kids learn more and feel happier. Teachers can do their job better too. Good schools create a strong future for Lahti. I'll work to make this happen."
+    },
+    {
+      "id": "edu-2",
+      "category": "Education",
+      "question": "The municipality should save on education.",
+      "stance": "Strongly Disagree",
+      "explanation": "Education is an investment, not just an expense. Cutting education funding hurts our future. We need to invest in our schools, teachers, and students to build a stronger Lahti. Education creates opportunities and helps our economy grow."
+    },
+    {
+      "id": "econ-1",
+      "category": "Economy",
+      "question": "The municipality should save by cutting services.",
+      "stance": "Somewhat Disagree",
+      "explanation": "We should focus on making services more efficient, not just cutting them. Good services make Lahti attractive to residents and businesses. We can find smarter ways to use our resources without reducing the quality of life for our residents."
+    },
+    {
+      "id": "econ-2",
+      "category": "Economy",
+      "question": "The municipality should increase its debt to maintain services.",
+      "stance": "Neutral",
+      "explanation": "We need to balance our budget carefully. Some debt for important investments makes sense, but we must be responsible. I support smart investments that help our city grow and improve, while keeping our finances healthy for the future."
+    },
+    {
+      "id": "env-1",
+      "category": "Environment",
+      "question": "My municipality should do more to combat climate change.",
+      "stance": "Strongly Agree",
+      "explanation": "Lahti is already a green leader, but we can do even more. Fighting climate change creates jobs, improves health, and makes our city better. I'll support clean energy, public transport, and sustainable building to keep Lahti at the forefront of environmental action."
+    },
+    {
+      "id": "env-2",
+      "category": "Environment",
+      "question": "Environmental values should be prioritized in zoning, even if it means higher costs.",
+      "stance": "Somewhat Agree",
+      "explanation": "Green building may cost more upfront but saves money long-term. Environmental planning makes Lahti healthier and more attractive. We need to balance costs with our environmental goals, finding smart solutions that work for everyone."
+    },
+    {
+      "id": "immig-1",
+      "category": "Immigration & Integration",
+      "question": "Immigration enriches my municipality.",
+      "stance": "Strongly Agree",
+      "explanation": "As a business owner in Lahti, I've seen how people from different backgrounds bring new skills and ideas. Immigrants help our city grow, create jobs, and make Lahti more diverse. Being open to different cultures is key to our city's success."
+    },
+    {
+      "id": "immig-2",
+      "category": "Immigration & Integration",
+      "question": "My municipality should save on integration services for immigrants.",
+      "stance": "Strongly Disagree",
+      "explanation": "Lahti's future depends on helping newcomers become part of our community. Cutting integration services leads to problems and higher costs later. We lose valuable skills and business ideas. We need to invest in language teaching and job training so everyone can help build a better Lahti."
+    },
+    {
+      "id": "local-1",
+      "category": "Local Issues",
+      "question": "Lahti Energia should remain 100% owned by the city.",
+      "stance": "Somewhat Agree",
+      "explanation": "Companies like Lahti Energia are vital for our city. Local ownership ensures reliable services and responsible energy solutions. The city should keep control over these important matters. We can explore partnerships if they bring better, cheaper energy to residents. But the city should keep the final say."
+    },
+    {
+      "id": "local-2",
+      "category": "Local Issues",
+      "question": "A hotel should be built in Alatori.",
+      "stance": "Somewhat Agree",
+      "explanation": "Lahti needs projects that attract tourists and create jobs. A hotel at Alatori would make our city center more lively and help nearby businesses. But we must plan it carefully, with input from residents. The project should fit with our city's character and green values."
+    }
+  ]
+}

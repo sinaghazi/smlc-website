@@ -6,7 +6,7 @@ import ChallengePage from '../components/hackathon/ChallengePage';
 import Layout from '../components/Layout';
 import TeamAssessment from '../components/teams/TeamAssessment';
 import ContactPage from '../components/contact/ContactPage';
-import CampaignPage from '../components/campaign/CampaignPage';
+import ElectionPage from '../components/election/ElectionPage';
 
 const AppRouter: React.FC = () => {
     return (
@@ -18,7 +18,14 @@ const AppRouter: React.FC = () => {
                     <Route path="/challenge" element={<ChallengePage />} />
                     <Route path="/teams/assessment" element={<TeamAssessment />} />
                     <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/campaign" element={<CampaignPage />} />
+                    
+                    {/* Election routes with language support */}
+                    <Route path="/election" element={<Navigate to="/en/election" replace />} />
+                    <Route path="/:lang/election" element={<ElectionPage />} />
+                    
+                    {/* Redirect old campaign URL to new election URL */}
+                    <Route path="/campaign" element={<Navigate to="/en/election" replace />} />
+                    
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Route>
             </Routes>

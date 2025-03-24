@@ -1,0 +1,196 @@
+{
+  "title": "SINA GHAZI",
+  "subtitle": "Musharax Golaha Magaalada Lahti 2025",
+  "candidateNumber": "MUSHARAX 137",
+  "videoDescription": "Baro wax ku saabsan Sina Ghazi, asalkiisa, iyo ballanqaadyada muhiimka ah ee hagaajinta hal-abuurka, ganacsiga, iyo jawaabta muwaadiniinta ee Lahti.",
+  "keyPromisesTitle": "BALLANQAADYADA MUHIIMKA AH EE DOORASHADA",
+  "promises": {
+    "tech": {
+      "title": "TIKNOOLAJIYAD LOOGU TALAGALAY MUUQAALKA MUWAADINIINTA",
+      "points": [
+        "App-ka LahenJutut ee Sina wuxuu siiyaa cod kasta oo muwaadin ah codkood horumarinta magaalada.",
+        "App-ku wuxuu taageeraa luqado badan oo ay ku jiraan Finnish, Ingiriisi, Ruush, iyo Carabi.",
+        "Qarsoodi buuxda oo isticmaale ayaa hubisa in qof kastaa si xor ah u wadaagi karo fikradahooda."
+      ]
+    },
+    "entrepreneurship": {
+      "title": "TAAGEERIDDA GANACSIGA & HAL-ABUURKA",
+      "points": [
+        "Abuuritaanka shabakadaha iskaashiga deegaanka ee isku xira ganacsiyada la aasaasay iyo kuwa cusub.",
+        "Horumarinta barnaamijyada tababarka shaqada oo kaashada hay'adaha waxbarashada ee deegaanka.",
+        "Fududeynta nidaamyada magaalada si loo helo ganacsi fudud"
+      ]
+    },
+    "integration": {
+      "title": "ISDHEXGALKA WAXTAR LEH EE SOOGALOOTIGA",
+      "points": [
+        "Dhisidda xarun aqoon iyo luqadeed oo gaar ah oo loogu talagalay dadka cusub.",
+        "Bixinta waxbarasho luqadeed oo la qaabeeyay, xaqiijinta xirfadaha, iyo tababarka shaqo ee shakhsi ahaaneed.",
+        "Abuuritaanka wadooyin ay talantiga caalamiga ah ku dhisi karaan xirfadahooda Lahti."
+      ]
+    },
+    "youth": {
+      "title": "KA QAYBGALKA DHALINYARADA & ARDAYDA",
+      "points": [
+        "Abuuritaanka wadooyin macno leh oo dhalinyaradu kaga qaybqaadan karaan qorsheynta magaalada.",
+        "Taageeridda hindisaha ganacsiga ardayda.",
+        "Hubinta in fursadaha waxbarashadu waafaqsan yihiin mustaqbalka shaqada ee mustaqbalka ee gobolka."
+      ]
+    }
+  },
+  "qaTitle": "SU'AALO & JAWAABO",
+  "qaDescription": "Jawaabaha su'aalaha inta badan la weydiiyo ee ku saabsan ololahayga iyo aragtidayda Lahti.",
+  "socialMediaTitle": "KULA XIRIIR BARAHA BULSHADA",
+  "socialMediaDescription": "Raac safarka ololaha Sina oo ku biir wadahadalka.",
+  "voteForSina": "#UCodeeySina",
+  "vote": "CODEE 137",
+  "tabs": {
+    "overview": "Guudmar",
+    "detailed": "Mowqifyada Siyaasadeed",
+    "qa": "S&J"
+  },
+  "detailedPromises": {
+    "title": "MOWQIFYADA SIYAASADEED EE FAAHFAAHSAN",
+    "description": "Sahmin mowqifkayga ku saabsan arrimaha muhiimka ah ee saameynaya Lahti iyo Finland. Guji mawduuc kasta si aad u aqriso sharaxaaddayda faahfaahsan.",
+    "entrepreneurship": {
+      "title": "GANACSI XOG AH IYO DIB-U-HABEYNTA NOLOSHA SHAQADA",
+      "description": "Waxaan taageeraa ganacsiga maxalliga ah iyo abuurista shaqooyinka anigoo abuuraya qaab iskaashi oo Lahti ah halkaas oo hay'adaha waxbarashada ee maxalliga ah iyo ganacsatadu si wadajir ah u horumariyaan barnaamijyada tababarka shaqada iyo shabakadaha ganacsiga. Tani waxay hubinaysaa in Lahti ay ku sii jirto hormarka nolosha shaqada ee ay qaabeeyeen AI iyo automation."
+    },
+    "integration": {
+      "title": "ISDHEXGAL WAXTAR BADAN IYO ISTICMAALKA XIRFADAHA",
+      "description": "Waxaan dhiirigeliyaa shaqaaleynta degdega ah ee muhaajiriinta iyo talantiga caalamiga ah ee Lahti anigoo horumarinaya xarun adeeg oo xirfadeed iyo luqadeed oo bixisa aqoonsiga shahaadooyinka, tababarka luqadda ee la habeeyay, iyo tababarka shaqada ee shakhsi ahaaneed. Tani waxay hubinaysaa in qof kastaa heli karo meeshiisa oo uu ka qayb qaadan karo kobaca iyo ladnaanta Lahti."
+    },
+    "decisionMaking": {
+      "title": "GO'AAN QAADASHADA FURAN IYO MIDKA LOO DHAN YAHAY",
+      "description": "Waxaan go'aan gaarista u soo dhoweeyaa dadka magaalada ku nool anigoo soo bandhigaya barta dijitaalka ah halkaas oo qof kasta oo Lahti ku nool uu si toos ah uga raaci karo go'aan qaadashada magaalada waqtiga dhabta ah ugana qayb qaadan karo wadahadallada iyo soo jeedinta soo jeedinno. Tani waxay kordhisaa hufnaanta waxayna awood u siisaa isticmaalka tiknoolajiyada cusub ee horumarinta magaaladayada oo ay weheliyaan dadka deggan."
+    }
+  },
+  "qaCategories": {
+    "Technology": "Tiknoolajiyad",
+    "Entrepreneurship": "Ganacsi",
+    "Integration": "Isdhexgal",
+    "Election General": "Doorashada Guud"
+  },
+  "qaItems": [
+    {
+      "id": "tech-1",
+      "category": "Technology",
+      "question": "Waa maxay app-ka LahenJutut?",
+      "answer": "LahenJutut waa app ka qaybgalka muwaadiniinta oo aan sameeyay. Waxay u ogolaataa dadka degan Lahti inay si toos ah ula wadaagaan fikradaha iyo walaacyada saraakiisha magaalada. Waxaa lagu heli karaa luqado badan si loo hubiyo in codka qof walba la maqlo."
+    },
+    {
+      "id": "tech-2",
+      "category": "Technology",
+      "question": "Sidee bay tiknoolajiyadu u hagaajin doontaa ka qaybgalka muwaadiniinta?",
+      "answer": "Barta dijitaalka ah waxay u oggolaaneysaa muwaadiniinta inay si toos ah u raacaan go'aamada magaalada. Waxaad awoodi doontaa inaad ka faalloto soo jeedinta oo aad soo jeediso fikradahaaga. Tani waxay ka dhigeysaa dawladda mid daahfuran oo wax looga qabto."
+    },
+    {
+      "id": "ent-1",
+      "category": "Entrepreneurship",
+      "question": "Waa maxay hindiseyaasha la qorsheeyay si kor loogu qaado ganacsiga maxalliga ah?",
+      "answer": "Waxaan abuuri doonaa tababar shaqo oo lala kaashanayo dugsiyada maxalliga ah. Tani waxay ka caawineysaa ganacsiyada inay koraan waxayna abuuraysaa shaqooyin badan oo Lahti ah."
+    },
+    {
+      "id": "ent-2",
+      "category": "Entrepreneurship",
+      "question": "Sidee baad u taageeri doontaa ganacsiyada yaryar ee Lahti?",
+      "answer": "Waxaan isku xiri doonaa shirkadaha waaweyn iyo kuwa yaryar. Tani waxay abuuraysaa fursado hagitaan. Sidoo kale waxaan fududeyn doonaa shaqada warqadaha magaalada ee mulkiilayaasha ganacsiga."
+    },
+    {
+      "id": "int-1",
+      "category": "Integration",
+      "question": "Sidee baad u hagaajin doontaa isdhexgalka muhaajiriinta cusub?",
+      "answer": "Waxaan dhisi doonaa xarun gaar ah oo loogu talagalay dadka cusub. Waxay bixin doontaa fasallo luqadeed, hubinta xirfadaha, iyo tababarka shaqada. Tani waxay ka caawineysaa dadka inay si dhakhso leh u degaan."
+    },
+    {
+      "id": "int-2",
+      "category": "Integration",
+      "question": "Waa maxay doorka aad u aragtaa talantiga caalamiga ah ee mustaqbalka Lahti?",
+      "answer": "Talantiga caalamiga ah wuxuu ka caawiyaa Lahti inay korto! Waxaan abuuri doonaa siyaabo ay ardayda caalamiga ahi halkan ugu sii jiri karaan. Waxaan soo jiidan doonaa shaqaale xirfad leh waxaana ka caawin doonaa inay nolol ku dhisaan magaaladayada."
+    },
+    {
+      "id": "gen-1",
+      "category": "Election General",
+      "question": "Sidee bay khibradda caalamiga ah ee Sina Ghazi u faa'iideysaa Lahti?",
+      "answer": "Sina wuxuu keenaa aragtida caalamiga ah ee Lahti. Tani waxay ka caawineysaa keenista fikrado cusub, soo jiidashada talantiga caalamiga ah, iyo xoojinta dhaqaalaha magaaladayada."
+    },
+    {
+      "id": "gen-2",
+      "category": "Election General",
+      "question": "Waa maxay mudnaantaada ka qaybgalka dhalinyarada iyo ardayda?",
+      "answer": "Waxaan abuuri doonaa siyaabo ay dhalinyaradu kaga caawin karaan qorsheynta magaalada. Waxaan taageeri doonaa ganacsiyada ardayda. Waxaana hubin doonaa in waxbarashadu horseeddo shaqooyin wanaagsan oo Lahti ah."
+    }
+  ],
+  "policyPositions": [
+    {
+      "id": "edu-1",
+      "category": "Education",
+      "question": "Degmadaydu waa inay dejisaa xad ugu badan oo loogu talagalay cabbirka kooxaha waxbarashada aasaasiga ah.",
+      "stance": "Aad ugu Raacsanahay",
+      "explanation": "Fasallada yaryar macnaheedu waa in macallimiintu si fiican u caawin karaan arday kasta. Carruurtu wax badan bay bartaan oo way ku faraxsan yihiin. Macallimiintuna si fiican ayey u qaban karaan shaqadooda. Dugsiyada wanaagsani waxay abuuraan mustaqbal xooggan oo Lahti ah. Waxaan ka shaqeyn doonaa in tani dhacdo."
+    },
+    {
+      "id": "edu-2",
+      "category": "Education",
+      "question": "Degmadu waa inay wax ka badbaadiyo waxbarashada.",
+      "stance": "Aad ugu Diidanahay",
+      "explanation": "Waxbarashadu waa maalgashi, ma aha oo keliya kharash. Dhimista maalgelinta waxbarashadu waxay waxyeeleysaa mustaqbalkayaga. Waxaan u baahanahay inaan maalgelinno dugsiyadeenna, macallimiinteenna, iyo ardaydeenna si aan u dhisno Lahti oo xooggan. Waxbarashadu waxay abuuraysaa fursado waxayna ka caawisaa dhaqaalahayaga inuu koro."
+    },
+    {
+      "id": "econ-1",
+      "category": "Economy",
+      "question": "Degmadu waa inay wax ka badbaadiyo iyadoo jareysa adeegyada.",
+      "stance": "Waxoogaa Diidanahay",
+      "explanation": "Waa inaan diiradda saarnaa ka dhigista adeegyada kuwo waxtar badan leh, ma ahan oo kaliya in la jaro. Adeegyada wanaagsani waxay ka dhigaan Lahti mid soo jiidanaya dadka deggan iyo ganacsiyada. Waxaan heli karnaa siyaabo caqli badan oo aan ugu isticmaalno kheyraadkeenna iyada oo aan hoos u dhigin tayada nolosha dadka deggan."
+    },
+    {
+      "id": "econ-2",
+      "category": "Economy",
+      "question": "Degmadu waa inay kordhisaa deynteeda si ay u ilaaliso adeegyada.",
+      "stance": "Dhexdhexaad",
+      "explanation": "Waa inaan si taxadar leh u dheellitirno miisaaniyaddeenna. Qaar ka mid ah deynta maalgashiyada muhiimka ah ayaa macquul ah, laakiin waa inaan mas'uul noqonnaa. Waxaan taageeraa maalgashiyo caqli gal ah oo ka caawiya magaaladayada inay korto oo ay hagaajiso, iyada oo la ilaalinayo maaliyaddeenna oo caafimaad qabta mustaqbalka."
+    },
+    {
+      "id": "env-1",
+      "category": "Environment",
+      "question": "Degmadaydu waa inay wax badan ka qabataa la dagaallanka isbeddelka cimilada.",
+      "stance": "Aad ugu Raacsanahay",
+      "explanation": "Lahti waa hormuud cagaaran, laakiin waxaan samayn karnaa wax badan. La dagaallanka isbeddelka cimiladu wuxuu abuuraa shaqooyin, wuxuu hagaajiyaa caafimaadka, wuxuuna ka dhigaa magaaladayada mid ka fiican. Waxaan taageeri doonaa tamarta nadiifka ah, gaadiidka dadweynaha, iyo dhismaha waara si aan Lahti ugu hayno hormarka ficilka deegaanka."
+    },
+    {
+      "id": "env-2",
+      "category": "Environment",
+      "question": "Qiyamka deegaanka waa in mudnaanta la siiyaa aagagga, xitaa haddii ay macnaheedu tahay kharashyo sare.",
+      "stance": "Waxoogaa Raacsanahay",
+      "explanation": "Dhismaha cagaaran waxaa laga yaabaa inuu bilow ahaan ka badan yahay kharashka laakiin wuxuu keydiyaa lacag muddada-dheer. Qorsheynta deegaanku waxay ka dhigtaa Lahti mid caafimaad qaba oo soo jiidanaya. Waxaan u baahanahay inaan dheellitirno kharashyada iyo yoolalkeenna deegaanka, oo aan helno xalal caqli gal ah oo u shaqeeya qof kasta."
+    },
+    {
+      "id": "immig-1",
+      "category": "Immigration & Integration",
+      "question": "Socdaalku wuxuu hodmiyaa degmadayda.",
+      "stance": "Aad ugu Raacsanahay",
+      "explanation": "Anigoo ah ganacsi ku leh Lahti, waxaan arkay sida dadka ka soo jeeda asalka kala duwan ay u keenaan xirfado iyo fikrado cusub. Muhaajiriintu waxay ka caawiyaan magaaladayada inay korto, waxay abuuraan shaqooyin, waxayna ka dhigaan Lahti mid kala duwan. In la furnaado dhaqamada kala duwan waa furaha guusha magaaladayada."
+    },
+    {
+      "id": "immig-2",
+      "category": "Immigration & Integration",
+      "question": "Degmadaydu waa inay wax ka badbaadiyo adeegyada isdhexgalka ee muhaajiriinta.",
+      "stance": "Aad ugu Diidanahay",
+      "explanation": "Mustaqbalka Lahti wuxuu ku xiran yahay in laga caawiyo dadka cusub inay qayb ka noqdaan bulshadeenna. Dhimista adeegyada isdhexgalka waxay keentaa dhibaatooyin iyo kharashyo sare oo dambe. Waxaan luminaa xirfado qiimo leh iyo fikradaha ganacsiga. Waxaan u baahanahay inaan maalgelino barashada luqadda iyo tababarka shaqada si qof kastaa uga caawiyo dhisida Lahti oo ka fiican."
+    },
+    {
+      "id": "local-1",
+      "category": "Local Issues",
+      "question": "Lahti Energia waa inay sii ahaataa 100% hantida magaalada.",
+      "stance": "Waxoogaa Raacsanahay",
+      "explanation": "Shirkadaha sida Lahti Energia waa kuwo muhiim u ah magaaladayada. Lahaanshaha maxalliga ah wuxuu hubiyaa adeegyo lagu kalsoonaan karo iyo xalal tamarta oo mas'uul ah. Magaaladu waa inay xakameysaa arrimahan muhiimka ah. Waxaan sahamikaraaa iskaashiyo haddii ay dadka deggan u keenaan tamarta wanaagsan oo jaban. Laakiin magaaladu waa inay lahaataa ereyga ugu dambeeya."
+    },
+    {
+      "id": "local-2",
+      "category": "Local Issues",
+      "question": "Waa in hotel laga dhisaa Alatori.",
+      "stance": "Waxoogaa Raacsanahay",
+      "explanation": "Lahti waxay u baahan tahay mashaariic soo jiita dalxiisayaasha oo abuurta shaqooyin. Hotel ku yaalla Alatori wuxuu ka dhigi lahaa xarunta magaaladayada mid firfircoon wuxuuna caawin lahaa ganacsiyada u dhow. Laakiin waa inaan si taxadar leh u qorsheyno, oo ay la socdaan fikradaha dadka deggan. Mashruucu waa inuu la jaan qaadaa dabeecadda magaaladayada iyo qiyamka cagaaran."
+    }
+  ]
+}

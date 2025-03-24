@@ -1,0 +1,196 @@
+{
+  "title": "SINA GHAZI",
+  "subtitle": "Kandidat për Këshillin Bashkiak të Lahti 2025",
+  "candidateNumber": "KANDIDATI 137",
+  "videoDescription": "Mësoni rreth Sina Ghazi, prejardhjes së tij, dhe premtimeve kyçe për përmirësimin e sipërmarrjes, biznesit, dhe reagimit qytetar në Lahti.",
+  "keyPromisesTitle": "PREMTIMET KRYESORE TË FUSHATËS",
+  "promises": {
+    "tech": {
+      "title": "TEKNOLOGJI PËR ZËRIN E QYTETARËVE",
+      "points": [
+        "Aplikacioni LahenJutut i Sina i jep çdo qytetari një zë në zhvillimin e qytetit.",
+        "Aplikacioni mbështet shumë gjuhë, përfshirë finlandisht, anglisht, rusisht dhe arabisht.",
+        "Anonimiteti i plotë i përdoruesit siguron që të gjithë mund të ndajnë lirshëm mendimet e tyre."
+      ]
+    },
+    "entrepreneurship": {
+      "title": "MBËSHTETJE PËR BIZNESIN & SIPËRMARRJEN",
+      "points": [
+        "Krijimi i rrjeteve të bashkëpunimit lokal që lidhin bizneset e themeluara dhe të reja.",
+        "Zhvillimi i programeve praktike të trajnimit në punë në bashkëpunim me institucionet arsimore lokale.",
+        "Thjeshtimi i proceseve të qytetit për të bërë biznes më të lehtë."
+      ]
+    },
+    "integration": {
+      "title": "INTEGRIM EFEKTIV I EMIGRANTËVE",
+      "points": [
+        "Themelimi i një qendre të specializuar aftësish dhe gjuhësore për të ardhurit e rinj.",
+        "Ofrimi i trajnimit të përshtatur gjuhësor, verifikimit të aftësive dhe trajnimit personal të punës.",
+        "Krijimi i rrugëve për talentet ndërkombëtare për të ndërtuar karrierën e tyre në Lahti."
+      ]
+    },
+    "youth": {
+      "title": "PËRFSHIRJA E TË RINJVE & STUDENTËVE",
+      "points": [
+        "Krijimi i rrugëve kuptimplote për pjesëmarrjen e të rinjve në planifikimin e qytetit.",
+        "Mbështetja e iniciativave të biznesit të studentëve.",
+        "Sigurimi që mundësitë arsimore përputhen me perspektivat e ardhshme të punës në rajon."
+      ]
+    }
+  },
+  "qaTitle": "PYETJE & PËRGJIGJE",
+  "qaDescription": "Përgjigje për pyetjet më të shpeshta rreth fushatës sime dhe vizionit për Lahti.",
+  "socialMediaTitle": "LIDHU NË MEDIA SOCIALE",
+  "socialMediaDescription": "Ndiqni udhëtimin e fushatës së Sina dhe bashkohuni në bisedë.",
+  "voteForSina": "#VotoniSina",
+  "vote": "VOTONI 137",
+  "tabs": {
+    "overview": "Përmbledhje",
+    "detailed": "Qëndrimet Politike",
+    "qa": "P&P"
+  },
+  "detailedPromises": {
+    "title": "QËNDRIME TË DETAJUARA POLITIKE",
+    "description": "Eksploroni qëndrimin tim për çështjet kryesore që ndikojnë në Lahti dhe Finlandë. Klikoni në çdo temë për të lexuar shpjegimin tim të detajuar.",
+    "entrepreneurship": {
+      "title": "SIPËRMARRJE MË E FORTË DHE REFORMA E JETËS SË PUNËS",
+      "description": "Unë mbështes sipërmarrjen lokale dhe krijimin e vendeve të punës duke krijuar një model bashkëpunimi Lahti ku institucionet arsimore lokale dhe bizneset bashkërisht zhvillojnë programe praktike trajnimi dhe rrjete biznesi. Kjo siguron që Lahti të mbetet në krye të evolucionit të jetës së punës të formuar nga AI dhe automatizimi."
+    },
+    "integration": {
+      "title": "INTEGRIM MË EFEKTIV DHE PËRDORIM I AFTËSIVE",
+      "description": "Unë inkurajoj punësimin e shpejtë të emigrantëve dhe talenteve ndërkombëtare në Lahti duke zhvilluar një qendër shërbimi aftësish dhe gjuhësore që ofron njohje të kualifikimeve, trajnim të përshtatur gjuhësor dhe këshillim karriere të personalizuar. Kjo siguron që secili mund të gjejë vendin e tyre dhe të kontribuojë në rritjen dhe mirëqenien e Lahti."
+    },
+    "decisionMaking": {
+      "title": "VENDIMMARRJE MË E HAPUR DHE GJITHËPËRFSHIRËSE",
+      "description": "Unë e sjell vendimmarrjen më afër qytetarëve duke prezantuar një platformë digjitale ku çdo banor i Lahti mund të ndjekë drejtpërdrejt vendimmarrjen e qytetit në kohë reale dhe të marrë pjesë në diskutime dhe propozime. Kjo rrit transparencën dhe mundëson përdorimin e teknologjive të reja për të zhvilluar qytetin tonë së bashku me banorët."
+    }
+  },
+  "qaCategories": {
+    "Technology": "Teknologji",
+    "Entrepreneurship": "Sipërmarrje",
+    "Integration": "Integrim",
+    "Election General": "Zgjedhjet e Përgjithshme"
+  },
+  "qaItems": [
+    {
+      "id": "tech-1",
+      "category": "Technology",
+      "question": "Çfarë është aplikacioni LahenJutut?",
+      "answer": "LahenJutut është një aplikacion për pjesëmarrjen e qytetarëve që kam krijuar. U lejon banorëve të Lahti të ndajnë drejtpërdrejt idetë dhe shqetësimet e tyre me zyrtarët e qytetit. Është i disponueshëm në shumë gjuhë për të siguruar që zëri i secilit të dëgjohet."
+    },
+    {
+      "id": "tech-2",
+      "category": "Technology",
+      "question": "Si do ta përmirësojë teknologjia pjesëmarrjen e qytetarëve?",
+      "answer": "Platforma digjitale do t'u lejojë qytetarëve të ndjekin drejtpërdrejt vendimet e qytetit. Do të jeni në gjendje të komentoni propozimet dhe të sugjeroni idetë tuaja. Kjo e bën qeverisjen më transparente dhe të përgjegjshme."
+    },
+    {
+      "id": "ent-1",
+      "category": "Entrepreneurship",
+      "question": "Cilat janë iniciativat e planifikuara për të nxitur sipërmarrjen lokale?",
+      "answer": "Do të krijojmë trajnime praktike me shkollat lokale. Kjo ndihmon bizneset të rriten dhe krijon më shumë vende pune në Lahti."
+    },
+    {
+      "id": "ent-2",
+      "category": "Entrepreneurship",
+      "question": "Si do t'i mbështesni bizneset e vogla në Lahti?",
+      "answer": "Do të lidhim kompanitë e mëdha dhe të vogla. Kjo krijon mundësi për mentorimin. Gjithashtu do të thjeshtoj punën me letrat e qytetit për pronarët e bizneseve."
+    },
+    {
+      "id": "int-1",
+      "category": "Integration",
+      "question": "Si do ta përmirësoni integrimin e emigrantëve të rinj?",
+      "answer": "Do të ndërtoj një qendër të specializuar për të ardhurit e rinj. Do të ofrojë klasa gjuhësore, verifikim të aftësive dhe trajnim pune. Kjo i ndihmon njerëzit të vendosen më shpejt."
+    },
+    {
+      "id": "int-2",
+      "category": "Integration",
+      "question": "Çfarë roli shihni për talentet ndërkombëtare në të ardhmen e Lahti?",
+      "answer": "Talentet ndërkombëtare ndihmojnë Lahti të rritet! Do të krijoj mënyra që studentët ndërkombëtarë të qëndrojnë këtu. Do të tërheqim punonjës të kualifikuar dhe do t'i ndihmojmë të ndërtojnë një jetë në qytetin tonë."
+    },
+    {
+      "id": "gen-1",
+      "category": "Election General",
+      "question": "Si e përfiton Lahti nga përvoja ndërkombëtare e Sina Ghazi?",
+      "answer": "Sina sjell një perspektivë globale në Lahti. Kjo ndihmon në sjellien e ideve të reja, tërheqjen e talenteve ndërkombëtare, dhe forcimin e ekonomisë së qytetit tonë."
+    },
+    {
+      "id": "gen-2",
+      "category": "Election General",
+      "question": "Cila është përparësia juaj për përfshirjen e të rinjve dhe studentëve?",
+      "answer": "Do të krijoj mënyra që të rinjtë të ndihmojnë në planifikimin e qytetit. Do të mbështes bizneset e studentëve. Dhe do të siguroj që arsimi të çojë në punë të mira në Lahti."
+    }
+  ],
+  "policyPositions": [
+    {
+      "id": "edu-1",
+      "category": "Education",
+      "question": "Komuna ime duhet të vendosë një kufi maksimal për madhësinë e grupeve të arsimit bazë.",
+      "stance": "Shumë Dakord",
+      "explanation": "Klasat më të vogla do të thotë që mësuesit mund të ndihmojnë më mirë çdo nxënës. Fëmijët mësojnë më shumë dhe janë më të lumtur. Mësuesit gjithashtu mund të bëjnë punën e tyre më mirë. Shkollat e mira krijojnë një të ardhme të fortë për Lahti. Do të punoj për ta bërë këtë të ndodhë."
+    },
+    {
+      "id": "edu-2",
+      "category": "Education",
+      "question": "Komuna duhet të kursejë nga arsimi.",
+      "stance": "Shumë Kundër",
+      "explanation": "Arsimi është një investim, jo thjesht një shpenzim. Ulja e financimit të arsimit dëmton të ardhmen tonë. Na duhet të investojmë në shkollat, mësuesit dhe nxënësit tanë për të ndërtuar një Lahti të fortë. Arsimi krijon mundësi dhe ndihmon ekonominë tonë të rritet."
+    },
+    {
+      "id": "econ-1",
+      "category": "Economy",
+      "question": "Komuna duhet të kursejë duke prerë shërbimet.",
+      "stance": "Pak Kundër",
+      "explanation": "Duhet të fokusohemi në bërjen e shërbimeve më efikase, jo thjesht t'i presim ato. Shërbimet e mira e bëjnë Lahti tërheqëse për banorët dhe bizneset. Mund të gjejmë mënyra të zgjuara për të përdorur burimet tona pa ulur cilësinë e jetës së banorëve."
+    },
+    {
+      "id": "econ-2",
+      "category": "Economy",
+      "question": "Komuna duhet të rrisë borxhin e saj për të ruajtur shërbimet.",
+      "stance": "Neutral",
+      "explanation": "Duhet të balancojmë me kujdes buxhetin tonë. Disa borxhe për investime të rëndësishme janë të arsyeshme, por duhet të jemi të përgjegjshëm. Mbështes investime të zgjuara që ndihmojnë qytetin tonë të rritet dhe përmirësohet, duke mbajtur financat tona të shëndetshme për të ardhmen."
+    },
+    {
+      "id": "env-1",
+      "category": "Environment",
+      "question": "Komuna ime duhet të bëjë më shumë për të luftuar ndryshimet klimatike.",
+      "stance": "Shumë Dakord",
+      "explanation": "Lahti është një lider i gjelbër, por mund të bëjmë më shumë. Luftimi i ndryshimeve klimatike krijon vende pune, përmirëson shëndetin dhe e bën qytetin tonë një vend më të mirë. Do të mbështes energjinë e pastër, transportin publik dhe ndërtimin e qëndrueshëm për ta mbajtur Lahti në krye të veprimit mjedisor."
+    },
+    {
+      "id": "env-2",
+      "category": "Environment",
+      "question": "Vlerat mjedisore duhet të kenë përparësi në zonat, edhe nëse kjo do të thotë kosto më të larta.",
+      "stance": "Pak Dakord",
+      "explanation": "Ndërtimi i gjelbër mund të kushtojë më shumë fillimisht, por kursen para në afat të gjatë. Planifikimi mjedisor e bën Lahti të shëndetshëm dhe tërheqës. Na duhet të balancojmë kostot me qëllimet tona mjedisore, duke gjetur zgjidhje praktike që funksionojnë për të gjithë."
+    },
+    {
+      "id": "immig-1",
+      "category": "Immigration & Integration",
+      "question": "Emigracioni e pasuron komunën time.",
+      "stance": "Shumë Dakord",
+      "explanation": "Si një pronar biznesi në Lahti, kam parë se si njerëzit me prejardhje të ndryshme sjellin aftësi dhe ide të reja. Emigrantët ndihmojnë qytetin tonë të rritet, krijojnë vende pune dhe e bëjnë Lahti më të larmishëm. Të qenit të hapur ndaj kulturave të ndryshme është çelësi i suksesit të qytetit tonë."
+    },
+    {
+      "id": "immig-2",
+      "category": "Immigration & Integration",
+      "question": "Komuna ime duhet të kursejë në shërbimet e integrimit për emigrantët.",
+      "stance": "Shumë Kundër",
+      "explanation": "E ardhmja e Lahti varet nga ndihma për të ardhurit e rinj të bëhen pjesë e komunitetit tonë. Ulja e shërbimeve të integrimit shkakton probleme dhe kosto më të larta më vonë. Humbasim aftësi të vlefshme dhe ide biznesi. Na duhet të investojmë në mësimin e gjuhës dhe trajnimin e punës në mënyrë që të gjithë të mund të ndihmojnë në ndërtimin e një Lahti më të mirë."
+    },
+    {
+      "id": "local-1",
+      "category": "Local Issues",
+      "question": "Lahti Energia duhet të mbetet 100% në pronësi të qytetit.",
+      "stance": "Pak Dakord",
+      "explanation": "Kompanitë si Lahti Energia janë të rëndësishme për qytetin tonë. Pronësia lokale siguron shërbime të besueshme dhe zgjidhje të përgjegjshme energjetike. Qyteti duhet të mbajë kontrollin mbi këto çështje të rëndësishme. Mund të eksplorojmë partneritete nëse u sjellin banorëve energji më të mirë dhe më të lirë. Por qyteti duhet të ketë fjalën e fundit."
+    },
+    {
+      "id": "local-2",
+      "category": "Local Issues",
+      "question": "Një hotel duhet të ndërtohet në Alatori.",
+      "stance": "Pak Dakord",
+      "explanation": "Lahti ka nevojë për projekte që tërheqin turistë dhe krijojnë vende pune. Një hotel në Alatori do ta bënte qendrën e qytetit tonë më të gjallë dhe do të ndihmonte bizneset përreth. Por duhet të planifikojmë me kujdes, duke dëgjuar idetë e banorëve. Projekti duhet të përshtatet me karakterin e qytetit tonë dhe vlerat e gjelbra."
+    }
+  ]
+}

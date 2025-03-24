@@ -1,0 +1,196 @@
+{
+  "title": "SINA GHAZI",
+  "subtitle": "Candidato al Ayuntamiento de Lahti 2025",
+  "candidateNumber": "CANDIDATO 137",
+  "videoDescription": "Conozca a Sina Ghazi, sus antecedentes y las promesas clave para mejorar el emprendimiento, los negocios y la respuesta ciudadana en Lahti.",
+  "keyPromisesTitle": "PROMESAS ELECTORALES CLAVE",
+  "promises": {
+    "tech": {
+      "title": "TECNOLOGÍA PARA LA VOZ CIUDADANA",
+      "points": [
+        "La aplicación LahenJutut de Sina da a cada ciudadano voz en el desarrollo de la ciudad.",
+        "La aplicación es compatible con varios idiomas, incluidos finlandés, inglés, ruso y árabe.",
+        "El completo anonimato del usuario garantiza que todos puedan compartir libremente sus ideas."
+      ]
+    },
+    "entrepreneurship": {
+      "title": "APOYO AL NEGOCIO Y EMPRENDIMIENTO",
+      "points": [
+        "Creación de redes de colaboración local que conecten empresas establecidas y nuevas.",
+        "Desarrollo de programas prácticos de formación laboral en colaboración con instituciones educativas locales.",
+        "Simplificación de los procesos municipales para facilitar los negocios."
+      ]
+    },
+    "integration": {
+      "title": "INTEGRACIÓN EFECTIVA DE INMIGRANTES",
+      "points": [
+        "Establecimiento de un centro especializado de competencias e idiomas para los recién llegados.",
+        "Provisión de formación lingüística personalizada, verificación de habilidades y entrenamiento laboral individual.",
+        "Creación de vías para que el talento internacional desarrolle su carrera en Lahti."
+      ]
+    },
+    "youth": {
+      "title": "PARTICIPACIÓN DE JÓVENES Y ESTUDIANTES",
+      "points": [
+        "Creación de vías significativas para la participación juvenil en la planificación urbana.",
+        "Apoyo a iniciativas empresariales estudiantiles.",
+        "Asegurar que las oportunidades educativas se alineen con las perspectivas laborales futuras en la región."
+      ]
+    }
+  },
+  "qaTitle": "PREGUNTAS Y RESPUESTAS",
+  "qaDescription": "Respuestas a las preguntas más frecuentes sobre mi campaña y visión para Lahti.",
+  "socialMediaTitle": "CONÉCTATE EN REDES SOCIALES",
+  "socialMediaDescription": "Sigue el viaje de campaña de Sina y únete a la conversación.",
+  "voteForSina": "#VotaPorSina",
+  "vote": "VOTA 137",
+  "tabs": {
+    "overview": "Resumen",
+    "detailed": "Posiciones Políticas",
+    "qa": "P&R"
+  },
+  "detailedPromises": {
+    "title": "POSICIONES POLÍTICAS DETALLADAS",
+    "description": "Explore mi postura sobre temas clave que afectan a Lahti y Finlandia. Haga clic en cada tema para leer mi explicación detallada.",
+    "entrepreneurship": {
+      "title": "EMPRENDIMIENTO MÁS FUERTE Y REFORMA DE LA VIDA LABORAL",
+      "description": "Apoyo el emprendimiento local y la creación de empleo creando un modelo colaborativo en Lahti donde las instituciones educativas locales y las empresas desarrollen conjuntamente programas prácticos de formación y redes empresariales. Esto asegura que Lahti permanezca a la vanguardia de la evolución de la vida laboral moldeada por la IA y la automatización."
+    },
+    "integration": {
+      "title": "INTEGRACIÓN MÁS EFECTIVA Y UTILIZACIÓN DE HABILIDADES",
+      "description": "Fomento el rápido empleo de inmigrantes y talento internacional en Lahti desarrollando un centro de servicio de competencias e idiomas que ofrezca reconocimiento de cualificaciones, formación lingüística personalizada y coaching profesional individual. Esto asegura que cada persona pueda encontrar su lugar y contribuir al crecimiento y bienestar de Lahti."
+    },
+    "decisionMaking": {
+      "title": "TOMA DE DECISIONES MÁS ABIERTA E INCLUSIVA",
+      "description": "Acerco la toma de decisiones a los residentes de la ciudad introduciendo una plataforma digital donde cada residente de Lahti pueda seguir directamente la toma de decisiones de la ciudad en tiempo real y participar en discusiones y propuestas. Esto aumenta la transparencia y permite el uso de nuevas tecnologías para desarrollar nuestra ciudad junto con los residentes."
+    }
+  },
+  "qaCategories": {
+    "Technology": "Tecnología",
+    "Entrepreneurship": "Emprendimiento",
+    "Integration": "Integración",
+    "Election General": "Elecciones Generales"
+  },
+  "qaItems": [
+    {
+      "id": "tech-1",
+      "category": "Technology",
+      "question": "¿Qué es la aplicación LahenJutut?",
+      "answer": "LahenJutut es una aplicación de participación ciudadana que he creado. Permite a los residentes de Lahti compartir directamente sus ideas y preocupaciones con los funcionarios de la ciudad. Está disponible en varios idiomas para garantizar que se escuche la voz de todos."
+    },
+    {
+      "id": "tech-2",
+      "category": "Technology",
+      "question": "¿Cómo mejorará la tecnología la participación ciudadana?",
+      "answer": "La plataforma digital permitirá a los ciudadanos seguir directamente las decisiones de la ciudad. Podrás comentar propuestas y sugerir tus ideas. Esto hace que el gobierno sea más transparente y responsable."
+    },
+    {
+      "id": "ent-1",
+      "category": "Entrepreneurship",
+      "question": "¿Cuáles son las iniciativas planeadas para impulsar el negocio local?",
+      "answer": "Crearé formación laboral en colaboración con escuelas locales. Esto ayudará a las empresas a crecer y creará más empleos en Lahti."
+    },
+    {
+      "id": "ent-2",
+      "category": "Entrepreneurship",
+      "question": "¿Cómo apoyará a las pequeñas empresas en Lahti?",
+      "answer": "Conectaremos grandes y pequeñas empresas. Esto crea oportunidades de mentoría. También simplificaré el papeleo municipal para los propietarios de negocios."
+    },
+    {
+      "id": "int-1",
+      "category": "Integration",
+      "question": "¿Cómo mejorará la integración de los nuevos inmigrantes?",
+      "answer": "Construiré un centro especializado para recién llegados. Ofrecerá clases de idiomas, verificación de habilidades y formación laboral. Esto ayuda a las personas a establecerse más rápidamente."
+    },
+    {
+      "id": "int-2",
+      "category": "Integration",
+      "question": "¿Qué papel ve para el talento internacional en el futuro de Lahti?",
+      "answer": "¡El talento internacional ayuda a Lahti a crecer! Crearé formas para que los estudiantes internacionales permanezcan aquí. Atraeremos trabajadores cualificados y les ayudaremos a construir una vida en nuestra ciudad."
+    },
+    {
+      "id": "gen-1",
+      "category": "Election General",
+      "question": "¿Cómo se beneficia Lahti de la experiencia internacional de Sina Ghazi?",
+      "answer": "Sina aporta una perspectiva global a Lahti. Esto ayuda a traer nuevas ideas, atraer talento internacional y fortalecer la economía de nuestra ciudad."
+    },
+    {
+      "id": "gen-2",
+      "category": "Election General",
+      "question": "¿Cuál es su prioridad para la participación de jóvenes y estudiantes?",
+      "answer": "Crearé formas para que los jóvenes ayuden en la planificación de la ciudad. Apoyaré los negocios estudiantiles. Y me aseguraré de que la educación conduzca a buenos trabajos en Lahti."
+    }
+  ],
+  "policyPositions": [
+    {
+      "id": "edu-1",
+      "category": "Education",
+      "question": "Mi municipio debería establecer un límite máximo para el tamaño de los grupos de educación básica.",
+      "stance": "Muy de Acuerdo",
+      "explanation": "Clases más pequeñas significa que los maestros pueden ayudar mejor a cada estudiante. Los niños aprenden más y están más felices. Los maestros también pueden hacer mejor su trabajo. Las buenas escuelas crean un futuro fuerte para Lahti. Trabajaré para que esto suceda."
+    },
+    {
+      "id": "edu-2",
+      "category": "Education",
+      "question": "El municipio debería ahorrar en educación.",
+      "stance": "Muy en Desacuerdo",
+      "explanation": "La educación es una inversión, no solo un gasto. Reducir la financiación educativa daña nuestro futuro. Necesitamos invertir en nuestras escuelas, maestros y estudiantes para construir un Lahti fuerte. La educación crea oportunidades y ayuda a crecer a nuestra economía."
+    },
+    {
+      "id": "econ-1",
+      "category": "Economy",
+      "question": "El municipio debería ahorrar recortando servicios.",
+      "stance": "Algo en Desacuerdo",
+      "explanation": "Debemos centrarnos en hacer los servicios más eficientes, no solo recortarlos. Los buenos servicios hacen que Lahti sea atractivo para residentes y empresas. Podemos encontrar formas inteligentes de usar nuestros recursos sin reducir la calidad de vida de los residentes."
+    },
+    {
+      "id": "econ-2",
+      "category": "Economy",
+      "question": "El municipio debería aumentar su deuda para mantener los servicios.",
+      "stance": "Neutral",
+      "explanation": "Debemos equilibrar cuidadosamente nuestro presupuesto. Alguna deuda para inversiones importantes es razonable, pero debemos ser responsables. Apoyo inversiones inteligentes que ayuden a nuestra ciudad a crecer y mejorar, manteniendo nuestras finanzas saludables para el futuro."
+    },
+    {
+      "id": "env-1",
+      "category": "Environment",
+      "question": "Mi municipio debería hacer más para combatir el cambio climático.",
+      "stance": "Muy de Acuerdo",
+      "explanation": "Lahti es un líder verde, pero podemos hacer más. Combatir el cambio climático crea empleos, mejora la salud y hace que nuestra ciudad sea un lugar mejor. Apoyaré la energía limpia, el transporte público y la construcción sostenible para mantener a Lahti a la vanguardia de la acción ambiental."
+    },
+    {
+      "id": "env-2",
+      "category": "Environment",
+      "question": "Los valores ambientales deberían priorizarse en las zonas, incluso si esto significa costos más altos.",
+      "stance": "Algo de Acuerdo",
+      "explanation": "La construcción verde puede costar más inicialmente, pero ahorra dinero a largo plazo. La planificación ambiental hace que Lahti sea saludable y atractivo. Necesitamos equilibrar los costos con nuestros objetivos ambientales, encontrando soluciones prácticas que funcionen para todos."
+    },
+    {
+      "id": "immig-1",
+      "category": "Immigration & Integration",
+      "question": "La inmigración enriquece mi municipio.",
+      "stance": "Muy de Acuerdo",
+      "explanation": "Como propietario de un negocio en Lahti, he visto cómo las personas de diferentes orígenes aportan nuevas habilidades e ideas. Los inmigrantes ayudan a nuestra ciudad a crecer, crean empleos y hacen que Lahti sea más diverso. Estar abiertos a diferentes culturas es clave para el éxito de nuestra ciudad."
+    },
+    {
+      "id": "immig-2",
+      "category": "Immigration & Integration",
+      "question": "Mi municipio debería ahorrar en servicios de integración para inmigrantes.",
+      "stance": "Muy en Desacuerdo",
+      "explanation": "El futuro de Lahti depende de ayudar a los recién llegados a formar parte de nuestra comunidad. Reducir los servicios de integración causa problemas y costos más altos más tarde. Perdemos habilidades valiosas e ideas de negocios. Necesitamos invertir en aprendizaje de idiomas y formación laboral para que todos puedan ayudar a construir un mejor Lahti."
+    },
+    {
+      "id": "local-1",
+      "category": "Local Issues",
+      "question": "Lahti Energia debería seguir siendo 100% propiedad de la ciudad.",
+      "stance": "Algo de Acuerdo",
+      "explanation": "Empresas como Lahti Energia son importantes para nuestra ciudad. La propiedad local asegura servicios confiables y soluciones energéticas responsables. La ciudad debe mantener el control sobre estos asuntos importantes. Podemos explorar asociaciones si traen mejor y más barata energía a los residentes. Pero la ciudad debe tener la última palabra."
+    },
+    {
+      "id": "local-2",
+      "category": "Local Issues",
+      "question": "Se debería construir un hotel en Alatori.",
+      "stance": "Algo de Acuerdo",
+      "explanation": "Lahti necesita proyectos que atraigan turistas y creen empleos. Un hotel en Alatori haría que el centro de nuestra ciudad sea más vibrante y ayudaría a los negocios cercanos. Pero debemos planificar cuidadosamente, escuchando las ideas de los residentes. El proyecto debe ajustarse al carácter de nuestra ciudad y valores verdes."
+    }
+  ]
+}

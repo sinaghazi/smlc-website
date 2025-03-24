@@ -1,14 +1,28 @@
-import React, { useState } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
-import {Book, Home, Trophy, Menu, X, Users, Mail, Vote} from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import {Book, Home, Trophy, Menu, X, Users, Mail, Vote, Globe} from 'lucide-react';
 import { Logo } from '@/assets/Logo';
+import { SupportedLanguage } from '@/translations';
 
 const Layout: React.FC = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>('en');
+
+    useEffect(() => {
+        // Extract language from URL if it's an election page
+        const pathParts = location.pathname.split('/');
+        if (pathParts.length > 2 && pathParts[2] === 'election') {
+            const lang = pathParts[1] as SupportedLanguage;
+            if (lang === 'en' || lang === 'fi') {
+                setCurrentLanguage(lang);
+            }
+        }
+    }, [location.pathname]);
 
     const isActive = (path: string) => {
-        return location.pathname === path;
+        return location.pathname === path || location.pathname.includes(path.substring(1));
     };
 
     const navigationItems = [
@@ -17,11 +31,19 @@ const Layout: React.FC = () => {
         { path: '/challenge', icon: Trophy, label: 'Challenge' },
         { path: '/teams/assessment', icon: Users, label: 'Team Assessment' },
         { path: '/contact', icon: Mail, label: 'Contact' },
-        { path: '/campaign', icon: Vote, label: 'Campaign 2025' }
+        { path: '/election', icon: Vote, label: 'Election 2025' }
     ];
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const switchLanguage = (lang: SupportedLanguage) => {
+        // If we're on an election page, navigate to the same page with new language
+        if (location.pathname.includes('/election')) {
+            navigate(`/${lang}/election`);
+        }
+        setCurrentLanguage(lang);
     };
 
     return (
@@ -109,16 +131,46 @@ const Layout: React.FC = () => {
                                 &copy; {new Date().getFullYear()} Sina's Multidimensional Leadership Cube
                             </p>
                         </div>
-                        <div className="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
-                            {navigationItems.map(({ path, label }) => (
-                                <Link
-                                    key={path}
-                                    to={path}
-                                    className="text-sm text-kokoomus-lightBlue hover:text-white font-barlowSemi uppercase"
-                                >
-                                    {label}
-                                </Link>
-                            ))}
+                        <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-8 items-center">
+                            {/* Language Switcher */}
+                            <div className="flex items-center space-x-2 mb-4 md:mb-0">
+                                <Globe className="w-4 h-4 text-kokoomus-lightBlue" />
+                                <div className="flex space-x-2">
+                                    <button 
+                                        onClick={() => switchLanguage('en')}
+                                        className={`px-2 py-1 text-sm rounded ${
+                                            currentLanguage === 'en' 
+                                                ? 'bg-kokoomus-blue text-white' 
+                                                : 'text-kokoomus-lightBlue hover:text-white'
+                                        }`}
+                                    >
+                                        🇬🇧 EN
+                                    </button>
+                                    <button 
+                                        onClick={() => switchLanguage('fi')}
+                                        className={`px-2 py-1 text-sm rounded ${
+                                            currentLanguage === 'fi' 
+                                                ? 'bg-kokoomus-blue text-white' 
+                                                : 'text-kokoomus-lightBlue hover:text-white'
+                                        }`}
+                                    >
+                                        🇫🇮 FI
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            {/* Navigation Links */}
+                            <div className="flex flex-wrap justify-center gap-4">
+                                {navigationItems.map(({ path, label }) => (
+                                    <Link
+                                        key={path}
+                                        to={path}
+                                        className="text-sm text-kokoomus-lightBlue hover:text-white font-barlowSemi uppercase"
+                                    >
+                                        {label}
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

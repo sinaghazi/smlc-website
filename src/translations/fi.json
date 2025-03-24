@@ -1,0 +1,196 @@
+{
+  "title": "SINA GHAZI",
+  "subtitle": "Lahden kaupunginvaltuuston ehdokas 2025",
+  "candidateNumber": "EHDOKAS 137",
+  "videoDescription": "Tutustu Sina Ghaziin, hänen taustaansa ja keskeisiin lupauksiin innovaatioiden, yrittäjyyden ja kansalaisten osallistamisen parantamiseksi Lahdessa.",
+  "keyPromisesTitle": "KESKEISET VAALILUPAUKSET",
+  "promises": {
+    "tech": {
+      "title": "TEKNOLOGIA KANSALAISTEN NÄKYVYYDEN PARANTAMISEKSI",
+      "points": [
+        "Sinan LahenJutut-sovellus antaa jokaiselle kansalaiselle äänen kaupungin kehittämisessä.",
+        "Sovellus tukee useita kieliä, mukaan lukien suomi, englanti, venäjä ja arabia.",
+        "Täydellinen käyttäjän anonymiteetti varmistaa, että kaikki voivat vapaasti jakaa ideansa."
+      ]
+    },
+    "entrepreneurship": {
+      "title": "YRITTÄJYYDEN JA INNOVAATIOIDEN TUKEMINEN",
+      "points": [
+        "Luodaan yhteistyöverkostoja, jotka yhdistävät vakiintuneet yritykset startup-yrityksiin.",
+        "Kehitetään käytännön koulutusohjelmia yhteistyössä paikallisten oppilaitosten kanssa.",
+        "Yksinkertaistetaan kaupungin prosesseja, jotta yrittäjyys olisi helpommin saavutettavissa."
+      ]
+    },
+    "integration": {
+      "title": "TEHOKAS KOTOUTUMINEN MAAHANMUUTTAJILLE",
+      "points": [
+        "Perustetaan erikoistunut osaamis- ja kielikeskus uusille tulijoille.",
+        "Tarjotaan räätälöityä kielikoulutusta, taitojen validointia ja henkilökohtaista uraohjausta.",
+        "Luodaan väyliä kansainvälisille osaajille rakentaa uraa Lahdessa."
+      ]
+    },
+    "youth": {
+      "title": "NUORTEN JA OPISKELIJOIDEN OSALLISTAMINEN",
+      "points": [
+        "Luodaan merkityksellisiä väyliä nuorten osallistumiselle kaupunkisuunnitteluun.",
+        "Tuetaan opiskelijoiden yrittäjyysaloitteita.",
+        "Varmistetaan, että koulutusmahdollisuudet vastaavat alueen tulevia uramahdollisuuksia."
+      ]
+    }
+  },
+  "qaTitle": "KYSYMYKSIÄ & VASTAUKSIA",
+  "qaDescription": "Vastauksia usein kysyttyihin kysymyksiin kampanjastani ja visiostani Lahdelle.",
+  "socialMediaTitle": "SEURAA SOSIAALISESSA MEDIASSA",
+  "socialMediaDescription": "Seuraa Sinan kampanjamatkaa ja osallistu keskusteluun.",
+  "voteForSina": "#ÄänestäSinaa",
+  "vote": "ÄÄNESTÄ 137",
+  "tabs": {
+    "overview": "Yleiskatsaus",
+    "detailed": "Poliittiset kannat",
+    "qa": "K&V"
+  },
+  "detailedPromises": {
+    "title": "YKSITYISKOHTAISET POLIITTISET KANNAT",
+    "description": "Tutustu näkemyksiini keskeisistä Lahtea ja Suomea koskevista kysymyksistä. Napsauta mitä tahansa aihetta lukeaksesi yksityiskohtaisen selitykseni.",
+    "entrepreneurship": {
+      "title": "VAHVEMPI YRITTÄJYYS JA TYÖELÄMÄN UUDISTAMINEN",
+      "description": "Tuen paikallista yrittäjyyttä ja työpaikkojen luomista kehittämällä Lahteen yhteistyömallin, jossa paikalliset oppilaitokset ja yritykset kehittävät yhdessä käytännön koulutusohjelmia ja yrittäjyysverkostoja. Tämä varmistaa, että Lahti pysyy tekoälyn ja automaation muovaaman työelämän eturintamassa."
+    },
+    "integration": {
+      "title": "TEHOKKAAMPI KOTOUTUMINEN JA OSAAMISEN HYÖDYNTÄMINEN",
+      "description": "Edistän maahanmuuttajien ja kansainvälisten osaajien nopeaa työllistymistä Lahdessa kehittämällä osaamis- ja kielipalvelukeskuksen, joka tarjoaa tutkintojen tunnustamista, räätälöityä kielikoulutusta ja henkilökohtaista uraohjausta. Tämä varmistaa, että jokainen löytää paikkansa ja voi osallistua Lahden kasvuun ja hyvinvointiin."
+    },
+    "decisionMaking": {
+      "title": "AVOIMEMPI JA OSALLISTAVAMPI PÄÄTÖKSENTEKO",
+      "description": "Tuon päätöksenteon lähemmäs kaupunkilaisia ottamalla käyttöön digitaalisen alustan, jossa jokainen lahtelainen voi seurata kaupungin päätöksentekoa reaaliajassa ja osallistua keskusteluihin ja ehdotusten tekemiseen. Tämä lisää läpinäkyvyyttä ja mahdollistaa uuden teknologian hyödyntämisen kaupunkimme kehittämisessä yhdessä asukkaiden kanssa."
+    }
+  },
+  "qaCategories": {
+    "Technology": "Teknologia",
+    "Entrepreneurship": "Yrittäjyys",
+    "Integration": "Kotoutuminen",
+    "Election General": "Yleiset vaalikysymykset"
+  },
+  "qaItems": [
+    {
+      "id": "tech-1",
+      "category": "Technology",
+      "question": "Mikä on LahenJutut-sovellus?",
+      "answer": "LahenJutut on kehittämäni kansalaisosallistumissovellus. Sen avulla Lahden asukkaat voivat jakaa ideoita ja huolenaiheita suoraan kaupungin virkamiehille. Se on saatavilla useilla kielillä, jotta kaikkien ääni tulisi kuulluksi."
+    },
+    {
+      "id": "tech-2",
+      "category": "Technology",
+      "question": "Miten teknologia parantaa kansalaisten osallistumista?",
+      "answer": "Digitaalinen alustamme mahdollistaa kaupunkilaisille kaupungin päätösten seuraamisen reaaliajassa. Voit kommentoida ehdotuksia ja ehdottaa omia ideoitasi. Tämä tekee hallinnosta läpinäkyvämmän ja reagoivamman."
+    },
+    {
+      "id": "ent-1",
+      "category": "Entrepreneurship",
+      "question": "Mitä aloitteita on suunnitteilla paikallisen yrittäjyyden edistämiseksi?",
+      "answer": "Luomme käytännönläheistä koulutusta yhteistyössä paikallisten koulujen kanssa. Tämä auttaa yrityksiä kasvamaan ja luo lisää työpaikkoja Lahteen."
+    },
+    {
+      "id": "ent-2",
+      "category": "Entrepreneurship",
+      "question": "Miten tuet pienyrityksiä Lahdessa?",
+      "answer": "Yhdistämme isot yritykset pienempien kanssa. Tämä luo mentorointimahdollisuuksia. Teemme myös kaupungin paperityöstä helpompaa yrittäjille."
+    },
+    {
+      "id": "int-1",
+      "category": "Integration",
+      "question": "Miten aiot parantaa uusien maahanmuuttajien kotoutumista?",
+      "answer": "Rakennamme erityisen keskuksen uusille tulijoille. Se tarjoaa kielikursseja, taitojen arviointia ja uraohjausta. Tämä auttaa ihmisiä asettumaan nopeammin."
+    },
+    {
+      "id": "int-2",
+      "category": "Integration",
+      "question": "Millaisen roolin näet kansainvälisillä osaajilla Lahden tulevaisuudessa?",
+      "answer": "Kansainväliset osaajat auttavat Lahtea kasvamaan! Luomme väyliä kansainvälisille opiskelijoille jäädä tänne. Houkuttelemme ammattitaitoisia työntekijöitä ja autamme heitä rakentamaan elämää kaupungissamme."
+    },
+    {
+      "id": "gen-1",
+      "category": "Election General",
+      "question": "Miten Sina Ghazin kansainvälinen kokemus hyödyttää Lahtea?",
+      "answer": "Sina tuo globaalin näkökulman Lahteen. Tämä auttaa tuomaan uusia ideoita, houkuttelemaan kansainvälisiä osaajia ja vahvistamaan kaupunkimme taloutta."
+    },
+    {
+      "id": "gen-2",
+      "category": "Election General",
+      "question": "Mitkä ovat prioriteettisi nuorten ja opiskelijoiden osallistamisessa?",
+      "answer": "Luomme tapoja nuorille osallistua kaupungin suunnitteluun. Tuemme opiskelijoiden yrityksiä. Ja varmistamme, että koulutus johtaa hyviin työpaikkoihin Lahdessa."
+    }
+  ],
+  "policyPositions": [
+    {
+      "id": "edu-1",
+      "category": "Education",
+      "question": "Kuntani tulisi asettaa enimmäisraja perusopetuksen opetusryhmien koolle.",
+      "stance": "Vahvasti samaa mieltä",
+      "explanation": "Pienemmät luokat tarkoittavat, että opettajat voivat auttaa jokaista oppilasta paremmin. Lapset oppivat enemmän ja ovat onnellisempia. Myös opettajat voivat tehdä työnsä paremmin. Hyvät koulut luovat vahvan tulevaisuuden Lahdelle. Työskentelen tämän toteuttamiseksi."
+    },
+    {
+      "id": "edu-2",
+      "category": "Education",
+      "question": "Kunnan tulisi säästää koulutuksesta.",
+      "stance": "Vahvasti eri mieltä",
+      "explanation": "Koulutus on investointi, ei vain kulu. Koulutusrahoituksen leikkaaminen vahingoittaa tulevaisuuttamme. Meidän on investoitava kouluihimme, opettajiimme ja oppilaisiimme vahvemman Lahden rakentamiseksi. Koulutus luo mahdollisuuksia ja auttaa talouttamme kasvamaan."
+    },
+    {
+      "id": "econ-1",
+      "category": "Economy",
+      "question": "Kunnan tulisi säästää leikkaamalla palveluja.",
+      "stance": "Jokseenkin eri mieltä",
+      "explanation": "Meidän tulisi keskittyä tekemään palveluista tehokkaampia, ei vain leikata niitä. Hyvät palvelut tekevät Lahdesta houkuttelevan asukkaille ja yrityksille. Voimme löytää älykkäämpiä tapoja käyttää resurssejamme vähentämättä asukkaidemme elämänlaatua."
+    },
+    {
+      "id": "econ-2",
+      "category": "Economy",
+      "question": "Kunnan tulisi lisätä velkaantumistaan palvelujen ylläpitämiseksi.",
+      "stance": "Neutraali",
+      "explanation": "Meidän on tasapainotettava budjettimme huolellisesti. Jonkin verran velkaa tärkeitä investointeja varten on järkevää, mutta meidän on oltava vastuullisia. Kannatan älykkäitä investointeja, jotka auttavat kaupunkiamme kasvamaan ja kehittymään, samalla pitäen taloutemme terveenä tulevaisuutta varten."
+    },
+    {
+      "id": "env-1",
+      "category": "Environment",
+      "question": "Kuntani tulisi tehdä enemmän ilmastonmuutoksen torjumiseksi.",
+      "stance": "Vahvasti samaa mieltä",
+      "explanation": "Lahti on jo vihreä johtaja, mutta voimme tehdä vielä enemmän. Ilmastonmuutoksen torjunta luo työpaikkoja, parantaa terveyttä ja tekee kaupungistamme paremman. Tuen puhdasta energiaa, julkista liikennettä ja kestävää rakentamista pitääkseni Lahden ympäristötoimien eturintamassa."
+    },
+    {
+      "id": "env-2",
+      "category": "Environment",
+      "question": "Ympäristöarvoja tulisi priorisoida kaavoituksessa, vaikka se tarkoittaisi korkeampia kustannuksia.",
+      "stance": "Jokseenkin samaa mieltä",
+      "explanation": "Vihreä rakentaminen saattaa maksaa enemmän etukäteen, mutta säästää rahaa pitkällä aikavälillä. Ympäristösuunnittelu tekee Lahdesta terveellisemmän ja houkuttelevamman. Meidän on tasapainotettava kustannukset ympäristötavoitteidemme kanssa ja löydettävä älykkäitä ratkaisuja, jotka toimivat kaikille."
+    },
+    {
+      "id": "immig-1",
+      "category": "Immigration & Integration",
+      "question": "Maahanmuutto rikastuttaa kuntaani.",
+      "stance": "Vahvasti samaa mieltä",
+      "explanation": "Lahden yrittäjänä olen nähnyt, kuinka eri taustoista tulevat ihmiset tuovat uusia taitoja ja ideoita. Maahanmuuttajat auttavat kaupunkiamme kasvamaan, luovat työpaikkoja ja tekevät Lahdesta monimuotoisemman. Avoimuus eri kulttuureille on avain kaupunkimme menestykseen."
+    },
+    {
+      "id": "immig-2",
+      "category": "Immigration & Integration",
+      "question": "Kuntani tulisi säästää maahanmuuttajien kotouttamispalveluista.",
+      "stance": "Vahvasti eri mieltä",
+      "explanation": "Lahden tulevaisuus riippuu siitä, että autamme uusia tulijoita tulemaan osaksi yhteisöämme. Kotouttamispalvelujen leikkaaminen johtaa ongelmiin ja korkeampiin kustannuksiin myöhemmin. Menetämme arvokkaita taitoja ja liikeideoita. Meidän on investoitava kieltenopetukseen ja työkoulutukseen, jotta kaikki voivat auttaa rakentamaan parempaa Lahtea."
+    },
+    {
+      "id": "local-1",
+      "category": "Local Issues",
+      "question": "Lahti Energian tulisi pysyä 100% kaupungin omistuksessa.",
+      "stance": "Jokseenkin samaa mieltä",
+      "explanation": "Lahti Energian kaltaiset yritykset ovat elintärkeitä kaupungillemme. Paikallinen omistus varmistaa luotettavat palvelut ja vastuulliset energiaratkaisut. Kaupungin tulisi säilyttää valta näissä tärkeissä asioissa. Voimme tutkia kumppanuuksia, jos ne tuovat asukkaille parempaa, edullisempaa energiaa. Mutta kaupungilla tulisi olla viimeinen sana."
+    },
+    {
+      "id": "local-2",
+      "category": "Local Issues",
+      "question": "Alatorille tulisi rakentaa hotelli.",
+      "stance": "Jokseenkin samaa mieltä",
+      "explanation": "Lahti tarvitsee hankkeita, jotka houkuttelevat turisteja ja luovat työpaikkoja. Hotelli Alatorilla tekisi kaupungin keskustasta elävämmän ja auttaisi lähialueen yrityksiä. Mutta meidän on suunniteltava se huolellisesti, asukkaiden mielipiteet huomioiden. Hankkeen tulisi sopia kaupunkimme luonteeseen ja vihreisiin arvoihin."
+    }
+  ]
+}
