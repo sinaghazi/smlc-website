@@ -183,7 +183,7 @@ const Scene: React.FC<{
     const { camera, gl } = useThree();
 
     useEffect(() => {
-        camera.position.set(5, 5, 5);
+        camera.position.set(3, 3, 3);
         camera.lookAt(0, 0, 0);
         gl.setClearColor('#ffffff', 1);
     }, [camera, gl]);
@@ -199,8 +199,8 @@ const Scene: React.FC<{
             <OrbitControls
                 enablePan={false}
                 enableZoom={true}
-                maxDistance={12}
-                minDistance={3}
+                maxDistance={10}
+                minDistance={2}
                 enableDamping
                 dampingFactor={0.05}
                 makeDefault
@@ -215,7 +215,7 @@ export const CubeVisualization: React.FC<CubeVisualizationProps> = ({
                                                                         onPositionChange
                                                                     }) => {
     return (
-        <div className="w-full h-[600px] bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="w-full h-[800px] bg-white rounded-lg shadow-lg overflow-hidden">
             <Canvas
                 gl={{
                     antialias: true,
@@ -224,10 +224,10 @@ export const CubeVisualization: React.FC<CubeVisualizationProps> = ({
                     powerPreference: 'high-performance',
                 }}
                 camera={{
-                    fov: 75,
+                    fov: 60,
                     near: 0.1,
                     far: 1000,
-                    position: [5, 5, 5]
+                    position: [3, 3, 3]
                 }}
                 style={{
                     background: 'white',

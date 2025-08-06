@@ -4,23 +4,23 @@ import { CubeDimension } from '../types/cube.types';
 export const CUBE_DIMENSIONS: CubeDimension = {
     personal: {
         axes: [
-            { name: 'x', min: -1, max: 1, label: 'Individual vs. Collective Focus' },
-            { name: 'y', min: -1, max: 1, label: 'Emotional vs. Rational Decision-Making' },
-            { name: 'z', min: -1, max: 1, label: 'Risk-Taking vs. Risk-Averse' }
+            { name: 'x', min: -1, max: 1, label: 'Self-Focus vs. Others-Focus' },
+            { name: 'y', min: -1, max: 1, label: 'Analytical vs. Intuitive' },
+            { name: 'z', min: -1, max: 1, label: 'Cautious vs. Bold' }
         ]
     },
     organizational: {
         axes: [
-            { name: 'x', min: -1, max: 1, label: 'Hierarchical vs. Flat' },
-            { name: 'y', min: -1, max: 1, label: 'Task-Oriented vs. People-Oriented' },
-            { name: 'z', min: -1, max: 1, label: 'Process-Driven vs. Innovation-Driven' }
+            { name: 'x', min: -1, max: 1, label: 'Directive vs. Collaborative' },
+            { name: 'y', min: -1, max: 1, label: 'Task-Focused vs. People-Focused' },
+            { name: 'z', min: -1, max: 1, label: 'Structured vs. Flexible' }
         ]
     },
     societal: {
         axes: [
-            { name: 'x', min: -1, max: 1, label: 'Collectivism vs. Free Markets' },
-            { name: 'y', min: -1, max: 1, label: 'Human-Centric vs. System-Centric' },
-            { name: 'z', min: -1, max: 1, label: 'Data-Driven vs. Intuition-Driven' }
+            { name: 'x', min: -1, max: 1, label: 'Individual Rights vs. Collective Good' },
+            { name: 'y', min: -1, max: 1, label: 'Traditional vs. Progressive' },
+            { name: 'z', min: -1, max: 1, label: 'Local vs. Global Perspective' }
         ]
     }
 };

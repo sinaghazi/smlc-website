@@ -8,19 +8,19 @@ export enum AxisType {
 // Constants for each axis level
 export const AXIS_LABELS = {
     [AxisType.PERSONAL]: {
-        x: 'Individual vs. Collective Focus',
-        y: 'Emotional vs. Rational Decision-Making',
-        z: 'Risk-Taking vs. Risk-Averse'
+        x: 'Self-Focus vs. Others-Focus',
+        y: 'Analytical vs. Intuitive',
+        z: 'Cautious vs. Bold'
     },
     [AxisType.ORGANIZATIONAL]: {
-        x: 'Hierarchical vs. Flat',
-        y: 'Task-Oriented vs. People-Oriented',
-        z: 'Process-Driven vs. Innovation-Driven'
+        x: 'Directive vs. Collaborative',
+        y: 'Task-Focused vs. People-Focused',
+        z: 'Structured vs. Flexible'
     },
     [AxisType.SOCIETAL]: {
-        x: 'Collectivism vs. Free Markets',
-        y: 'Human-Centric vs. System-Centric',
-        z: 'Data-Driven vs. Intuition-Driven'
+        x: 'Individual Rights vs. Collective Good',
+        y: 'Traditional vs. Progressive',
+        z: 'Local vs. Global Perspective'
     }
 };
 

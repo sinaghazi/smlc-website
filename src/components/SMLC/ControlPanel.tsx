@@ -1,5 +1,5 @@
 import React from 'react';
-import { AxisType } from '../../types/axis.types';
+import { AxisType, AXIS_LABELS } from '../../types/axis.types';
 import { Position, IconState } from './types';
 import './ControlPanel.css';
 
@@ -21,23 +21,6 @@ const IconControls: React.FC<{
     onAxisChange: (isSecondary: boolean, axis: AxisType) => void;
     onReset: (isSecondary: boolean) => void;
 }> = ({ icon, isSecondary, axisType, onPositionChange, onAxisChange, onReset }) => {
-    const axisLabels = {
-        [AxisType.PERSONAL]: {
-            x: 'Individual vs. Collective Focus',
-            y: 'Emotional vs. Rational Decision-Making',
-            z: 'Risk-Taking vs. Risk-Averse'
-        },
-        [AxisType.ORGANIZATIONAL]: {
-            x: 'Hierarchical vs. Flat',
-            y: 'Task-Oriented vs. People-Oriented',
-            z: 'Process-Driven vs. Innovation-Driven'
-        },
-        [AxisType.SOCIETAL]: {
-            x: 'Collectivism vs. Free Markets',
-            y: 'Human-Centric vs. System-Centric',
-            z: 'Data-Driven vs. Intuition-Driven'
-        }
-    };
     const step = 0.5; // This will create 5 steps: -1, -0.5, 0, 0.5, 1
 
 
@@ -81,7 +64,7 @@ const IconControls: React.FC<{
                 {['x', 'y', 'z'].map((axis) => (
                     <div key={axis} className="space-y-2">
                         <label className="block text-sm font-medium text-gray-700">
-                            {axisLabels[axisType][axis as keyof typeof axisLabels[typeof axisType]]}
+                            {AXIS_LABELS[axisType][axis as keyof typeof AXIS_LABELS[typeof axisType]]}
                         </label>
                         <input
                             type="range"

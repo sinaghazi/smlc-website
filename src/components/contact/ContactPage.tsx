@@ -9,7 +9,7 @@ const ContactPage: React.FC = () => {
             icon: Calendar,
             label: 'Book a meeting',
             value: 'Select data & time',
-            href: 'https://calendly.com/innovategy'
+            href: 'https://calendly.com/sinaghazi/online-meeting'
         },
         {
             icon: Mail,
@@ -26,8 +26,8 @@ const ContactPage: React.FC = () => {
         {
             icon: Globe,
             label: 'Website',
-            value: 'innovategy.fi',
-            href: 'https://innovategy.fi'
+            value: 'innovategy.com',
+            href: 'https://www.innovategy.com'
         }
     ];
 
