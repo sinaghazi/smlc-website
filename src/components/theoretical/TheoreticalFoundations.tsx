@@ -25,7 +25,7 @@ const DimensionCard: React.FC<{ dimension: ScientificFoundation }> = ({ dimensio
         
         <div className="flex items-center justify-between">
           <span className="text-sm text-blue-600 hover:text-blue-800">
-            {isExpanded ? 'Hide Details' : 'Show Scientific Details'}
+            {isExpanded ? 'Hide Research Details' : 'See the Science Behind This'}
           </span>
           <svg
             className={`w-5 h-5 text-gray-500 transition-transform ${
@@ -43,7 +43,7 @@ const DimensionCard: React.FC<{ dimension: ScientificFoundation }> = ({ dimensio
       {isExpanded && (
         <div className="mt-6 pt-6 border-t border-gray-200 space-y-4">
           <div>
-            <h5 className="font-medium text-gray-800 mb-2">Theoretical Basis</h5>
+            <h5 className="font-medium text-gray-800 mb-2">Research Foundation</h5>
             <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
               {dimension.theoreticalBasis.map((basis, index) => (
                 <li key={index}>{basis}</li>
@@ -100,12 +100,12 @@ const TheoreticalFoundations: React.FC<TheoreticalFoundationsProps> = ({ classNa
     <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ${className}`}>
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Scientific Foundations
+          Why This Leadership Approach Works
         </h1>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-          The Multidimensional Leadership Cube is grounded in established psychological, 
-          organizational, and cultural research. Each dimension is based on validated 
-          theoretical constructs and measurement instruments from peer-reviewed scientific literature.
+          Our approach isn't just theory - it's based on decades of scientific research about how people think, 
+          work together, and lead across cultures. Every aspect has been tested and validated by researchers 
+          around the world, giving you tools that actually help solve real problems.
         </p>
       </div>
 

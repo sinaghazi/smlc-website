@@ -2,28 +2,28 @@ import { Brain, Users, Lightbulb, ArrowRight, Languages } from 'lucide-react';
 
 const features = [
     {
-        name: 'Multidimensional Analysis',
-        description: 'Understand leadership dynamics across personal, organizational, and societal levels through a comprehensive three-dimensional framework.',
+        name: 'See the Whole Picture',
+        description: 'Learn to understand how leadership works at different levels - from personal relationships to global challenges - so you can make better decisions that help everyone.',
         icon: Brain,
     },
     {
-        name: 'Cognitive Flexibility',
-        description: 'Develop the ability to see situations from multiple perspectives and adapt your leadership approach accordingly.',
+        name: 'Think Flexibly',
+        description: 'Develop the skill to see problems from different angles and change your approach when needed - just like great leaders do during crises.',
         icon: Brain,
     },
     {
-        name: 'Cultural Intelligence',
-        description: 'Bridge differences and foster understanding across diverse teams and organizational cultures.',
+        name: 'Connect Across Cultures',
+        description: 'Learn to work effectively with people from different backgrounds and build trust across cultural differences - essential for solving global problems.',
         icon: Languages,
     },
     {
-        name: 'Inclusive Leadership',
-        description: 'Create environments where differences are valued and everyone can contribute their unique perspectives.',
+        name: 'Include Everyone',
+        description: 'Create spaces where everyone feels valued and can contribute their unique ideas - because diverse teams solve problems better.',
         icon: Users,
     },
     {
-        name: 'Adaptive Communication',
-        description: 'Master the art of adjusting your communication style to effectively connect with different audiences.',
+        name: 'Communicate for Impact',
+        description: 'Learn to adjust how you communicate so your message connects with different people and inspires positive action.',
         icon: Lightbulb,
     },
 ];
@@ -34,13 +34,13 @@ const FeaturesSection = () => {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:text-center">
                     <h2 className="text-base font-semibold leading-7 text-indigo-600">
-                        Comprehensive Framework
+                        Leadership Skills That Matter
                     </h2>
                     <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Everything you need to understand multidimensional leadership
+                        Build the skills our world needs right now
                     </p>
                     <p className="mt-6 text-lg leading-8 text-gray-600">
-                        SMLC provides a structured approach to understanding and implementing effective leadership across different contexts and cultures.
+                        Our approach is based on decades of scientific research and helps leaders tackle complex challenges like climate change, social inequality, and global cooperation.
                     </p>
                 </div>
 

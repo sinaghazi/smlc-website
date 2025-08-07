@@ -13,11 +13,9 @@ const Layout: React.FC = () => {
 
     const navigationItems = [
         { path: '/', icon: Home, label: 'Home' },
-        { path: '/explanation', icon: GraduationCap, label: 'Learn SMLC' },
-        { path: '/foundations', icon: GraduationCap, label: 'Scientific Foundations' },
+        { path: '/explanation', icon: GraduationCap, label: 'About SMLC' },
         { path: '/assessment', icon: ClipboardCheck, label: 'Take Assessment' },
         { path: '/contact', icon: Mail, label: 'Contact' }
-
     ];
 
     const toggleMenu = () => {

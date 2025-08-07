@@ -134,7 +134,7 @@ export const PositionInfoDisplay: React.FC<PositionInfoDisplayProps> = ({
     return (
         <div className="space-y-4">
             <h3 className="text-lg font-medium text-gray-900">
-                {isSecondary ? 'Comparison Position' : 'Primary Position'} ({icon.axisType})
+                Position ({icon.axisType})
             </h3>
             {renderExample()}
         </div>
