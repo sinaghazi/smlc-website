@@ -12,7 +12,7 @@ import {
     CheckCircle2,
     FileText
 } from 'lucide-react';
-import { HackathonResults } from '../HackathonResults';
+
 import { SCIENTIFIC_FOUNDATIONS } from '../../../data/scientificFoundations';
 
 interface ExplanationCardProps {
@@ -513,10 +513,7 @@ export const SMLCExplanation: React.FC = () => {
 
 
 
-                            {/* Case Studies */}
-                            <div className="mt-12">
-                                <HackathonResults/>
-                            </div>
+                            {/* Case Studies Section Removed */}
 
 
                         </div>
