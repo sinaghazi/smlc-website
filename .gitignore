@@ -16,9 +16,13 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 .idea
+.windsurf/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Personal source material (CV, Upwork earnings, essays) — local only
+sina/
