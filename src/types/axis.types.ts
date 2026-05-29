@@ -1,40 +1,24 @@
 // src/types/axis.types.ts
+// AxisType now denotes the *entity kind* (person / business / society), not a
+// separate axis system. All three share the dimensions defined in
+// constants/dimensions.ts; pole labels live in POLES there.
 export enum AxisType {
     PERSONAL = 'Person',
     ORGANIZATIONAL = 'Business',
-    SOCIETAL = 'Country'
+    SOCIETAL = 'Society'
 }
 
-// Constants for each axis level
-export const AXIS_LABELS = {
-    [AxisType.PERSONAL]: {
-        x: 'Self-Focus vs. Others-Focus',
-        y: 'Analytical vs. Intuitive',
-        z: 'Cautious vs. Bold'
-    },
-    [AxisType.ORGANIZATIONAL]: {
-        x: 'Directive vs. Collaborative',
-        y: 'Task-Focused vs. People-Focused',
-        z: 'Structured vs. Flexible'
-    },
-    [AxisType.SOCIETAL]: {
-        x: 'Individual Rights vs. Collective Good',
-        y: 'Traditional vs. Progressive',
-        z: 'Local vs. Global Perspective'
-    }
-};
-
-export type PositionType = 'personal' | 'business' | 'country';
+export type PositionType = 'person' | 'business' | 'society';
 
 export const mapAxisTypeToPositionType = (axisType: AxisType): PositionType => {
     switch (axisType) {
         case AxisType.PERSONAL:
-            return 'personal';
+            return 'person';
         case AxisType.ORGANIZATIONAL:
             return 'business';
         case AxisType.SOCIETAL:
-            return 'country';
+            return 'society';
         default:
-            return 'personal';
+            return 'person';
     }
 };

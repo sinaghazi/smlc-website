@@ -1,64 +1,175 @@
 import React from 'react';
-import { Calendar } from 'lucide-react';
+import { Mail, Phone, Globe, Linkedin, ArrowUpRight, Calendar } from 'lucide-react';
 import sinaImage from '@/assets/sina-photo.jpg';
 
 const ContactPage: React.FC = () => {
+    const contactInfo = [
+        {
+            icon: Calendar,
+            label: 'Book a meeting',
+            value: 'Pick a date & time',
+            href: 'https://calendly.com/sinaghazi/online-meeting',
+        },
+        {
+            icon: Mail,
+            label: 'Email',
+            value: 'sina@innovategy.fi',
+            href: 'mailto:sina@innovategy.fi',
+        },
+        {
+            icon: Phone,
+            label: 'Phone',
+            value: '+358 41 317 5455',
+            href: 'tel:+358413175455',
+        },
+        {
+            icon: Linkedin,
+            label: 'LinkedIn',
+            value: 'in/sinaghazi',
+            href: 'https://www.linkedin.com/in/sinaghazi/',
+        },
+    ];
 
     return (
-        <div className="min-h-screen bg-gray-50 py-12">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Hero Section */}
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                        Speaking & Advisory
+        <div className="bg-white">
+            <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28 lg:px-8">
+                {/* Hero */}
+                <div className="max-w-2xl">
+                    <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent-700">
+                        Get in touch
+                    </p>
+                    <h1 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-stone-900 sm:text-5xl">
+                        Let's figure out what's worth building.
                     </h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Book a meeting to discuss speaking engagements or advisory services.
+                    <p className="mt-6 text-lg leading-8 text-stone-700">
+                        Whether you want to try työ, scope a project, or just compare notes on
+                        understanding difference — I read every message myself, and I usually reply
+                        within a few hours.
                     </p>
                 </div>
 
-                <div className="max-w-4xl mx-auto">
-                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <div className="p-8">
-                            <div className="flex items-center gap-6 mb-8">
+                <div className="mt-16 grid gap-12 lg:grid-cols-2">
+                    {/* Left — who I am + the businesses */}
+                    <div className="space-y-6">
+                        <div className="rounded-2xl border border-stone-200 bg-stone-50 p-8">
+                            <div className="flex items-center gap-5">
                                 <img
                                     src={sinaImage}
                                     alt="Sina Ghazi"
-                                    className="w-24 h-24 rounded-full object-cover"
+                                    className="h-20 w-20 rounded-full object-cover ring-1 ring-stone-900/5"
                                 />
                                 <div>
-                                    <h2 className="text-2xl font-bold text-gray-900">Sina Ghazi</h2>
-                                    <p className="text-indigo-600 font-medium">Leadership Development & Organizational Advisory</p>
+                                    <h2 className="font-display text-2xl font-medium text-stone-900">
+                                        Sina Ghazi
+                                    </h2>
+                                    <p className="font-medium text-accent-700">
+                                        AI systems architect · Lahti, Finland
+                                    </p>
                                 </div>
                             </div>
-                            
-                            <div className="mb-8">
-                                <p className="text-gray-600 mb-4">
-                                    Available for speaking engagements and advisory services focused on multi-dimensional 
-                                    leadership development, organizational transformation, and cross-cultural collaboration.
-                                </p>
-                                <p className="text-gray-600">
-                                    Topics include leadership complexity, cultural intelligence, organizational dynamics, 
-                                    and science-based approaches to leadership development.
-                                </p>
+                            <p className="mt-6 text-stone-600">
+                                I help founders and teams understand what's actually worth building —
+                                and then build it. Twenty years across banking, payments, and AI,
+                                delivered independently with a 100% track record. Most of that work
+                                now runs through two things.
+                            </p>
+                        </div>
+
+                        <a
+                            href="https://tyo.vaivatta.fi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group block rounded-2xl border border-stone-200 p-6 transition hover:border-accent-300 hover:bg-accent-50/40"
+                        >
+                            <div className="flex items-center justify-between">
+                                <h3 className="font-display text-xl font-medium text-stone-900">työ</h3>
+                                <ArrowUpRight className="h-5 w-5 text-stone-400 transition group-hover:text-accent-600" />
                             </div>
-                            
-                            <div className="text-center">
+                            <p className="mt-2 text-sm leading-6 text-stone-600">
+                                An AI communication hub for Finnish teams — every message in one place,
+                                a framed reply drafted, a human always approving. Free to start.
+                            </p>
+                        </a>
+
+                        <a
+                            href="https://www.innovategy.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group block rounded-2xl border border-stone-200 p-6 transition hover:border-accent-300 hover:bg-accent-50/40"
+                        >
+                            <div className="flex items-center justify-between">
+                                <h3 className="font-display text-xl font-medium text-stone-900">
+                                    Innovategy Oy
+                                </h3>
+                                <ArrowUpRight className="h-5 w-5 text-stone-400 transition group-hover:text-accent-600" />
+                            </div>
+                            <p className="mt-2 text-sm leading-6 text-stone-600">
+                                System clarity and direction. I step into unclear situations to figure
+                                out what matters, what to stop, and how the pieces fit — often in a
+                                3–5 day Clarity Sprint.
+                            </p>
+                        </a>
+                    </div>
+
+                    {/* Right — contact methods */}
+                    <div>
+                        <div className="rounded-2xl border border-stone-200 p-8">
+                            <h3 className="font-display text-xl font-medium text-stone-900">
+                                Reach me directly
+                            </h3>
+                            <div className="mt-6 space-y-4">
+                                {contactInfo.map((info) => (
+                                    <a
+                                        key={info.label}
+                                        href={info.href}
+                                        target={info.href.startsWith('http') ? '_blank' : undefined}
+                                        rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                        className="flex items-center gap-4 rounded-xl p-3 text-stone-700 transition hover:bg-stone-50"
+                                    >
+                                        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent-100 text-accent-700">
+                                            <info.icon className="h-5 w-5" />
+                                        </div>
+                                        <div>
+                                            <p className="text-sm text-stone-500">{info.label}</p>
+                                            <p className="font-medium text-stone-900">{info.value}</p>
+                                        </div>
+                                    </a>
+                                ))}
                                 <a
-                                    href="https://calendly.com/sinaghazi/online-meeting"
+                                    href="https://www.innovategy.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-3 px-8 py-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-lg font-medium"
+                                    className="flex items-center gap-4 rounded-xl p-3 text-stone-700 transition hover:bg-stone-50"
                                 >
-                                    <Calendar className="h-5 w-5" />
-                                    Book a Meeting
+                                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent-100 text-accent-700">
+                                        <Globe className="h-5 w-5" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm text-stone-500">Website</p>
+                                        <p className="font-medium text-stone-900">innovategy.com</p>
+                                    </div>
                                 </a>
                             </div>
                         </div>
+
+                        <div className="mt-6 rounded-2xl bg-stone-900 p-8 text-stone-100">
+                            <h3 className="font-display text-xl font-medium">
+                                Prefer to just try the product?
+                            </h3>
+                            <p className="mt-2 text-sm leading-6 text-stone-300">
+                                työ is ready in about a minute, with a free tier and no installation.
+                            </p>
+                            <a
+                                href="https://tyo.vaivatta.fi"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-5 inline-flex items-center gap-2 rounded-md bg-accent-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-500"
+                            >
+                                Try työ <ArrowUpRight className="h-4 w-4" />
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     );

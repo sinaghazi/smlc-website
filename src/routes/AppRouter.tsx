@@ -4,7 +4,8 @@ import HomePage from '../components/HomePage';
 import { SMLCExplanation } from '../components/SMLC/explanation/SMLCExplanation';
 import Layout from '../components/Layout';
 import ContactPage from '../components/contact/ContactPage';
-import InteractiveAssessment from '../components/assessment/InteractiveAssessment';
+import StoryPage from '../components/story/StoryPage';
+import WorkPage from '../components/work/WorkPage';
 
 const AppRouter: React.FC = () => {
     return (
@@ -12,8 +13,9 @@ const AppRouter: React.FC = () => {
             <Routes>
                 <Route element={<Layout />}>
                     <Route path="/" element={<HomePage />} />
+                    <Route path="/story" element={<StoryPage />} />
                     <Route path="/explanation" element={<SMLCExplanation />} />
-                    <Route path="/assessment" element={<InteractiveAssessment />} />
+                    <Route path="/work" element={<WorkPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Route>
