@@ -43,7 +43,7 @@ const FitCard: React.FC<FitCardProps> = ({ a, b }) => {
                     <div key={ax.dimension}>
                         <div className="flex items-center justify-between text-xs">
                             <dt className="font-medium text-stone-700">{ax.dimension}</dt>
-                            <dd className="text-stone-400">
+                            <dd className="font-mono text-[11px] text-stone-400">
                                 {ax.gap === 0 ? 'aligned' : `gap ${ax.gap.toFixed(1)}`}
                             </dd>
                         </div>
@@ -53,7 +53,7 @@ const FitCard: React.FC<FitCardProps> = ({ a, b }) => {
                                 style={{ width: `${(ax.gap / 2) * 100}%` }}
                             />
                         </div>
-                        <div className="mt-1 flex items-center justify-between text-xs">
+                        <div className="mt-1 flex items-center justify-between font-mono text-[11px]">
                             <span style={{ color: ENTITY_COLOR[a.kind] }}>{ax.aPole}</span>
                             <span style={{ color: ENTITY_COLOR[b.kind] }}>{ax.bPole}</span>
                         </div>

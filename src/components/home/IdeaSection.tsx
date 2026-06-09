@@ -30,8 +30,8 @@ const IdeaSection = () => {
     return (
         <section id="idea" className="bg-stone-50 py-24 sm:py-32">
             <div className="mx-auto max-w-3xl px-6 lg:px-8">
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent-700">
-                    One world, two minds
+                <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent-600">
+                    02 / One world, two minds
                 </p>
                 <h2 className="mt-6 font-display text-3xl font-medium leading-tight tracking-tight text-stone-900 sm:text-4xl">
                     We share one world, but we don't share one mind.
@@ -64,8 +64,8 @@ const IdeaSection = () => {
                             key={m.title}
                             className="rounded-xl border border-stone-200 bg-white p-5"
                         >
-                            <div className="font-display text-3xl font-medium text-accent-300">
-                                {i + 1}
+                            <div className="font-mono text-2xl font-medium text-accent-600">
+                                0{i + 1}
                             </div>
                             <h3 className="mt-2 font-semibold text-stone-900">{m.title}</h3>
                             <p className="mt-2 text-sm leading-6 text-stone-600">{m.body}</p>
@@ -94,7 +94,7 @@ const IdeaSection = () => {
             <div className="mx-auto max-w-3xl px-6 lg:px-8">
                 <Link
                     to="/explanation"
-                    className="text-sm font-semibold leading-6 text-accent-700 transition hover:text-accent-600"
+                    className="font-mono text-xs uppercase tracking-[0.15em] text-accent-600 underline decoration-accent-200 underline-offset-8 transition hover:decoration-accent-600"
                 >
                     Go deeper on the SMLC framework <span aria-hidden="true">→</span>
                 </Link>

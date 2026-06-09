@@ -4,8 +4,8 @@ const StorySection = () => {
     return (
         <section id="story" className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-3xl px-6 lg:px-8">
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent-700">
-                    Two countries, two minds
+                <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent-600">
+                    01 / Two countries, two minds
                 </p>
 
                 <div className="mt-8 space-y-6 text-lg leading-8 text-stone-700">
@@ -46,7 +46,7 @@ const StorySection = () => {
                 <div className="mt-10">
                     <Link
                         to="/story"
-                        className="text-sm font-semibold leading-6 text-accent-700 transition hover:text-accent-600"
+                        className="font-mono text-xs uppercase tracking-[0.15em] text-accent-600 underline decoration-accent-200 underline-offset-8 transition hover:decoration-accent-600"
                     >
                         Read the full story <span aria-hidden="true">→</span>
                     </Link>

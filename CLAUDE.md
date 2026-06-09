@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-SMLC (Sina's Multidimensional Leadership Cube) is a single-page React + TypeScript site that visualizes leadership dynamics on an interactive 3D cube. Users place icons in a 3D space whose axes change meaning depending on the selected analysis level (Personal / Organizational / Societal), and the app maps that position to descriptive examples (personas, companies, countries).
+sinaghazi.com is a single-page React + TypeScript personal hub built around the SMLC (Sina's Multidimensional Leadership Cube). The core idea: a **person**, a **business**, and a **society** are all positioned on the *same* three dimensions (Agency / Mode / Orientation, each −1..1), so the distance between any two of them is a meaningful "fit" (alignment) or "friction" reading. The homepage is one narrative scroll — story → idea (the cube) → proof (testimonials) → työ (the product CTA).
 
 ## Commands
 
@@ -21,25 +21,26 @@ There is **no test runner and no `lint` script** wired into package.json. ESLint
 
 ## Architecture
 
-**Routing.** `App.tsx` → `routes/AppRouter.tsx` defines all routes inside a shared `<Layout />` (BrowserRouter). Each top-level page is one component directory under `src/components/` (e.g. `assessment/`, `theoretical/`, `hackathon/`, `contact/`). Unknown paths redirect to `/`.
+**Routing.** `App.tsx` → `routes/AppRouter.tsx` defines all routes inside a shared `<Layout />` (BrowserRouter): `/` (HomePage, composed from `components/home/*` sections), `/story`, `/explanation` (the SMLC deep-dive), `/work`, `/contact`. Unknown paths redirect to `/`. Each page sets its own head tags via `components/seo/Seo.tsx` (react-helmet-async); `index.html` carries only static homepage fallbacks for no-JS scrapers — do not add description/canonical there.
 
-**The cube (`src/components/SMLC/`).** This is the core feature. `SMLCContainer` owns all state — two `IconState` objects (`primaryIcon`, `secondaryIcon`), each holding `{ position: {x,y,z}, active, color, axisType }` — and passes handlers down. It composes three children:
-- `ControlPanel` — sliders/inputs that mutate icon position and axis level.
-- `CubeVisualization` — the Three.js scene (via `@react-three/fiber` + `@react-three/drei`), rendering the cube, draggable icons, and `AxisLabelsOverlay`.
-- `PositionInfoDisplay` — shows the example mapped from the current position.
+**The shared dimensions (`src/constants/dimensions.ts`).** The single source of truth for the model. `DIMENSIONS` names the axes (x = Agency, y = Mode, z = Orientation; sign convention locked: + = self-directed / analytical / bold cluster). `POLES` gives level-appropriate pole words per entity kind (person / business / society); `AXIS_ENDS` gives the generic cross-level glosses used inside the 3D cube; `ENTITY_LABEL` / `ENTITY_COLOR` brand the three kinds. **Scientific grounding:** society x follows Hofstede individualism–collectivism, society y follows Trompenaars universalism–particularism (rule-based vs relationship-based), z maps to Higgins' regulatory focus / openness-to-change; person y is Kahneman dual-process. The "note on honesty" in `SMLCExplanation.tsx` states these citations — keep poles, placements, and that note consistent when editing any of them.
 
-**Axis semantics are level-dependent.** A cube position `(x,y,z)` means different things per level. `AxisType` (`src/types/axis.types.ts`) enumerates `PERSONAL`/`ORGANIZATIONAL`/`SOCIETAL`; `AXIS_LABELS` and `CUBE_DIMENSIONS` (`src/constants/cube.constants.ts`) hold the per-level axis label strings. Axis ranges are always `-1..1`.
+**The cube (`src/components/SMLC/`).** `SMLCContainer` owns all state: a `Stack` (`types.ts`) = person + optional business + optional society, each an `EntityState { kind, position, active }`. Two modes: *explore* (one stack) and *compare* (two stacks side by side), plus presets (`SINA`, `FINLAND`, `IRAN` constants must mirror the hand-placed positions in `data/positionMapping.ts`). Children:
+- `ControlPanel` — per-entity sliders (step 0.5, so values are always in {−1, −0.5, 0, 0.5, 1}).
+- `CubeVisualization` — the Three.js scene (`@react-three/fiber` + drei): 2×2×2 wireframe cube, one marker per active entity (sphere/box/cone), drei `<Line>` fit-lines between every pair, axis-end labels from `AXIS_ENDS`. The `<Canvas>` is wrapped in `ErrorBoundary` with a text fallback — keep it that way; a WebGL failure must not take down the homepage.
+- `PositionInfoDisplay` — per-entity profile card via `getPositionInsight`.
+- `FitDisplay` — pairwise fit cards via `computeFit`.
 
-**Position → example mapping (`src/data/`).** Each axis is discretized to `[-1, -0.5, 0, 0.5, 1]`, giving 125 positions per level. `positionMappingGenerator.ts` programmatically generates persona/company/country examples for every combination from the position values; `positionMapping.ts` merges those generated entries with hand-authored overrides via `mergeWithExistingMapping`. Look up examples with `getExamplesByPosition(...)` keyed by `getPositionKey({x,y,z})` (format `"x_y_z"`). When changing example content, check whether it's generated (edit the generator's `determine*Style`/`generate*Example` functions) or a hand-authored override (edit `positionMapping.ts`).
+**The fit engine (`src/components/SMLC/fit.ts`).** `computeFit(aKind, aPos, bKind, bPos)` returns per-axis gaps (0..2), Euclidean `friction` (0..√12), `similarity = 1 − friction/√12`, and a generated headline naming the widest-gap axis using kind-specific pole words.
 
-**Scientific grounding.** `.windsurf/rules/scientific-references.md` documents the validated psychological/organizational constructs behind each axis (Hofstede, Higgins regulatory focus, Competing Values Framework, Gelfand tightness-looseness, etc.). `src/data/scientificFoundations.ts` and the `theoretical/` pages surface this. **Preserve the theoretical grounding** when editing axis labels, dimension definitions, or framework copy — the axes are not arbitrary.
+**Examples (`src/data/positionMapping.ts`).** `EXAMPLES` holds ~13 hand-placed real-world examples per entity kind — positions are judgment calls anchored to the cited research; tune coordinates there. For any position, `profileFor` computes a magnitude-aware text profile ("Strongly …" at ±1, "Leans …" at ±0.5) and `nearestExample` finds the closest example by Euclidean distance (`getPositionInsight` combines both, flagging exact matches). There is no pre-generated position dictionary.
 
 ## Conventions
 
 - **Path alias:** `@/` → `src/` (configured in both `vite.config.ts` and `tsconfig.app.json`).
-- **Styling:** Tailwind (`tailwind.config.js`), with a few component-scoped `.css` files (e.g. `ControlPanel.css`). `clsx` + `tailwind-merge` via `src/lib/utils.ts`.
-- **Three.js perf:** `vite.config.ts` manually chunks `three`, `three-fiber`, `three-drei`, `vendor`, and `utils` separately; assets are emitted under `assets/{js,img,...}/`. WebGL context options live in `src/utils/webglContext.ts`. Wrap risky 3D rendering in `ErrorBoundary`.
+- **Styling:** Tailwind (`tailwind.config.js`); `clsx` + `tailwind-merge` via `src/lib/utils.ts`. Design system ("coordinates", Swiss/technical): cool ink-on-paper neutrals mapped over the `stone` token name, electric cobalt `accent`, acid-lime `signal` (dark surfaces only), near-sharp `borderRadius` overrides, hairline borders. Fonts: Inter body, Space Grotesk `font-display`, JetBrains Mono `font-mono` for uppercase micro-labels/kickers (the recurring `font-mono text-xs uppercase tracking-[0.25em]` kicker pattern).
+- **Three.js perf:** `vite.config.ts` manually chunks `three`, `three-fiber`, `three-drei`, `vendor`, and `utils` (npm utility packages) separately; assets are emitted under `assets/{js,img,...}/`.
 
 ## Deploy
 
-`deploy.template.yaml` targets DigitalOcean App Platform as a static site: build command `./build.sh`, output dir `dist`, Node 20.
+`deploy.template.yaml` targets DigitalOcean App Platform as a static site: build command `./build.sh`, output dir `dist`, Node 20. Fathom analytics is loaded from `index.html`.

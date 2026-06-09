@@ -18,8 +18,9 @@ const mk = (person: Position, business?: Position, society?: Position): Stack =>
     society: { kind: 'society', position: society ?? v(0, 0, 0), active: !!society },
 });
 
+// Mirror the hand-placed positions in data/positionMapping.ts EXAMPLES.
 const SINA = v(0.5, 1, 0.5);
-const FINLAND = v(-0.5, 0.5, 0);
+const FINLAND = v(0.5, 0.5, 0);
 const IRAN = v(-0.5, -1, -1);
 
 interface Preset {
@@ -45,8 +46,8 @@ const presets: Preset[] = [
         b: mk(SINA, undefined, IRAN),
     },
     {
-        label: 'Person 111 in 101 vs 100 in 011',
-        sub: 'compare · the worked example',
+        label: 'Two invented situations',
+        sub: 'compare · pure coordinates, make them yours',
         mode: 'compare',
         a: mk(v(1, 1, 1), undefined, v(1, 0, 1)),
         b: mk(v(1, 0, 0), undefined, v(0, 1, 1)),
@@ -102,14 +103,14 @@ const SMLCContainer: React.FC = () => {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 {/* Mode toggle */}
                 <div className="flex flex-wrap items-center justify-between gap-4">
-                    <div className="inline-flex rounded-lg border border-stone-200 bg-white p-1">
+                    <div className="inline-flex border border-stone-300 bg-white p-1">
                         {(['explore', 'compare'] as Mode[]).map((m) => (
                             <button
                                 key={m}
                                 onClick={() => setMode(m)}
-                                className={`rounded-md px-4 py-2 text-sm font-medium transition ${
+                                className={`px-4 py-2 font-mono text-xs uppercase tracking-[0.12em] transition ${
                                     mode === m
-                                        ? 'bg-accent-600 text-white'
+                                        ? 'bg-stone-900 text-stone-50'
                                         : 'text-stone-600 hover:text-stone-900'
                                 }`}
                             >
@@ -121,18 +122,22 @@ const SMLCContainer: React.FC = () => {
 
                 {/* Presets */}
                 <div className="mt-5">
-                    <p className="text-sm font-medium text-stone-500">Try a starting point:</p>
+                    <p className="font-mono text-xs uppercase tracking-[0.15em] text-stone-500">
+                        Try a starting point
+                    </p>
                     <div className="mt-3 flex flex-wrap gap-3">
                         {presets.map((preset) => (
                             <button
                                 key={preset.label}
                                 onClick={() => applyPreset(preset)}
-                                className="group rounded-xl border border-stone-200 bg-white px-4 py-2.5 text-left transition hover:border-accent-300 hover:bg-accent-50/40"
+                                className="group border border-stone-300 bg-white px-4 py-2.5 text-left transition hover:border-accent-600"
                             >
-                                <span className="block text-sm font-semibold text-stone-900 group-hover:text-accent-700">
+                                <span className="block text-sm font-semibold text-stone-900 group-hover:text-accent-600">
                                     {preset.label}
                                 </span>
-                                <span className="block text-xs text-stone-500">{preset.sub}</span>
+                                <span className="block font-mono text-[10px] uppercase tracking-[0.1em] text-stone-500">
+                                    {preset.sub}
+                                </span>
                             </button>
                         ))}
                     </div>
@@ -212,25 +217,29 @@ const CompareSummary: React.FC<{ stackA: Stack; stackB: Stack }> = ({ stackA, st
     const moreAligned = fa.similarity >= fb.similarity ? 'A' : 'B';
 
     return (
-        <div className="rounded-2xl bg-stone-900 p-6 text-stone-100">
+        <div className="rounded-2xl bg-stone-950 p-6 text-stone-100">
             <div className="grid gap-6 sm:grid-cols-2">
                 <div>
-                    <p className="text-xs uppercase tracking-wider text-stone-400">
+                    <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-stone-400">
                         Situation A · {pairLabel(pa)}
                     </p>
-                    <p className="mt-1 font-display text-3xl font-medium">
+                    <p className="mt-1 font-display text-3xl font-medium text-signal-400">
                         {similarityPct(fa.similarity)}% aligned
                     </p>
-                    <p className="text-sm text-stone-400">friction {fa.friction.toFixed(2)}</p>
+                    <p className="font-mono text-xs text-stone-400">
+                        friction {fa.friction.toFixed(2)}
+                    </p>
                 </div>
                 <div>
-                    <p className="text-xs uppercase tracking-wider text-stone-400">
+                    <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-stone-400">
                         Situation B · {pairLabel(pb)}
                     </p>
-                    <p className="mt-1 font-display text-3xl font-medium">
+                    <p className="mt-1 font-display text-3xl font-medium text-signal-400">
                         {similarityPct(fb.similarity)}% aligned
                     </p>
-                    <p className="text-sm text-stone-400">friction {fb.friction.toFixed(2)}</p>
+                    <p className="font-mono text-xs text-stone-400">
+                        friction {fb.friction.toFixed(2)}
+                    </p>
                 </div>
             </div>
             <p className="mt-5 border-t border-white/10 pt-4 text-sm text-stone-300">

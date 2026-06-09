@@ -1,10 +1,11 @@
 // src/components/SMLC/CubeVisualization.tsx
 import React, { useEffect, useMemo } from 'react';
-import { OrbitControls, Html } from '@react-three/drei';
+import { OrbitControls, Html, Line } from '@react-three/drei';
 import { Canvas, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { EntityState, Position } from './types';
 import { EntityKind, AXIS_ENDS, ENTITY_COLOR, ENTITY_LABEL } from '@/constants/dimensions';
+import { ErrorBoundary } from '../ErrorBoundary';
 
 interface CubeVisualizationProps {
     entities: EntityState[];
@@ -32,26 +33,20 @@ const MarkerMesh: React.FC<{ kind: EntityKind; position: Position }> = ({ kind, 
     );
 };
 
-// A fit line between two markers — makes the gap literal.
-const FitLine: React.FC<{ a: Position; b: Position }> = ({ a, b }) => {
-    const positions = useMemo(
-        () => new Float32Array([a.x, a.y, a.z, b.x, b.y, b.z]),
-        [a, b],
-    );
-    return (
-        <line>
-            <bufferGeometry>
-                <bufferAttribute
-                    attach="attributes-position"
-                    array={positions}
-                    count={2}
-                    itemSize={3}
-                />
-            </bufferGeometry>
-            <lineBasicMaterial color="#a8a29e" linewidth={2} transparent opacity={0.85} />
-        </line>
-    );
-};
+// A fit line between two markers — makes the gap literal. drei's <Line> rebuilds
+// its geometry when points change (a raw <bufferAttribute array> swap doesn't).
+const FitLine: React.FC<{ a: Position; b: Position }> = ({ a, b }) => (
+    <Line
+        points={[
+            [a.x, a.y, a.z],
+            [b.x, b.y, b.z],
+        ]}
+        color="#9a9a8f"
+        lineWidth={1.5}
+        transparent
+        opacity={0.85}
+    />
+);
 
 const AxisEndLabel: React.FC<{ position: [number, number, number]; text: string }> = ({
     position,
@@ -61,14 +56,17 @@ const AxisEndLabel: React.FC<{ position: [number, number, number]; text: string 
         position={position}
         center
         style={{
-            background: 'white',
-            padding: '1px 5px',
-            borderRadius: '4px',
-            fontSize: '11px',
+            background: 'rgba(247,247,244,0.95)',
+            border: '1px solid #e0e0d9',
+            padding: '1px 6px',
+            borderRadius: '2px',
+            fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+            fontSize: '10px',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
             whiteSpace: 'nowrap',
-            opacity: 0.92,
             pointerEvents: 'none',
-            color: '#57534e',
+            color: '#52524b',
             fontWeight: 500,
         }}
     >
@@ -89,7 +87,7 @@ const Scene: React.FC<{ entities: EntityState[] }> = ({ entities }) => {
         const geo = new THREE.BoxGeometry(2, 2, 2);
         const e = new THREE.EdgesGeometry(geo);
         const t = new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false });
-        const l = new THREE.LineBasicMaterial({ color: '#d6d3d1' });
+        const l = new THREE.LineBasicMaterial({ color: '#c6c6bc' });
         return [geo, e, t, l];
     }, []);
 
@@ -152,19 +150,28 @@ const Scene: React.FC<{ entities: EntityState[] }> = ({ entities }) => {
 export const CubeVisualization: React.FC<CubeVisualizationProps> = ({ entities, height = 520 }) => {
     return (
         <div
-            className="relative w-full overflow-hidden rounded-lg bg-white"
+            className="relative w-full overflow-hidden rounded-lg border border-stone-200 bg-white"
             style={{ height }}
         >
-            <Canvas
-                gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
-                camera={{ fov: 60, near: 0.1, far: 1000, position: [3, 3, 3] }}
-                style={{ background: 'white' }}
+            <ErrorBoundary
+                fallback={
+                    <div className="flex h-full w-full items-center justify-center px-6 text-center text-sm text-stone-500">
+                        The 3D view couldn't load on this device — the sliders and readings
+                        still work.
+                    </div>
+                }
             >
-                <Scene entities={entities} />
-            </Canvas>
+                <Canvas
+                    gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
+                    camera={{ fov: 60, near: 0.1, far: 1000, position: [3, 3, 3] }}
+                    style={{ background: 'white' }}
+                >
+                    <Scene entities={entities} />
+                </Canvas>
+            </ErrorBoundary>
 
             {/* legend */}
-            <div className="pointer-events-none absolute bottom-3 left-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-stone-500">
+            <div className="pointer-events-none absolute bottom-3 left-3 flex flex-wrap gap-x-4 gap-y-1 font-mono text-[10px] uppercase tracking-[0.12em] text-stone-500">
                 {entities.map((e) => (
                     <span key={e.kind} className="flex items-center gap-1.5">
                         <span

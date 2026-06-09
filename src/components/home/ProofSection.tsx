@@ -5,10 +5,10 @@ const featured = testimonials.filter((t) => t.featured);
 
 const ProofSection = () => {
     return (
-        <section className="bg-stone-900 py-24 text-stone-100 sm:py-32">
+        <section className="bg-stone-950 py-24 text-stone-100 sm:py-32">
             <div className="mx-auto max-w-5xl px-6 lg:px-8">
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent-300">
-                    The proof
+                <p className="font-mono text-xs uppercase tracking-[0.25em] text-signal-400">
+                    03 / The proof
                 </p>
                 <h2 className="mt-6 max-w-2xl font-display text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
                     Understanding fast is a skill people pay for.
@@ -50,7 +50,7 @@ const ProofSection = () => {
                             key={t.attribution}
                             className="flex flex-col rounded-2xl bg-white/5 p-6 ring-1 ring-white/10"
                         >
-                            <span className="mb-3 inline-flex w-fit rounded-full bg-accent-500/15 px-2.5 py-0.5 text-xs font-medium text-accent-200">
+                            <span className="mb-3 inline-flex w-fit border border-signal-400/30 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-300">
                                 {t.proves}
                             </span>
                             <blockquote className="flex-auto text-[15px] leading-7 text-stone-200">
@@ -66,7 +66,7 @@ const ProofSection = () => {
                 <div className="mt-10">
                     <Link
                         to="/work"
-                        className="text-sm font-semibold leading-6 text-accent-300 transition hover:text-accent-200"
+                        className="font-mono text-xs uppercase tracking-[0.15em] text-signal-400 underline decoration-signal-400/40 underline-offset-8 transition hover:text-signal-300"
                     >
                         See selected work & more testimonials <span aria-hidden="true">→</span>
                     </Link>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, Globe, Linkedin, ArrowUpRight, Calendar } from 'lucide-react';
 import sinaImage from '@/assets/sina-photo.jpg';
+import Seo from '../seo/Seo';
 
 const ContactPage: React.FC = () => {
     const contactInfo = [
@@ -32,10 +33,15 @@ const ContactPage: React.FC = () => {
 
     return (
         <div className="bg-white">
+            <Seo
+                title="Contact — let's figure out what's worth building | Sina Ghazi"
+                description="Get in touch with Sina Ghazi, AI systems architect in Lahti, Finland. Try työ, scope a project, or book a meeting — I read every message myself and usually reply within a few hours."
+                path="/contact"
+            />
             <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28 lg:px-8">
                 {/* Hero */}
                 <div className="max-w-2xl">
-                    <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent-700">
+                    <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent-600">
                         Get in touch
                     </p>
                     <h1 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-stone-900 sm:text-5xl">
@@ -152,7 +158,7 @@ const ContactPage: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="mt-6 rounded-2xl bg-stone-900 p-8 text-stone-100">
+                        <div className="mt-6 rounded-2xl bg-stone-950 p-8 text-stone-100">
                             <h3 className="font-display text-xl font-medium">
                                 Prefer to just try the product?
                             </h3>
@@ -163,7 +169,7 @@ const ContactPage: React.FC = () => {
                                 href="https://tyo.vaivatta.fi"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mt-5 inline-flex items-center gap-2 rounded-md bg-accent-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-500"
+                                className="mt-5 inline-flex items-center gap-2 bg-signal-400 px-5 py-3 font-mono text-xs uppercase tracking-[0.15em] text-stone-950 transition hover:bg-signal-300"
                             >
                                 Try työ <ArrowUpRight className="h-4 w-4" />
                             </a>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { DIMENSIONS, POLES, ENTITY_LABEL, EntityKind } from '@/constants/dimensions';
 import SMLCContainer from '../SMLCContainer';
+import Seo from '../../seo/Seo';
 
 const KINDS: EntityKind[] = ['person', 'business', 'society'];
 
@@ -30,9 +31,15 @@ const applications = [
 export const SMLCExplanation: React.FC = () => {
     return (
         <div className="bg-white">
+            <Seo
+                title="The SMLC — one world, two minds, mapped | Sina Ghazi"
+                description="The Sina Multidimensional Leadership Cube measures a person, a business, and a society on the same three dimensions — so you can read the fit, or the friction, between someone and their context."
+                path="/explanation"
+                ogType="article"
+            />
             {/* Hero */}
             <div className="mx-auto max-w-3xl px-6 pt-20 sm:pt-28 lg:px-8">
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent-700">
+                <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent-600">
                     The SMLC
                 </p>
                 <h1 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-stone-900 sm:text-5xl">
@@ -120,12 +127,15 @@ export const SMLCExplanation: React.FC = () => {
 
             {/* Honesty note */}
             <div className="mx-auto mt-10 max-w-3xl px-6 lg:px-8">
-                <div className="rounded-2xl bg-stone-900 p-8 text-stone-100">
-                    <h3 className="font-display text-xl font-medium">A note on honesty</h3>
+                <div className="rounded-2xl bg-stone-950 p-8 text-stone-100">
+                    <h3 className="font-display text-xl font-medium text-signal-400">
+                        A note on honesty
+                    </h3>
                     <p className="mt-3 text-sm leading-7 text-stone-300">
                         The axes map onto validated constructs — Hofstede's individualism–collectivism
                         (which holds at both the personal and national level), Kahneman's
-                        dual-process theory, Higgins' regulatory focus, Gelfand's tightness–looseness.
+                        dual-process theory, Higgins' regulatory focus, and Trompenaars'
+                        universalism–particularism (rule-based vs relationship-based trust).
                         Two honest caveats: the three dimensions are treated as independent, though in
                         reality they can correlate — so read distance as a guide, not a measurement.
                         And a society's position is its <em>prevailing default</em>, not a claim about
@@ -166,13 +176,13 @@ export const SMLCExplanation: React.FC = () => {
                             href="https://tyo.vaivatta.fi"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 rounded-md bg-accent-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-500"
+                            className="inline-flex items-center gap-2 border border-accent-600 bg-accent-600 px-5 py-3 font-mono text-xs uppercase tracking-[0.15em] text-white transition hover:border-stone-900 hover:bg-stone-900"
                         >
                             Try työ <ArrowUpRight className="h-4 w-4" />
                         </a>
                         <Link
                             to="/work"
-                            className="inline-flex items-center px-4 py-3 text-sm font-semibold text-stone-900 transition hover:text-accent-600"
+                            className="inline-flex items-center px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-stone-900 underline decoration-stone-300 underline-offset-8 transition hover:text-accent-600 hover:decoration-accent-600"
                         >
                             See the work →
                         </Link>

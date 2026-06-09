@@ -1,5 +1,6 @@
 // Real-world examples, all re-placed onto the three SHARED dimensions
 // (Agency / Mode / Orientation), sign convention + = self-directed / analytical / bold.
+// Society placements follow Hofstede (x), Trompenaars universalism–particularism (y).
 // See constants/dimensions.ts for pole meanings per entity kind.
 //
 // We no longer pre-generate a 125-cell dictionary. For any position we compute a
@@ -62,20 +63,20 @@ export const EXAMPLES: Record<EntityKind, Example[]> = {
         { name: 'Toyota', kind: 'business', note: 'Automotive', real: true, position: p(-1, 1, -1), blurb: 'Lean manufacturing, strong process, hierarchical structure.' },
         { name: 'Regulated bank', kind: 'business', note: 'Finance', real: true, position: p(-1, 1, -0.5), blurb: 'Strong hierarchy and controls; auditability first; deterministic process.' },
     ],
-    // + = Individualist, Tight (strong norms), Progressive · Global
+    // + = Individualist, Rule-based (universalist), Progressive · Global
     society: [
-        { name: 'United States', kind: 'society', note: 'North America', real: true, position: p(1, -0.5, 0.5), blurb: 'Market-driven and individualist; loose norms; self-advocacy rewarded.' },
+        { name: 'United States', kind: 'society', note: 'North America', real: true, position: p(1, 0, 0.5), blurb: 'Market-driven and individualist; contracts and courts matter, but so does the hustle; self-advocacy rewarded.' },
         { name: 'Estonia', kind: 'society', note: 'Northern Europe', real: true, position: p(0.5, 0.5, 1), blurb: 'Digital society and e-governance; tech-driven and outward-looking.' },
-        { name: 'Singapore', kind: 'society', note: 'Southeast Asia', real: true, position: p(0.5, 1, 0.5), blurb: 'Efficient and rule-bound; smart-nation; pro-market.' },
+        { name: 'Singapore', kind: 'society', note: 'Southeast Asia', real: true, position: p(-0.5, 1, 1), blurb: 'Communitarian yet hyper-global; efficient and rule-bound; smart-nation.' },
         { name: 'Netherlands', kind: 'society', note: 'Western Europe', real: true, position: p(0.5, 0, 0.5), blurb: 'Consensus ("polder model") plus open markets; famously direct.' },
         { name: 'Switzerland', kind: 'society', note: 'Central Europe', real: true, position: p(0.5, 0.5, -0.5), blurb: 'Direct democracy; strong institutions; risk-managed and local-rooted.' },
         { name: 'Germany', kind: 'society', note: 'Central Europe', real: true, position: p(0, 0.5, 0), blurb: 'Social market economy; rule-following; balanced.' },
-        { name: 'Denmark', kind: 'society', note: 'Nordic Europe', real: true, position: p(0.5, -0.5, 1), blurb: 'High-trust and egalitarian; loose norms; progressive welfare.' },
+        { name: 'Denmark', kind: 'society', note: 'Nordic Europe', real: true, position: p(0.5, -0.5, 1), blurb: 'High-trust and egalitarian; informal over formal; progressive welfare.' },
         { name: 'Norway', kind: 'society', note: 'Nordic Europe', real: true, position: p(0.5, -0.5, 0.5), blurb: 'Universal welfare; collective bargaining; social equality.' },
-        { name: 'Finland', kind: 'society', note: 'Nordic Europe', real: true, position: p(-0.5, 0.5, 0), blurb: 'Institutional trust first; the system works; quiet competence over confidence.' },
+        { name: 'Finland', kind: 'society', note: 'Nordic Europe', real: true, position: p(0.5, 0.5, 0), blurb: 'Individualist but understated; institutional trust first; quiet competence over confidence.' },
         { name: 'France', kind: 'society', note: 'Western Europe', real: true, position: p(0, 0.5, -0.5), blurb: 'Strong state and social programs; cultural preservation.' },
-        { name: 'South Korea', kind: 'society', note: 'East Asia', real: true, position: p(-0.5, 1, 0.5), blurb: 'Collective and tight-normed; intensely tech-driven.' },
-        { name: 'Japan', kind: 'society', note: 'East Asia', real: true, position: p(-1, 1, -0.5), blurb: 'Collectivist, tight norms, tradition-valuing.' },
+        { name: 'South Korea', kind: 'society', note: 'East Asia', real: true, position: p(-0.5, 1, 0.5), blurb: 'Collective and rule-intense; intensely tech-driven.' },
+        { name: 'Japan', kind: 'society', note: 'East Asia', real: true, position: p(-1, 1, -0.5), blurb: 'Collectivist; strong protocol and process; tradition-valuing.' },
         { name: 'Iran', kind: 'society', note: 'Western Asia', real: true, position: p(-0.5, -1, -1), blurb: 'Relationships over institutions; improvisation under constraint; tradition.' },
     ],
 };

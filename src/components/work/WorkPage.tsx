@@ -1,4 +1,5 @@
 import { testimonials, proofStats, domains } from '@/data/testimonials';
+import Seo from '../seo/Seo';
 
 interface Engagement {
     name: string;
@@ -44,8 +45,13 @@ const engagements: Engagement[] = [
 const WorkPage = () => {
     return (
         <div className="bg-white">
+            <Seo
+                title="Selected work — systems where getting it wrong is expensive | Sina Ghazi"
+                description="A selection from 32 independent engagements at a 100% job success score — banking, payments, brokerage, identity, and AI — plus verbatim client testimonials."
+                path="/work"
+            />
             <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28 lg:px-8">
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent-700">
+                <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent-600">
                     Selected work
                 </p>
                 <h1 className="mt-6 max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight text-stone-900 sm:text-5xl">
@@ -138,7 +144,7 @@ const WorkPage = () => {
                         href="https://www.innovategy.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-md bg-accent-600 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-accent-500"
+                        className="inline-flex items-center gap-2 border border-accent-600 bg-accent-600 px-6 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-white transition hover:border-stone-900 hover:bg-stone-900"
                     >
                         Work with me <span aria-hidden="true">→</span>
                     </a>
@@ -146,7 +152,7 @@ const WorkPage = () => {
                         href="https://tyo.vaivatta.fi"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-2 py-3.5 text-sm font-semibold text-stone-900 transition hover:text-accent-600"
+                        className="inline-flex items-center gap-2 px-2 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-stone-900 underline decoration-stone-300 underline-offset-8 transition hover:text-accent-600 hover:decoration-accent-600"
                     >
                         Try työ <span aria-hidden="true">→</span>
                     </a>

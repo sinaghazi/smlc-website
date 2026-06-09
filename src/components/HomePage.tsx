@@ -1,3 +1,4 @@
+import Seo from './seo/Seo';
 import Hero from './home/Hero';
 import StorySection from './home/StorySection';
 import IdeaSection from './home/IdeaSection';
@@ -9,6 +10,12 @@ import TyoSection from './home/TyoSection';
 const HomePage = () => {
     return (
         <div className="bg-white">
+            <Seo
+                title="Sina Ghazi — Understanding difference, and building what depends on it"
+                description="Sina Ghazi helps people understand each other — and builds the systems that depend on it. Twenty years across banking, payments, and AI, from Iran to Finland. Creator of the SMLC framework; builder of työ."
+                path="/"
+                ogType="profile"
+            />
             <Hero />
             <StorySection />
             <IdeaSection />

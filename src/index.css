@@ -11,6 +11,11 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection {
+    background: #2438f0;
+    color: #ffffff;
+}
+
 body {
     margin: 0;
     min-width: 320px;

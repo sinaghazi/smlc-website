@@ -3,6 +3,8 @@ import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
     children?: ReactNode;
+    /** Rendered instead of the default message when the subtree throws. */
+    fallback?: ReactNode;
 }
 
 interface State {
@@ -24,12 +26,13 @@ export class ErrorBoundary extends Component<Props, State> {
 
     public render() {
         if (this.state.hasError) {
+            if (this.props.fallback) return this.props.fallback;
             return (
-                <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                <div className="flex h-full w-full items-center justify-center bg-stone-50">
                     <div className="text-center">
-                        <h2 className="text-xl font-semibold text-gray-800">Something went wrong</h2>
+                        <h2 className="text-xl font-semibold text-stone-800">Something went wrong</h2>
                         <button
-                            className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+                            className="mt-4 rounded-md bg-accent-600 px-4 py-2 text-white hover:bg-accent-500"
                             onClick={() => this.setState({ hasError: false })}
                         >
                             Try again

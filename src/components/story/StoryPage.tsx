@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Seo from '../seo/Seo';
 
 interface Milestone {
     period: string;
@@ -44,8 +45,14 @@ const milestones: Milestone[] = [
 const StoryPage = () => {
     return (
         <div className="bg-white">
+            <Seo
+                title="The story — From Iran to Finland | Sina Ghazi"
+                description="Two ways of building a life, from Iran to Finland: why quiet competence and patient craft beat loud self-promotion — and twenty years of work where correctness matters, from core banking to AI."
+                path="/story"
+                ogType="article"
+            />
             <article className="mx-auto max-w-3xl px-6 py-20 sm:py-28 lg:px-8">
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent-700">
+                <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent-600">
                     The story
                 </p>
                 <h1 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-stone-900 sm:text-5xl">

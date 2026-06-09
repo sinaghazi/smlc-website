@@ -5,8 +5,6 @@
 // Sign convention (locked): + = the self-directed / analytical / bold cluster.
 //   x = Agency, y = Mode, z = Orientation.
 
-import { AxisType } from '../types/axis.types';
-
 export type DimensionKey = 'x' | 'y' | 'z';
 export type EntityKind = 'person' | 'business' | 'society';
 
@@ -29,7 +27,7 @@ export interface Pole {
 // Level-appropriate pole words for each entity kind. Same axis, different surface.
 export const POLES: Record<EntityKind, Record<DimensionKey, Pole>> = {
     person: {
-        x: { neg: 'Collaborative', pos: 'Self-directed' },
+        x: { neg: 'Group-anchored', pos: 'Self-directed' },
         y: { neg: 'Intuitive', pos: 'Analytical' },
         z: { neg: 'Cautious', pos: 'Bold' },
     },
@@ -40,7 +38,9 @@ export const POLES: Record<EntityKind, Record<DimensionKey, Pole>> = {
     },
     society: {
         x: { neg: 'Collectivist', pos: 'Individualist' },
-        y: { neg: 'Loose', pos: 'Tight' },
+        // Trompenaars universalism–particularism: rules-apply-equally vs
+        // relationships-decide. (Not Gelfand tightness — see SMLCExplanation.)
+        y: { neg: 'Relationship-based', pos: 'Rule-based' },
         z: { neg: 'Traditional · Local', pos: 'Progressive · Global' },
     },
 };
@@ -53,19 +53,6 @@ export const AXIS_ENDS: Record<DimensionKey, Pole & { name: string }> = {
     z: { name: 'Orientation', neg: 'Stability', pos: 'Change' },
 };
 
-export const entityOf = (axisType: AxisType): EntityKind => {
-    switch (axisType) {
-        case AxisType.PERSONAL:
-            return 'person';
-        case AxisType.ORGANIZATIONAL:
-            return 'business';
-        case AxisType.SOCIETAL:
-            return 'society';
-        default:
-            return 'person';
-    }
-};
-
 export const ENTITY_LABEL: Record<EntityKind, string> = {
     person: 'Person',
     business: 'Business',
@@ -74,7 +61,7 @@ export const ENTITY_LABEL: Record<EntityKind, string> = {
 
 // Branded marker colors, by entity kind (distinct, readable together).
 export const ENTITY_COLOR: Record<EntityKind, string> = {
-    person: '#dd6234', // accent orange
-    business: '#0d9488', // teal
-    society: '#8b5cf6', // violet
+    person: '#2438f0', // cobalt (site accent)
+    business: '#0e9384', // teal
+    society: '#e11d74', // magenta
 };

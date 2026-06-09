@@ -2,8 +2,8 @@ const TyoSection = () => {
     return (
         <section id="tyo" className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-3xl px-6 lg:px-8">
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent-700">
-                    So I built työ
+                <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent-600">
+                    04 / So I built työ
                 </p>
                 <h2 className="mt-6 font-display text-3xl font-medium leading-tight tracking-tight text-stone-900 sm:text-4xl">
                     Most work doesn't break on the work. It breaks in the messages around it.
@@ -25,7 +25,7 @@ const TyoSection = () => {
                         href="https://tyo.vaivatta.fi"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 rounded-md bg-accent-600 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-accent-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
+                        className="inline-flex items-center justify-center gap-2 border border-accent-600 bg-accent-600 px-6 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-white transition hover:border-stone-900 hover:bg-stone-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
                     >
                         Try työ — free to start
                         <span aria-hidden="true">→</span>
@@ -34,7 +34,7 @@ const TyoSection = () => {
                         href="https://www.innovategy.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-semibold leading-6 text-stone-900 transition hover:text-accent-600"
+                        className="font-mono text-xs uppercase tracking-[0.15em] text-stone-900 underline decoration-stone-300 underline-offset-8 transition hover:text-accent-600 hover:decoration-accent-600"
                     >
                         Or work with me directly <span aria-hidden="true">→</span>
                     </a>

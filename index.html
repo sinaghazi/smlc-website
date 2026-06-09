@@ -7,22 +7,32 @@
   <title>Sina Ghazi — Understanding difference, and building what depends on it</title>
 
   <!-- Meta Tags for SEO -->
-  <meta name="description" content="Sina Ghazi helps people understand each other — and builds the systems that depend on it. Twenty years across banking, payments, and AI, from Iran to Finland. Creator of the SMLC framework; builder of työ.">
+  <!--
+    Per-route title, description, canonical, og:title/description/url and twitter
+    cards are managed at runtime by the <Seo> component (react-helmet-async) so
+    each page is unique for search engines. The tags below are static fallbacks
+    for crawlers/social scrapers that don't execute JS; they describe the
+    homepage. Do NOT add description/canonical here — that would duplicate or
+    conflict with the per-route tags Helmet injects.
+  -->
   <meta name="keywords" content="Sina Ghazi, AI systems architect, fractional CTO, fintech, payments, communication, työ, Innovategy, SMLC, Lahti Finland">
   <meta name="author" content="Sina Ghazi">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#dd6234">
+  <meta name="theme-color" content="#141412">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="canonical" href="https://sinaghazi.com/">
 
-  <!-- Open Graph Meta Tags -->
+  <!-- Open Graph / Twitter fallbacks (homepage) — what no-JS social scrapers see -->
   <meta property="og:title" content="Sina Ghazi — Understanding difference, and building what depends on it">
   <meta property="og:description" content="Twenty years across banking, payments, and AI, from Iran to Finland. Most things break where understanding breaks — so I build the systems and the tools that fix it.">
-  <meta property="og:image" content="https://sinaghazi.com/android-chrome-512x512.png">
   <meta property="og:url" content="https://sinaghazi.com/">
+  <meta property="og:image" content="https://sinaghazi.com/icon/android-chrome-512x512.png">
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Sina Ghazi">
   <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sina Ghazi — Understanding difference, and building what depends on it">
+  <meta name="twitter:description" content="Twenty years across banking, payments, and AI, from Iran to Finland. Most things break where understanding breaks — so I build the systems and the tools that fix it.">
+  <meta name="twitter:image" content="https://sinaghazi.com/icon/android-chrome-512x512.png">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -31,7 +41,7 @@
       "@type": "Person",
       "name": "Sina Ghazi",
       "url": "https://sinaghazi.com/",
-      "image": "https://sinaghazi.com/android-chrome-512x512.png",
+      "image": "https://sinaghazi.com/icon/android-chrome-512x512.png",
       "jobTitle": "AI Systems & Solutions Architect",
       "homeLocation": {
         "@type": "Place",
@@ -50,26 +60,16 @@
     }
   </script>
 
-  <!-- Favicon -->
-  <link rel="icon" href="public/icon/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="public/icon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="public/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="public/icon/favicon-16x16.png">
+  <!-- Favicon (public/ contents are served from the site root) -->
+  <link rel="icon" href="/icon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
 
   <!-- Stylesheets and Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
-
-  <!-- Import Map for Modules -->
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
-        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Fathom - beautiful, simple website analytics -->
   <script src="https://cdn.usefathom.com/script.js" data-site="ZAOYGYGK" defer></script>
